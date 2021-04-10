@@ -1,0 +1,22 @@
+1 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/ChartFactory.java 694
+Faulty:
+PiePlot3D plot=new PiePlot3D(dataset);
+Seed:
+PiePlot plot=new PiePlot(dataset);
+**************************************************
+2 Delete /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/Plot.java 932
+Faulty:
+drawBackgroundImage(g2,area);
+Seed:
+this.drawingSupplier=new DefaultDrawingSupplier();
+**************************************************
+3 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot3D.java 247
+Faulty:
+if (getLabelGenerator() != null) {
+  labelPercent=getLabelGap() + getMaximumLabelWidth();
+}
+Seed:
+setInsets(insets,true);
+**************************************************
+Evaluations: 336
+EstimatedTime: 742794

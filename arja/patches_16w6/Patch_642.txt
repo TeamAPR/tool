@@ -1,0 +1,26 @@
+1 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot3D.java 239
+Faulty:
+drawBackground(g2,plotArea);
+Seed:
+insets.trim(plotArea);
+**************************************************
+2 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/ChartFactory.java 694
+Faulty:
+PiePlot3D plot=new PiePlot3D(dataset);
+Seed:
+PiePlot plot=new PiePlot(dataset);
+**************************************************
+3 Delete /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/ChartFactory.java 695
+Faulty:
+plot.setInsets(new RectangleInsets(0.0,5.0,5.0,5.0));
+Seed:
+plot.setToolTipGenerator(new StandardPieToolTipGenerator());
+**************************************************
+4 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot.java 1423
+Faulty:
+return this.labelGap;
+Seed:
+throw new IllegalArgumentException("Null 'offset' argument.");
+**************************************************
+Evaluations: 553
+EstimatedTime: 1228355

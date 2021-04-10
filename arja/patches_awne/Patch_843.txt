@@ -1,0 +1,19 @@
+1 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/data/statistics/DefaultStatisticalCategoryDataset.java 113
+Faulty:
+return result;
+Seed:
+this.minimumRangeValueIncStdDev=Double.NaN;
+**************************************************
+2 Delete /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/chart/renderer/category/StatisticalBarRenderer.java 207
+Faulty:
+if (orientation == PlotOrientation.HORIZONTAL) {
+  drawHorizontalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,statData,row,column);
+}
+ else if (orientation == PlotOrientation.VERTICAL) {
+  drawVerticalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,statData,row,column);
+}
+Seed:
+notifyListeners(new RendererChangeEvent(this));
+**************************************************
+Evaluations: 790
+EstimatedTime: 2152979

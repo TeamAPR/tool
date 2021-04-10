@@ -1,0 +1,25 @@
+1 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot3D.java 242
+Faulty:
+g2.clip(plotArea);
+Seed:
+if (DatasetUtilities.isEmptyOrNull(getDataset())) {
+  drawNoDataMessage(g2,plotArea);
+  g2.setClip(savedClip);
+  drawOutline(g2,plotArea);
+  return;
+}
+**************************************************
+2 Delete /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/ChartFactory.java 695
+Faulty:
+plot.setInsets(new RectangleInsets(0.0,5.0,5.0,5.0));
+Seed:
+plot.setInsets(new RectangleInsets(0.0,5.0,5.0,5.0));
+**************************************************
+3 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot3D.java 230
+Faulty:
+RectangleInsets insets=getInsets();
+Seed:
+g2.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER,1.0f));
+**************************************************
+Evaluations: 643
+EstimatedTime: 1433730

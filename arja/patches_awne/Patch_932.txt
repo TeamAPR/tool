@@ -1,0 +1,33 @@
+1 Delete /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/chart/renderer/category/StatisticalBarRenderer.java 200
+Faulty:
+if (!(data instanceof StatisticalCategoryDataset)) {
+  throw new IllegalArgumentException("Requires StatisticalCategoryDataset.");
+}
+Seed:
+plot.drawBackground(g2,dataArea);
+**************************************************
+2 Delete /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/chart/renderer/category/StatisticalBarRenderer.java 207
+Faulty:
+if (orientation == PlotOrientation.HORIZONTAL) {
+  drawHorizontalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,statData,row,column);
+}
+ else if (orientation == PlotOrientation.VERTICAL) {
+  drawVerticalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,statData,row,column);
+}
+Seed:
+drawHorizontalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,statData,row,column);
+**************************************************
+3 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/data/statistics/DefaultStatisticalCategoryDataset.java 273
+Faulty:
+return this.data.getColumnCount();
+Seed:
+return this.data.getRowCount();
+**************************************************
+4 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/chart/renderer/category/StatisticalBarRenderer.java 243
+Faulty:
+double rectY=domainAxis.getCategoryStart(column,getColumnCount(),dataArea,xAxisLocation);
+Seed:
+double rectY=0.0;
+**************************************************
+Evaluations: 869
+EstimatedTime: 2348572

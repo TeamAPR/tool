@@ -1,0 +1,32 @@
+1 Delete /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/chart/renderer/category/StatisticalBarRenderer.java 207
+Faulty:
+if (orientation == PlotOrientation.HORIZONTAL) {
+  drawHorizontalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,statData,row,column);
+}
+ else if (orientation == PlotOrientation.VERTICAL) {
+  drawVerticalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,statData,row,column);
+}
+Seed:
+if (orientation == PlotOrientation.HORIZONTAL) {
+  drawHorizontalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,data,row,column);
+}
+ else if (orientation == PlotOrientation.VERTICAL) {
+  drawVerticalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,data,row,column);
+}
+**************************************************
+2 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/chart/renderer/category/StatisticalBarRenderer.java 240
+Faulty:
+RectangleEdge xAxisLocation=plot.getDomainAxisEdge();
+Seed:
+if (row < dataset.getRowCount() - 1) {
+  return;
+}
+**************************************************
+3 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/chart/renderer/category/StatisticalBarRenderer.java 247
+Faulty:
+int categoryCount=getColumnCount();
+Seed:
+setPositiveItemLabelPositionFallback(null);
+**************************************************
+Evaluations: 1011
+EstimatedTime: 2681162

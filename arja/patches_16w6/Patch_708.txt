@@ -1,0 +1,32 @@
+1 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot3D.java 242
+Faulty:
+g2.clip(plotArea);
+Seed:
+g2.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER,getForegroundAlpha()));
+**************************************************
+2 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/ChartFactory.java 694
+Faulty:
+PiePlot3D plot=new PiePlot3D(dataset);
+Seed:
+PiePlot plot=new PiePlot(dataset);
+**************************************************
+3 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/Plot.java 932
+Faulty:
+drawBackgroundImage(g2,area);
+Seed:
+this.outlineStroke=outlineStroke;
+**************************************************
+4 Delete /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot3D.java 272
+Faulty:
+if (isCircular()) {
+  double min=Math.min(linkW,linkH) / 2;
+  linkX=(linkX + linkX + linkW) / 2 - min;
+  linkY=(linkY + linkY + linkH) / 2 - min;
+  linkW=2 * min;
+  linkH=2 * min;
+}
+Seed:
+g2.clip(plotArea);
+**************************************************
+Evaluations: 602
+EstimatedTime: 1341720

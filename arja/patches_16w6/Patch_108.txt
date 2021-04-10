@@ -1,0 +1,38 @@
+1 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/ChartFactory.java 694
+Faulty:
+PiePlot3D plot=new PiePlot3D(dataset);
+Seed:
+PiePlot plot=new PiePlot(dataset);
+**************************************************
+2 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot3D.java 245
+Faulty:
+double gapPercent=getInteriorGap();
+Seed:
+g2.setClip(savedClip);
+**************************************************
+3 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot3D.java 280
+Faulty:
+PiePlotState state=initialise(g2,plotArea,this,null,info);
+Seed:
+PiePlotState state=new PiePlotState(info);
+**************************************************
+4 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot.java 1423
+Faulty:
+return this.labelGap;
+Seed:
+return this.startAngle;
+**************************************************
+5 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot.java 706
+Faulty:
+return this.circular;
+Seed:
+this.labelDistributor.clear();
+**************************************************
+6 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot3D.java 252
+Faulty:
+double gapVertical=plotArea.getHeight() * gapPercent * 2.0;
+Seed:
+g2.setPaint(Color.gray);
+**************************************************
+Evaluations: 105
+EstimatedTime: 241105

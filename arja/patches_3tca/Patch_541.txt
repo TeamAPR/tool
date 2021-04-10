@@ -1,0 +1,22 @@
+1 Delete /Users/georgecherian/Desktop/TSE/bugs/chart/chart_12_buggy/source/org/jfree/chart/JFreeChart.java 664
+Faulty:
+removeSubtitle(getLegend());
+Seed:
+this.backgroundImage=DEFAULT_BACKGROUND_IMAGE;
+**************************************************
+2 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_12_buggy/source/org/jfree/chart/JFreeChart.java 962
+Faulty:
+fireChartChanged();
+Seed:
+if (plot == null) {
+  throw new NullPointerException("Null 'plot' argument.");
+}
+**************************************************
+3 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_12_buggy/source/org/jfree/data/general/AbstractDataset.java 161
+Faulty:
+return list.contains(listener);
+Seed:
+return true;
+**************************************************
+Evaluations: 527
+EstimatedTime: 1541770

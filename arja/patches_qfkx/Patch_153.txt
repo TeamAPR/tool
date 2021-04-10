@@ -1,0 +1,20 @@
+1 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_13_buggy/source/org/jfree/chart/block/BorderArrangement.java 307
+Faulty:
+w[3]=size.width;
+Seed:
+w[4]=size.width;
+**************************************************
+2 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_13_buggy/source/org/jfree/chart/block/BorderArrangement.java 301
+Faulty:
+double maxW=Math.max(width - w[2],0.0);
+Seed:
+this.leftBlock=null;
+**************************************************
+3 Delete /Users/georgecherian/Desktop/TSE/bugs/chart/chart_13_buggy/source/org/jfree/chart/block/BorderArrangement.java 443
+Faulty:
+h[2]=constraint.getHeight() - h[1] - h[0];
+Seed:
+h[4]=h[2];
+**************************************************
+Evaluations: 154
+EstimatedTime: 2467997

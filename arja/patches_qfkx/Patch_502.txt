@@ -1,0 +1,14 @@
+1 Delete /Users/georgecherian/Desktop/TSE/bugs/chart/chart_13_buggy/source/org/jfree/chart/block/BorderArrangement.java 307
+Faulty:
+w[3]=size.width;
+Seed:
+h[3]=h[2];
+**************************************************
+2 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_13_buggy/source/org/jfree/chart/block/BorderArrangement.java 443
+Faulty:
+h[2]=constraint.getHeight() - h[1] - h[0];
+Seed:
+this.rightBlock=null;
+**************************************************
+Evaluations: 477
+EstimatedTime: 2689240

@@ -1,0 +1,29 @@
+1 Delete /Users/georgecherian/Desktop/TSE/bugs/chart/chart_13_buggy/source/org/jfree/chart/block/AbstractBlock.java 443
+Faulty:
+lowerBound=trimToContentWidth(r.getLowerBound());
+Seed:
+this.width=0.0;
+**************************************************
+2 Delete /Users/georgecherian/Desktop/TSE/bugs/chart/chart_13_buggy/source/org/jfree/chart/block/BorderArrangement.java 319
+Faulty:
+w[4]=size.width;
+Seed:
+if (this.bottomBlock != null) {
+  Size2D size=this.bottomBlock.arrange(g2,c1);
+  w[1]=size.width;
+  h[1]=size.height;
+}
+**************************************************
+3 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_13_buggy/source/org/jfree/chart/block/BorderArrangement.java 314
+Faulty:
+if (this.centerBlock != null) {
+  RectangleConstraint c4=new RectangleConstraint(width - w[2] - w[3],null,LengthConstraintType.FIXED,0.0,null,LengthConstraintType.NONE);
+  Size2D size=this.centerBlock.arrange(g2,c4);
+  w[4]=size.width;
+  h[4]=size.height;
+}
+Seed:
+this.rightBlock=null;
+**************************************************
+Evaluations: 81
+EstimatedTime: 1971051

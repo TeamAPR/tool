@@ -1,0 +1,32 @@
+1 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/data/statistics/DefaultStatisticalCategoryDataset.java 381
+Faulty:
+result=new Range(this.minimumRangeValueIncStdDev,this.maximumRangeValueIncStdDev);
+Seed:
+if (!Double.isNaN(this.minimumRangeValueIncStdDev) && !Double.isNaN(this.maximumRangeValueIncStdDev)) result=new Range(this.minimumRangeValueIncStdDev,this.maximumRangeValueIncStdDev);
+**************************************************
+2 Delete /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/chart/renderer/category/StatisticalBarRenderer.java 207
+Faulty:
+if (orientation == PlotOrientation.HORIZONTAL) {
+  drawHorizontalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,statData,row,column);
+}
+ else if (orientation == PlotOrientation.VERTICAL) {
+  drawVerticalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,statData,row,column);
+}
+Seed:
+if (!getItemVisible(row,column)) {
+  return;
+}
+**************************************************
+3 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/chart/renderer/category/StatisticalBarRenderer.java 261
+Faulty:
+double base=0.0;
+Seed:
+if (this.errorIndicatorStroke != null) {
+  g2.setStroke(this.errorIndicatorStroke);
+}
+ else {
+  g2.setStroke(getItemOutlineStroke(row,column));
+}
+**************************************************
+Evaluations: 1556
+EstimatedTime: 10239764

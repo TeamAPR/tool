@@ -1,0 +1,29 @@
+1 Delete /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/chart/renderer/category/StatisticalBarRenderer.java 207
+Faulty:
+if (orientation == PlotOrientation.HORIZONTAL) {
+  drawHorizontalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,statData,row,column);
+}
+ else if (orientation == PlotOrientation.VERTICAL) {
+  drawVerticalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,statData,row,column);
+}
+Seed:
+if (orientation == PlotOrientation.VERTICAL) {
+  drawVerticalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,data,row,column);
+}
+**************************************************
+2 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/chart/renderer/category/StatisticalBarRenderer.java 246
+Faulty:
+int seriesCount=getRowCount();
+Seed:
+g2.setStroke(plot.getRangeGridlineStroke());
+**************************************************
+3 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/data/statistics/DefaultStatisticalCategoryDataset.java 110
+Faulty:
+if (masd != null) {
+  result=masd.getMean();
+}
+Seed:
+result=masd.getStandardDeviation();
+**************************************************
+Evaluations: 343
+EstimatedTime: 749065

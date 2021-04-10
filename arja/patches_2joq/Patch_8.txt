@@ -1,0 +1,8 @@
+1 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_7_buggy/source/org/jfree/data/time/TimePeriodValues.java 552
+Faulty:
+return this.maxMiddleIndex;
+Seed:
+return this.maxEndIndex;
+**************************************************
+Evaluations: 8
+EstimatedTime: 8065

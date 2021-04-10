@@ -1,0 +1,42 @@
+1 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/chart/renderer/category/StatisticalBarRenderer.java 248
+Faulty:
+if (seriesCount > 1) {
+  double seriesGap=dataArea.getHeight() * getItemMargin() / (categoryCount * (seriesCount - 1));
+  rectY=rectY + row * (state.getBarWidth() + seriesGap);
+}
+ else {
+  rectY=rectY + row * state.getBarWidth();
+}
+Seed:
+this.errorIndicatorPaint=Color.gray;
+**************************************************
+2 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/data/statistics/MeanAndStandardDeviation.java 104
+Faulty:
+return this.standardDeviation;
+Seed:
+this.mean=mean;
+**************************************************
+3 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/chart/renderer/category/StatisticalBarRenderer.java 260
+Faulty:
+double value=meanValue.doubleValue();
+Seed:
+if (this.errorIndicatorPaint != null) {
+  g2.setPaint(this.errorIndicatorPaint);
+}
+ else {
+  g2.setPaint(getItemOutlinePaint(row,column));
+}
+**************************************************
+4 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/chart/renderer/category/StatisticalBarRenderer.java 207
+Faulty:
+if (orientation == PlotOrientation.HORIZONTAL) {
+  drawHorizontalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,statData,row,column);
+}
+ else if (orientation == PlotOrientation.VERTICAL) {
+  drawVerticalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,statData,row,column);
+}
+Seed:
+setMinimumBarLength(1.0);
+**************************************************
+Evaluations: 525
+EstimatedTime: 1180045

@@ -1,0 +1,20 @@
+1 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/ChartFactory.java 694
+Faulty:
+PiePlot3D plot=new PiePlot3D(dataset);
+Seed:
+PiePlot plot=new PiePlot(dataset);
+**************************************************
+2 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot.java 1398
+Faulty:
+return this.labelGenerator;
+Seed:
+this.direction=direction;
+**************************************************
+3 Delete /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot3D.java 231
+Faulty:
+insets.trim(plotArea);
+Seed:
+g2.clip(plotArea);
+**************************************************
+Evaluations: 322
+EstimatedTime: 712391

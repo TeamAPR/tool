@@ -1,0 +1,10 @@
+java -jar nopol-0.2-SNAPSHOT-jar-with-dependencies.jar \
+-s /Users/georgecherian/Desktop/TSE/bugs/chart/chart_1_buggy  \
+-c /Users/georgecherian/Desktop/TSE/bugs/chart/chart_1_buggy/build:/Users/georgecherian/Desktop/TSE/bugs/chart/chart_1_buggy/build-test:/Users/georgecherian/Desktop/TSE/bugs/chart/chart_1_buggy/lib:/Users/georgecherian/.m2/repository/junit/junit/4.11/junit-4.11.jar:/Users/georgecherian/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar \
+-t org.jfree.* \
+-p z3_for_mac
+
+java -jar nopol-0.2-SNAPSHOT-jar-with-dependencies.jar \
+-s /Users/georgecherian/Desktop/TSE/bugs/chart/chart_1_buggy/source  \
+-c /Users/georgecherian/Desktop/TSE/bugs/chart/chart_1_buggy/build:/Users/georgecherian/Desktop/TSE/bugs/chart/chart_1_buggy/build-tests:/Users/georgecherian/Desktop/TSE/bugs/chart/chart_1_buggy/lib:/Users/georgecherian/.m2/repository/junit/junit/4.11/junit-4.11.jar:/Users/georgecherian/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar \
+-p z3_for_mac

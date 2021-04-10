@@ -1,0 +1,26 @@
+1 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_12_buggy/source/org/jfree/chart/JFreeChart.java 571
+Faulty:
+if (this.title != null) {
+  this.title.removeChangeListener(this);
+}
+Seed:
+if (title != null) {
+  title.addChangeListener(this);
+}
+**************************************************
+2 Delete /Users/georgecherian/Desktop/TSE/bugs/chart/chart_12_buggy/source/org/jfree/chart/JFreeChart.java 575
+Faulty:
+if (title != null) {
+  title.addChangeListener(this);
+}
+Seed:
+this.borderPaint=Color.black;
+**************************************************
+3 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_12_buggy/source/org/jfree/data/general/AbstractDataset.java 161
+Faulty:
+return list.contains(listener);
+Seed:
+return true;
+**************************************************
+Evaluations: 568
+EstimatedTime: 1664695

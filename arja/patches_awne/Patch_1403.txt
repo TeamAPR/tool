@@ -1,0 +1,32 @@
+1 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/data/statistics/MeanAndStandardDeviation.java 104
+Faulty:
+return this.standardDeviation;
+Seed:
+this.mean=mean;
+**************************************************
+2 Delete /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/chart/renderer/category/StatisticalBarRenderer.java 207
+Faulty:
+if (orientation == PlotOrientation.HORIZONTAL) {
+  drawHorizontalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,statData,row,column);
+}
+ else if (orientation == PlotOrientation.VERTICAL) {
+  drawVerticalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,statData,row,column);
+}
+Seed:
+if (orientation == PlotOrientation.VERTICAL) {
+  drawVerticalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,data,row,column);
+}
+**************************************************
+3 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/data/statistics/DefaultStatisticalCategoryDataset.java 379
+Faulty:
+if (!Double.isNaN(this.minimumRangeValueIncStdDev) && !Double.isNaN(this.maximumRangeValueIncStdDev)) result=new Range(this.minimumRangeValueIncStdDev,this.maximumRangeValueIncStdDev);
+Seed:
+if (includeInterval) {
+  if (!Double.isNaN(this.minimumRangeValueIncStdDev) && !Double.isNaN(this.maximumRangeValueIncStdDev))   result=new Range(this.minimumRangeValueIncStdDev,this.maximumRangeValueIncStdDev);
+}
+ else {
+  if (!Double.isNaN(this.minimumRangeValue) && !Double.isNaN(this.maximumRangeValue))   result=new Range(this.minimumRangeValue,this.maximumRangeValue);
+}
+**************************************************
+Evaluations: 1327
+EstimatedTime: 3414779

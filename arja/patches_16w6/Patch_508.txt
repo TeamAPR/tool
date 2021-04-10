@@ -1,0 +1,17 @@
+1 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot3D.java 246
+Faulty:
+double labelPercent=0.0;
+Seed:
+if (info != null) {
+  info.setPlotArea(plotArea);
+  info.setDataArea(plotArea);
+}
+**************************************************
+2 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/ChartFactory.java 694
+Faulty:
+PiePlot3D plot=new PiePlot3D(dataset);
+Seed:
+PiePlot plot=new PiePlot(dataset);
+**************************************************
+Evaluations: 449
+EstimatedTime: 992356

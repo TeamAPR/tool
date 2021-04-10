@@ -1,0 +1,21 @@
+1 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot3D.java 242
+Faulty:
+g2.clip(plotArea);
+Seed:
+if (DatasetUtilities.isEmptyOrNull(getDataset())) {
+  drawNoDataMessage(g2,plotArea);
+  g2.setClip(savedClip);
+  drawOutline(g2,plotArea);
+  return;
+}
+**************************************************
+2 Delete /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/Plot.java 931
+Faulty:
+fillBackground(g2,area);
+Seed:
+if (this.backgroundPaint == null) {
+  return;
+}
+**************************************************
+Evaluations: 853
+EstimatedTime: 1903890

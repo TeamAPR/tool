@@ -1,0 +1,14 @@
+1 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_12_buggy/source/org/jfree/chart/title/LegendTitle.java 542
+Faulty:
+return true;
+Seed:
+this.itemPaint=DEFAULT_ITEM_PAINT;
+**************************************************
+2 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_12_buggy/source/org/jfree/data/general/AbstractDataset.java 161
+Faulty:
+return list.contains(listener);
+Seed:
+return true;
+**************************************************
+Evaluations: 396
+EstimatedTime: 1168500

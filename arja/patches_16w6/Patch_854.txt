@@ -1,0 +1,22 @@
+1 Delete /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot3D.java 242
+Faulty:
+g2.clip(plotArea);
+Seed:
+drawBackground(g2,plotArea);
+**************************************************
+2 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/ChartFactory.java 694
+Faulty:
+PiePlot3D plot=new PiePlot3D(dataset);
+Seed:
+PiePlot plot=new PiePlot(dataset);
+**************************************************
+3 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/Plot.java 931
+Faulty:
+fillBackground(g2,area);
+Seed:
+if (insets == null) {
+  throw new IllegalArgumentException("Null 'insets' argument.");
+}
+**************************************************
+Evaluations: 717
+EstimatedTime: 1598991

@@ -1,0 +1,16 @@
+1 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_12_buggy/source/org/jfree/chart/title/LegendTitle.java 541
+Faulty:
+if (obj == this) {
+  return true;
+}
+Seed:
+this.legendItemGraphicPadding=new RectangleInsets(2.0,2.0,2.0,2.0);
+**************************************************
+2 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_12_buggy/source/org/jfree/data/general/AbstractDataset.java 161
+Faulty:
+return list.contains(listener);
+Seed:
+return true;
+**************************************************
+Evaluations: 469
+EstimatedTime: 1374285

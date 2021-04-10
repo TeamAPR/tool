@@ -1,0 +1,27 @@
+1 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/data/statistics/MeanAndStandardDeviation.java 104
+Faulty:
+return this.standardDeviation;
+Seed:
+return Double.NaN;
+**************************************************
+2 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/chart/renderer/category/StatisticalBarRenderer.java 262
+Faulty:
+double lclip=getLowerClip();
+Seed:
+g2.setPaint(plot.getRangeGridlinePaint());
+**************************************************
+3 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/chart/renderer/category/StatisticalBarRenderer.java 207
+Faulty:
+if (orientation == PlotOrientation.HORIZONTAL) {
+  drawHorizontalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,statData,row,column);
+}
+ else if (orientation == PlotOrientation.VERTICAL) {
+  drawVerticalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,statData,row,column);
+}
+Seed:
+if (!(data instanceof StatisticalCategoryDataset)) {
+  throw new IllegalArgumentException("Requires StatisticalCategoryDataset.");
+}
+**************************************************
+Evaluations: 61
+EstimatedTime: 112346

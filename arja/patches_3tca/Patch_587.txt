@@ -1,0 +1,26 @@
+1 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_12_buggy/source/org/jfree/chart/JFreeChart.java 645
+Faulty:
+if (subtitle instanceof LegendTitle) {
+  if (seen == index) {
+    return (LegendTitle)subtitle;
+  }
+ else {
+    seen++;
+  }
+}
+Seed:
+if (seen == index) {
+  return (LegendTitle)subtitle;
+}
+ else {
+  seen++;
+}
+**************************************************
+2 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_12_buggy/source/org/jfree/data/general/AbstractDataset.java 161
+Faulty:
+return list.contains(listener);
+Seed:
+return true;
+**************************************************
+Evaluations: 569
+EstimatedTime: 1667774

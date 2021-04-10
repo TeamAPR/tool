@@ -1,0 +1,8 @@
+1 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_13_buggy/source/org/jfree/chart/block/BorderArrangement.java 302
+Faulty:
+RectangleConstraint c3=new RectangleConstraint(0.0,new Range(Math.min(w[2],maxW),maxW),LengthConstraintType.RANGE,0.0,null,LengthConstraintType.NONE);
+Seed:
+this.leftBlock=null;
+**************************************************
+Evaluations: 415
+EstimatedTime: 2646622

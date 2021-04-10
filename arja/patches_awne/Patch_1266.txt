@@ -1,0 +1,8 @@
+1 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/data/statistics/DefaultStatisticalCategoryDataset.java 389
+Faulty:
+return result;
+Seed:
+this.data=new KeyedObjects2D();
+**************************************************
+Evaluations: 1194
+EstimatedTime: 3107095

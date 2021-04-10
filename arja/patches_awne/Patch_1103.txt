@@ -1,0 +1,39 @@
+1 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/chart/renderer/category/StatisticalBarRenderer.java 263
+Faulty:
+double uclip=getUpperClip();
+Seed:
+setNegativeItemLabelPositionFallback(null);
+**************************************************
+2 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/chart/renderer/category/StatisticalBarRenderer.java 262
+Faulty:
+double lclip=getLowerClip();
+Seed:
+plot.drawBackground(g2,dataArea);
+**************************************************
+3 Delete /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/chart/renderer/category/StatisticalBarRenderer.java 207
+Faulty:
+if (orientation == PlotOrientation.HORIZONTAL) {
+  drawHorizontalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,statData,row,column);
+}
+ else if (orientation == PlotOrientation.VERTICAL) {
+  drawVerticalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,statData,row,column);
+}
+Seed:
+if (orientation == PlotOrientation.VERTICAL) {
+  drawVerticalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,data,row,column);
+}
+**************************************************
+4 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/data/statistics/DefaultStatisticalCategoryDataset.java 273
+Faulty:
+return this.data.getColumnCount();
+Seed:
+return this.data.getRowCount();
+**************************************************
+5 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/chart/renderer/category/StatisticalBarRenderer.java 243
+Faulty:
+double rectY=domainAxis.getCategoryStart(column,getColumnCount(),dataArea,xAxisLocation);
+Seed:
+double rectY=0.0;
+**************************************************
+Evaluations: 1035
+EstimatedTime: 2739398

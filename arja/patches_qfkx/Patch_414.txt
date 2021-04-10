@@ -1,0 +1,14 @@
+1 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_13_buggy/source/org/jfree/chart/block/AbstractBlock.java 438
+Faulty:
+return null;
+Seed:
+this.bounds=bounds;
+**************************************************
+2 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_13_buggy/source/org/jfree/chart/block/BorderArrangement.java 443
+Faulty:
+h[2]=constraint.getHeight() - h[1] - h[0];
+Seed:
+this.rightBlock=null;
+**************************************************
+Evaluations: 401
+EstimatedTime: 2636940

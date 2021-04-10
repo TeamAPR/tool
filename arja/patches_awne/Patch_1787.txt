@@ -1,0 +1,21 @@
+1 Delete /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/chart/renderer/category/StatisticalBarRenderer.java 207
+Faulty:
+if (orientation == PlotOrientation.HORIZONTAL) {
+  drawHorizontalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,statData,row,column);
+}
+ else if (orientation == PlotOrientation.VERTICAL) {
+  drawVerticalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,statData,row,column);
+}
+Seed:
+if (!getItemVisible(row,column)) {
+  return;
+}
+**************************************************
+2 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/chart/renderer/category/StatisticalBarRenderer.java 240
+Faulty:
+RectangleEdge xAxisLocation=plot.getDomainAxisEdge();
+Seed:
+plot.drawBackground(g2,dataArea);
+**************************************************
+Evaluations: 1714
+EstimatedTime: 11357008

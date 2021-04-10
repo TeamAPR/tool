@@ -1,0 +1,25 @@
+1 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot3D.java 242
+Faulty:
+g2.clip(plotArea);
+Seed:
+if (DatasetUtilities.isEmptyOrNull(getDataset())) {
+  drawNoDataMessage(g2,plotArea);
+  g2.setClip(savedClip);
+  drawOutline(g2,plotArea);
+  return;
+}
+**************************************************
+2 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot3D.java 280
+Faulty:
+PiePlotState state=initialise(g2,plotArea,this,null,info);
+Seed:
+g2.setClip(savedClip);
+**************************************************
+3 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot.java 2611
+Faulty:
+LegendItemCollection result=new LegendItemCollection();
+Seed:
+this.labelOutlineStroke=DEFAULT_LABEL_OUTLINE_STROKE;
+**************************************************
+Evaluations: 512
+EstimatedTime: 1132231

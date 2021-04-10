@@ -1,0 +1,16 @@
+1 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/ChartFactory.java 694
+Faulty:
+PiePlot3D plot=new PiePlot3D(dataset);
+Seed:
+PiePlot plot=new PiePlot(dataset);
+**************************************************
+2 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot.java 2049
+Faulty:
+PiePlotState state=new PiePlotState(info);
+Seed:
+if (direction == null) {
+  throw new IllegalArgumentException("Null 'direction' argument.");
+}
+**************************************************
+Evaluations: 781
+EstimatedTime: 1745208

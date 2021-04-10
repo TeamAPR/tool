@@ -1,0 +1,31 @@
+1 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot3D.java 239
+Faulty:
+drawBackground(g2,plotArea);
+Seed:
+insets.trim(plotArea);
+**************************************************
+2 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot3D.java 242
+Faulty:
+g2.clip(plotArea);
+Seed:
+if (DatasetUtilities.isEmptyOrNull(getDataset())) {
+  drawNoDataMessage(g2,plotArea);
+  g2.setClip(savedClip);
+  drawOutline(g2,plotArea);
+  return;
+}
+**************************************************
+3 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot.java 670
+Faulty:
+return this.interiorGap;
+Seed:
+return this.labelLinkMargin;
+**************************************************
+4 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot3D.java 230
+Faulty:
+RectangleInsets insets=getInsets();
+Seed:
+setCircular(false,false);
+**************************************************
+Evaluations: 584
+EstimatedTime: 1301760

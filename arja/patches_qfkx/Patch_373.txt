@@ -1,0 +1,14 @@
+1 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_13_buggy/source/org/jfree/chart/block/BorderArrangement.java 307
+Faulty:
+w[3]=size.width;
+Seed:
+h[4]=size.height;
+**************************************************
+2 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_13_buggy/source/org/jfree/chart/block/BorderArrangement.java 323
+Faulty:
+return arrange(container,g2,new RectangleConstraint(width,height));
+Seed:
+this.rightBlock=null;
+**************************************************
+Evaluations: 362
+EstimatedTime: 2609933

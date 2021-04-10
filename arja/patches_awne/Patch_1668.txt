@@ -1,0 +1,27 @@
+1 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/chart/renderer/category/StatisticalBarRenderer.java 248
+Faulty:
+if (seriesCount > 1) {
+  double seriesGap=dataArea.getHeight() * getItemMargin() / (categoryCount * (seriesCount - 1));
+  rectY=rectY + row * (state.getBarWidth() + seriesGap);
+}
+ else {
+  rectY=rectY + row * state.getBarWidth();
+}
+Seed:
+if (row < dataset.getRowCount() - 1) {
+  return;
+}
+**************************************************
+2 Delete /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/chart/renderer/category/StatisticalBarRenderer.java 207
+Faulty:
+if (orientation == PlotOrientation.HORIZONTAL) {
+  drawHorizontalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,statData,row,column);
+}
+ else if (orientation == PlotOrientation.VERTICAL) {
+  drawVerticalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,statData,row,column);
+}
+Seed:
+setMinimumBarLength(1.0);
+**************************************************
+Evaluations: 1584
+EstimatedTime: 11074526

@@ -1,0 +1,20 @@
+1 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/data/statistics/DefaultStatisticalCategoryDataset.java 273
+Faulty:
+return this.data.getColumnCount();
+Seed:
+return this.data.getRowCount();
+**************************************************
+2 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/data/statistics/DefaultStatisticalCategoryDataset.java 169
+Faulty:
+Number result=null;
+Seed:
+this.minimumRangeValue=Double.NaN;
+**************************************************
+3 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/chart/renderer/category/StatisticalBarRenderer.java 247
+Faulty:
+int categoryCount=getColumnCount();
+Seed:
+plot.drawBackground(g2,dataArea);
+**************************************************
+Evaluations: 1526
+EstimatedTime: 8815844

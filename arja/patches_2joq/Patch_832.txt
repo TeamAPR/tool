@@ -1,0 +1,14 @@
+1 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_7_buggy/source/org/jfree/data/time/TimePeriodValues.java 304
+Faulty:
+long maxMiddle=s + (e - s) / 2;
+Seed:
+this.maxMiddleIndex=index;
+**************************************************
+2 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_7_buggy/source/org/jfree/data/time/TimePeriodValues.java 552
+Faulty:
+return this.maxMiddleIndex;
+Seed:
+return this.maxEndIndex;
+**************************************************
+Evaluations: 791
+EstimatedTime: 430063

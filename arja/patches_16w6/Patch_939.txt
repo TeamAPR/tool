@@ -1,0 +1,26 @@
+1 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/ChartFactory.java 694
+Faulty:
+PiePlot3D plot=new PiePlot3D(dataset);
+Seed:
+PiePlot plot=new PiePlot(dataset);
+**************************************************
+2 Delete /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot3D.java 272
+Faulty:
+if (isCircular()) {
+  double min=Math.min(linkW,linkH) / 2;
+  linkX=(linkX + linkX + linkW) / 2 - min;
+  linkY=(linkY + linkY + linkH) / 2 - min;
+  linkW=2 * min;
+  linkH=2 * min;
+}
+Seed:
+g2.setPaint(Color.gray);
+**************************************************
+3 Delete /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot.java 2051
+Faulty:
+state.setTotal(DatasetUtilities.calculatePieDatasetTotal(plot.getDataset()));
+Seed:
+this.labelShadowPaint=DEFAULT_LABEL_SHADOW_PAINT;
+**************************************************
+Evaluations: 783
+EstimatedTime: 1749879

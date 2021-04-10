@@ -1,0 +1,56 @@
+1 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/chart/renderer/category/StatisticalBarRenderer.java 248
+Faulty:
+if (seriesCount > 1) {
+  double seriesGap=dataArea.getHeight() * getItemMargin() / (categoryCount * (seriesCount - 1));
+  rectY=rectY + row * (state.getBarWidth() + seriesGap);
+}
+ else {
+  rectY=rectY + row * state.getBarWidth();
+}
+Seed:
+this.errorIndicatorPaint=Color.gray;
+**************************************************
+2 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/chart/renderer/category/StatisticalBarRenderer.java 263
+Faulty:
+double uclip=getUpperClip();
+Seed:
+if (dataset != null) {
+  int columns=dataset.getColumnCount();
+  int rows=dataset.getRowCount();
+  double space=0.0;
+  PlotOrientation orientation=plot.getOrientation();
+  if (orientation == PlotOrientation.HORIZONTAL) {
+    space=dataArea.getHeight();
+  }
+ else   if (orientation == PlotOrientation.VERTICAL) {
+    space=dataArea.getWidth();
+  }
+  double maxWidth=space * getMaximumBarWidth();
+  double categoryMargin=0.0;
+  if (columns > 1) {
+    categoryMargin=domainAxis.getCategoryMargin();
+  }
+  double used=space * (1 - domainAxis.getLowerMargin() - domainAxis.getUpperMargin()- categoryMargin);
+  if ((rows * columns) > 0) {
+    state.setBarWidth(Math.min(used / (dataset.getColumnCount()),maxWidth));
+  }
+ else {
+    state.setBarWidth(Math.min(used,maxWidth));
+  }
+}
+**************************************************
+3 Delete /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/chart/renderer/category/StatisticalBarRenderer.java 207
+Faulty:
+if (orientation == PlotOrientation.HORIZONTAL) {
+  drawHorizontalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,statData,row,column);
+}
+ else if (orientation == PlotOrientation.VERTICAL) {
+  drawVerticalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,statData,row,column);
+}
+Seed:
+if (orientation == PlotOrientation.VERTICAL) {
+  drawVerticalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,data,row,column);
+}
+**************************************************
+Evaluations: 1406
+EstimatedTime: 3596996

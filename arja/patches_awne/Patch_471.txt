@@ -1,0 +1,51 @@
+1 Delete /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/chart/renderer/category/StatisticalBarRenderer.java 207
+Faulty:
+if (orientation == PlotOrientation.HORIZONTAL) {
+  drawHorizontalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,statData,row,column);
+}
+ else if (orientation == PlotOrientation.VERTICAL) {
+  drawVerticalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,statData,row,column);
+}
+Seed:
+if (orientation == PlotOrientation.HORIZONTAL) {
+  drawHorizontalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,data,row,column);
+}
+ else if (orientation == PlotOrientation.VERTICAL) {
+  drawVerticalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,data,row,column);
+}
+**************************************************
+2 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/chart/renderer/category/StatisticalBarRenderer.java 265
+Faulty:
+if (uclip <= 0.0) {
+  if (value >= uclip) {
+    return;
+  }
+  base=uclip;
+  if (value <= lclip) {
+    value=lclip;
+  }
+}
+ else if (lclip <= 0.0) {
+  if (value >= uclip) {
+    value=uclip;
+  }
+ else {
+    if (value <= lclip) {
+      value=lclip;
+    }
+  }
+}
+ else {
+  if (value <= lclip) {
+    return;
+  }
+  base=getLowerClip();
+  if (value >= uclip) {
+    value=uclip;
+  }
+}
+Seed:
+this.errorIndicatorPaint=Color.gray;
+**************************************************
+Evaluations: 449
+EstimatedTime: 1004281

@@ -1,0 +1,45 @@
+1 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/chart/renderer/category/StatisticalBarRenderer.java 262
+Faulty:
+double lclip=getLowerClip();
+Seed:
+if (dataset != null) {
+  int columns=dataset.getColumnCount();
+  int rows=dataset.getRowCount();
+  double space=0.0;
+  PlotOrientation orientation=plot.getOrientation();
+  if (orientation == PlotOrientation.HORIZONTAL) {
+    space=dataArea.getHeight();
+  }
+ else   if (orientation == PlotOrientation.VERTICAL) {
+    space=dataArea.getWidth();
+  }
+  double categoryMargin=0.0;
+  double currentItemMargin=0.0;
+  if (columns > 1) {
+    categoryMargin=domainAxis.getCategoryMargin();
+  }
+  if (rows > 1) {
+    currentItemMargin=getItemMargin();
+  }
+  double used=space * (1 - domainAxis.getLowerMargin() - domainAxis.getUpperMargin()- categoryMargin- currentItemMargin);
+  if ((rows * columns) > 0) {
+    state.setBarWidth(used / (dataset.getColumnCount() * dataset.getRowCount()));
+  }
+ else {
+    state.setBarWidth(used);
+  }
+}
+**************************************************
+2 Delete /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/chart/renderer/category/StatisticalBarRenderer.java 207
+Faulty:
+if (orientation == PlotOrientation.HORIZONTAL) {
+  drawHorizontalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,statData,row,column);
+}
+ else if (orientation == PlotOrientation.VERTICAL) {
+  drawVerticalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,statData,row,column);
+}
+Seed:
+drawHorizontalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,statData,row,column);
+**************************************************
+Evaluations: 965
+EstimatedTime: 2578225

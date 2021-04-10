@@ -1,0 +1,27 @@
+1 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/chart/renderer/category/StatisticalBarRenderer.java 263
+Faulty:
+double uclip=getUpperClip();
+Seed:
+if (seriesCount > 1) {
+  double seriesGap=dataArea.getHeight() * getItemMargin() / (categoryCount * (seriesCount - 1));
+  rectY=rectY + row * (state.getBarWidth() + seriesGap);
+}
+ else {
+  rectY=rectY + row * state.getBarWidth();
+}
+**************************************************
+2 Delete /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/chart/renderer/category/StatisticalBarRenderer.java 207
+Faulty:
+if (orientation == PlotOrientation.HORIZONTAL) {
+  drawHorizontalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,statData,row,column);
+}
+ else if (orientation == PlotOrientation.VERTICAL) {
+  drawVerticalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,statData,row,column);
+}
+Seed:
+if (orientation == PlotOrientation.VERTICAL) {
+  drawVerticalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,data,row,column);
+}
+**************************************************
+Evaluations: 250
+EstimatedTime: 515101

@@ -1,0 +1,28 @@
+1 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/ChartFactory.java 694
+Faulty:
+PiePlot3D plot=new PiePlot3D(dataset);
+Seed:
+PiePlot plot=new PiePlot(dataset);
+**************************************************
+2 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot3D.java 280
+Faulty:
+PiePlotState state=initialise(g2,plotArea,this,null,info);
+Seed:
+PiePlotState state=new PiePlotState(info);
+**************************************************
+3 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/ChartFactory.java 699
+Faulty:
+if (urls) {
+  plot.setURLGenerator(new StandardPieURLGenerator());
+}
+Seed:
+plot.setLabelGenerator(new StandardPieSectionLabelGenerator());
+**************************************************
+4 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot3D.java 233
+Faulty:
+Rectangle2D originalPlotArea=(Rectangle2D)plotArea.clone();
+Seed:
+drawBackground(g2,plotArea);
+**************************************************
+Evaluations: 86
+EstimatedTime: 198049

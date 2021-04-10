@@ -1,0 +1,33 @@
+1 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/data/statistics/MeanAndStandardDeviation.java 104
+Faulty:
+return this.standardDeviation;
+Seed:
+throw new IllegalArgumentException("Zero length 'data' array.");
+**************************************************
+2 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/data/statistics/DefaultStatisticalCategoryDataset.java 113
+Faulty:
+return result;
+Seed:
+this.data=new KeyedObjects2D();
+**************************************************
+3 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/chart/renderer/category/StatisticalBarRenderer.java 262
+Faulty:
+double lclip=getLowerClip();
+Seed:
+g2.setPaint(plot.getRangeGridlinePaint());
+**************************************************
+4 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/chart/renderer/category/StatisticalBarRenderer.java 207
+Faulty:
+if (orientation == PlotOrientation.HORIZONTAL) {
+  drawHorizontalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,statData,row,column);
+}
+ else if (orientation == PlotOrientation.VERTICAL) {
+  drawVerticalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,statData,row,column);
+}
+Seed:
+if (!(data instanceof StatisticalCategoryDataset)) {
+  throw new IllegalArgumentException("Requires StatisticalCategoryDataset.");
+}
+**************************************************
+Evaluations: 6
+EstimatedTime: 13152

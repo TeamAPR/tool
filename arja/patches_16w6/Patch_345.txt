@@ -1,0 +1,34 @@
+1 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/ChartFactory.java 694
+Faulty:
+PiePlot3D plot=new PiePlot3D(dataset);
+Seed:
+PiePlot plot=new PiePlot(dataset);
+**************************************************
+2 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot3D.java 248
+Faulty:
+labelPercent=getLabelGap() + getMaximumLabelWidth();
+Seed:
+g2.setPaint(Color.gray);
+**************************************************
+3 Delete /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/ChartFactory.java 695
+Faulty:
+plot.setInsets(new RectangleInsets(0.0,5.0,5.0,5.0));
+Seed:
+if (title != null) {
+  title.addChangeListener(this);
+}
+**************************************************
+4 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot.java 2611
+Faulty:
+LegendItemCollection result=new LegendItemCollection();
+Seed:
+this.sectionOutlinePaintMap=new PaintMap();
+**************************************************
+5 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot3D.java 230
+Faulty:
+RectangleInsets insets=getInsets();
+Seed:
+g2.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER,1.0f));
+**************************************************
+Evaluations: 320
+EstimatedTime: 707561

@@ -1,0 +1,14 @@
+1 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/ChartFactory.java 694
+Faulty:
+PiePlot3D plot=new PiePlot3D(dataset);
+Seed:
+PiePlot plot=new PiePlot(dataset);
+**************************************************
+2 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot3D.java 233
+Faulty:
+Rectangle2D originalPlotArea=(Rectangle2D)plotArea.clone();
+Seed:
+drawBackground(g2,plotArea);
+**************************************************
+Evaluations: 624
+EstimatedTime: 1393070

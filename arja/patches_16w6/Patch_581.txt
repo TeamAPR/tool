@@ -1,0 +1,40 @@
+1 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/ChartFactory.java 702
+Faulty:
+return new JFreeChart(title,JFreeChart.DEFAULT_TITLE_FONT,plot,legend);
+Seed:
+return new JFreeChart(title,JFreeChart.DEFAULT_TITLE_FONT,plot,legend);
+**************************************************
+2 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot3D.java 239
+Faulty:
+drawBackground(g2,plotArea);
+Seed:
+drawOutline(g2,originalPlotArea);
+**************************************************
+3 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot3D.java 242
+Faulty:
+g2.clip(plotArea);
+Seed:
+g2.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER,1.0f));
+**************************************************
+4 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/ChartFactory.java 694
+Faulty:
+PiePlot3D plot=new PiePlot3D(dataset);
+Seed:
+PiePlot plot=new PiePlot(dataset);
+**************************************************
+5 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot.java 670
+Faulty:
+return this.interiorGap;
+Seed:
+return this.maximumLabelWidth;
+**************************************************
+6 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot.java 2612
+Faulty:
+if (this.dataset == null) {
+  return result;
+}
+Seed:
+this.baseSectionPaint=Color.gray;
+**************************************************
+Evaluations: 505
+EstimatedTime: 1115524

@@ -1,0 +1,46 @@
+1 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/data/statistics/DefaultStatisticalCategoryDataset.java 175
+Faulty:
+return result;
+Seed:
+return getMeanValue(row,column);
+**************************************************
+2 Delete /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/data/statistics/DefaultStatisticalCategoryDataset.java 172
+Faulty:
+if (masd != null) {
+  result=masd.getStandardDeviation();
+}
+Seed:
+this.minimumRangeValueIncStdDev=Double.NaN;
+**************************************************
+3 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/chart/renderer/category/StatisticalBarRenderer.java 274
+Faulty:
+if (lclip <= 0.0) {
+  if (value >= uclip) {
+    value=uclip;
+  }
+ else {
+    if (value <= lclip) {
+      value=lclip;
+    }
+  }
+}
+ else {
+  if (value <= lclip) {
+    return;
+  }
+  base=getLowerClip();
+  if (value >= uclip) {
+    value=uclip;
+  }
+}
+Seed:
+g2.setStroke(getItemOutlineStroke(row,column));
+**************************************************
+4 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/data/statistics/DefaultStatisticalCategoryDataset.java 273
+Faulty:
+return this.data.getColumnCount();
+Seed:
+return this.data.getRowCount();
+**************************************************
+Evaluations: 596
+EstimatedTime: 1344285

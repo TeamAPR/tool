@@ -1,0 +1,28 @@
+1 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_7_buggy/source/org/jfree/data/time/TimePeriodValues.java 259
+Faulty:
+long start=period.getStart().getTime();
+Seed:
+this.minEndIndex=index;
+**************************************************
+2 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_7_buggy/source/org/jfree/data/time/TimePeriodValues.java 552
+Faulty:
+return this.maxMiddleIndex;
+Seed:
+return this.maxEndIndex;
+**************************************************
+3 Delete /Users/georgecherian/Desktop/TSE/bugs/chart/chart_7_buggy/source/org/jfree/data/time/TimePeriodValues.java 317
+Faulty:
+this.minEndIndex=index;
+Seed:
+this.maxEndIndex=index;
+**************************************************
+4 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_7_buggy/source/org/jfree/data/time/TimePeriodValues.java 364
+Faulty:
+add(item);
+Seed:
+if (item == null) {
+  throw new IllegalArgumentException("Null item not allowed.");
+}
+**************************************************
+Evaluations: 1443
+EstimatedTime: 760119

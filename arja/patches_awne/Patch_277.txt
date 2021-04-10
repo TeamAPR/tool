@@ -1,0 +1,14 @@
+1 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/data/statistics/DefaultStatisticalCategoryDataset.java 273
+Faulty:
+return this.data.getColumnCount();
+Seed:
+return this.data.getRowCount();
+**************************************************
+2 Delete /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/data/statistics/DefaultStatisticalCategoryDataset.java 111
+Faulty:
+result=masd.getMean();
+Seed:
+this.minimumRangeValue=null;
+**************************************************
+Evaluations: 275
+EstimatedTime: 576795

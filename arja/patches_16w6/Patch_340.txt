@@ -1,0 +1,38 @@
+1 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/ChartFactory.java 694
+Faulty:
+PiePlot3D plot=new PiePlot3D(dataset);
+Seed:
+PiePlot plot=new PiePlot(dataset);
+**************************************************
+2 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot.java 670
+Faulty:
+return this.interiorGap;
+Seed:
+this.startAngle=DEFAULT_START_ANGLE;
+**************************************************
+3 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/Plot.java 932
+Faulty:
+drawBackgroundImage(g2,area);
+Seed:
+fillBackground(g2,area);
+**************************************************
+4 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot.java 2049
+Faulty:
+PiePlotState state=new PiePlotState(info);
+Seed:
+if (direction == null) {
+  throw new IllegalArgumentException("Null 'direction' argument.");
+}
+**************************************************
+5 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/ChartFactory.java 699
+Faulty:
+if (urls) {
+  plot.setURLGenerator(new StandardPieURLGenerator());
+}
+Seed:
+if (plot == null) {
+  throw new NullPointerException("Null 'plot' argument.");
+}
+**************************************************
+Evaluations: 317
+EstimatedTime: 700109

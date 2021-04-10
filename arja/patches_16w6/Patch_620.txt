@@ -1,0 +1,20 @@
+1 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/ChartFactory.java 694
+Faulty:
+PiePlot3D plot=new PiePlot3D(dataset);
+Seed:
+PiePlot plot=new PiePlot(dataset);
+**************************************************
+2 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot.java 670
+Faulty:
+return this.interiorGap;
+Seed:
+this.dataset=dataset;
+**************************************************
+3 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot.java 1448
+Faulty:
+return this.maximumLabelWidth;
+Seed:
+return this.interiorGap;
+**************************************************
+Evaluations: 536
+EstimatedTime: 1188586

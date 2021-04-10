@@ -1,0 +1,14 @@
+1 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/data/statistics/DefaultStatisticalCategoryDataset.java 273
+Faulty:
+return this.data.getColumnCount();
+Seed:
+return this.data.getRowCount();
+**************************************************
+2 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/data/statistics/DefaultStatisticalCategoryDataset.java 108
+Faulty:
+MeanAndStandardDeviation masd=(MeanAndStandardDeviation)this.data.getObject(row,column);
+Seed:
+this.minimumRangeValueIncStdDev=Double.NaN;
+**************************************************
+Evaluations: 1500
+EstimatedTime: 7788442

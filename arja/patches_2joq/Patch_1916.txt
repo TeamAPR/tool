@@ -1,0 +1,16 @@
+1 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_7_buggy/source/org/jfree/data/time/TimePeriodValues.java 243
+Faulty:
+if (item == null) {
+  throw new IllegalArgumentException("Null item not allowed.");
+}
+Seed:
+this.minEndIndex=-1;
+**************************************************
+2 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_7_buggy/source/org/jfree/data/time/TimePeriodValues.java 552
+Faulty:
+return this.maxMiddleIndex;
+Seed:
+return this.maxEndIndex;
+**************************************************
+Evaluations: 1836
+EstimatedTime: 964155

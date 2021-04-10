@@ -1,0 +1,22 @@
+1 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_12_buggy/source/org/jfree/chart/title/LegendTitle.java 542
+Faulty:
+return true;
+Seed:
+if (!(obj instanceof CompositeTitle)) {
+  return false;
+}
+**************************************************
+2 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_12_buggy/source/org/jfree/chart/JFreeChart.java 574
+Faulty:
+this.title=title;
+Seed:
+this.progressListeners=new EventListenerList();
+**************************************************
+3 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_12_buggy/source/org/jfree/data/general/AbstractDataset.java 161
+Faulty:
+return list.contains(listener);
+Seed:
+return true;
+**************************************************
+Evaluations: 356
+EstimatedTime: 1052506

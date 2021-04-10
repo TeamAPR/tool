@@ -1,0 +1,41 @@
+1 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/data/statistics/DefaultStatisticalCategoryDataset.java 273
+Faulty:
+return this.data.getColumnCount();
+Seed:
+return this.data.getRowCount();
+**************************************************
+2 Delete /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/chart/renderer/category/StatisticalBarRenderer.java 265
+Faulty:
+if (uclip <= 0.0) {
+  if (value >= uclip) {
+    return;
+  }
+  base=uclip;
+  if (value <= lclip) {
+    value=lclip;
+  }
+}
+ else if (lclip <= 0.0) {
+  if (value >= uclip) {
+    value=uclip;
+  }
+ else {
+    if (value <= lclip) {
+      value=lclip;
+    }
+  }
+}
+ else {
+  if (value <= lclip) {
+    return;
+  }
+  base=getLowerClip();
+  if (value >= uclip) {
+    value=uclip;
+  }
+}
+Seed:
+drawVerticalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,dataset,row,column);
+**************************************************
+Evaluations: 908
+EstimatedTime: 2441587

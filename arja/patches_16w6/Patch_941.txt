@@ -1,0 +1,21 @@
+1 Delete /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/ChartFactory.java 696
+Faulty:
+if (tooltips) {
+  plot.setToolTipGenerator(new StandardPieToolTipGenerator());
+}
+Seed:
+plot.setLabelGenerator(new StandardPieSectionLabelGenerator());
+**************************************************
+2 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot3D.java 266
+Faulty:
+double linkX=plotArea.getX() + gapHorizontal / 2;
+Seed:
+if (DatasetUtilities.isEmptyOrNull(getDataset())) {
+  drawNoDataMessage(g2,plotArea);
+  g2.setClip(savedClip);
+  drawOutline(g2,plotArea);
+  return;
+}
+**************************************************
+Evaluations: 784
+EstimatedTime: 1752263

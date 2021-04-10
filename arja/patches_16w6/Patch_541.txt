@@ -1,0 +1,20 @@
+1 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/ChartFactory.java 694
+Faulty:
+PiePlot3D plot=new PiePlot3D(dataset);
+Seed:
+PiePlot plot=new PiePlot(dataset);
+**************************************************
+2 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot.java 1423
+Faulty:
+return this.labelGap;
+Seed:
+return this.interiorGap;
+**************************************************
+3 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot3D.java 233
+Faulty:
+Rectangle2D originalPlotArea=(Rectangle2D)plotArea.clone();
+Seed:
+g2.setFont(getLabelFont());
+**************************************************
+Evaluations: 475
+EstimatedTime: 1044752

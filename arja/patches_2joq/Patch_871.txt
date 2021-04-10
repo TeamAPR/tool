@@ -1,0 +1,22 @@
+1 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_7_buggy/source/org/jfree/data/time/TimePeriodValues.java 271
+Faulty:
+this.minStartIndex=index;
+Seed:
+if (this.minEndIndex >= 0) {
+  long minEnd=getDataItem(this.minEndIndex).getPeriod().getEnd().getTime();
+  if (end < minEnd) {
+    this.minEndIndex=index;
+  }
+}
+ else {
+  this.minEndIndex=index;
+}
+**************************************************
+2 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_7_buggy/source/org/jfree/data/time/TimePeriodValues.java 552
+Faulty:
+return this.maxMiddleIndex;
+Seed:
+return this.maxEndIndex;
+**************************************************
+Evaluations: 829
+EstimatedTime: 450485

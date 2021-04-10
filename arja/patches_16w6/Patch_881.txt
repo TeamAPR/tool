@@ -1,0 +1,20 @@
+1 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/ChartFactory.java 694
+Faulty:
+PiePlot3D plot=new PiePlot3D(dataset);
+Seed:
+PiePlot plot=new PiePlot(dataset);
+**************************************************
+2 Delete /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/ChartFactory.java 695
+Faulty:
+plot.setInsets(new RectangleInsets(0.0,5.0,5.0,5.0));
+Seed:
+ToolTipManager.sharedInstance().registerComponent(this);
+**************************************************
+3 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot3D.java 266
+Faulty:
+double linkX=plotArea.getX() + gapHorizontal / 2;
+Seed:
+g2.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER,1.0f));
+**************************************************
+Evaluations: 738
+EstimatedTime: 1646841

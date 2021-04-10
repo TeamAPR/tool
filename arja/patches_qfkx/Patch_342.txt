@@ -1,0 +1,14 @@
+1 Delete /Users/georgecherian/Desktop/TSE/bugs/chart/chart_13_buggy/source/org/jfree/chart/block/AbstractBlock.java 443
+Faulty:
+lowerBound=trimToContentWidth(r.getLowerBound());
+Seed:
+this.padding=RectangleInsets.ZERO_INSETS;
+**************************************************
+2 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_13_buggy/source/org/jfree/chart/block/BorderArrangement.java 443
+Faulty:
+h[2]=constraint.getHeight() - h[1] - h[0];
+Seed:
+this.rightBlock=null;
+**************************************************
+Evaluations: 334
+EstimatedTime: 2591905

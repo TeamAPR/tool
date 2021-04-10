@@ -1,0 +1,14 @@
+1 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/data/statistics/DefaultStatisticalCategoryDataset.java 273
+Faulty:
+return this.data.getColumnCount();
+Seed:
+return this.data.getRowCount();
+**************************************************
+2 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/chart/renderer/category/StatisticalBarRenderer.java 243
+Faulty:
+double rectY=domainAxis.getCategoryStart(column,getColumnCount(),dataArea,xAxisLocation);
+Seed:
+setNegativeItemLabelPositionFallback(null);
+**************************************************
+Evaluations: 1017
+EstimatedTime: 2697235

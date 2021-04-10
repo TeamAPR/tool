@@ -1,0 +1,18 @@
+1 Delete /Users/georgecherian/Desktop/TSE/bugs/chart/chart_12_buggy/source/org/jfree/chart/JFreeChart.java 571
+Faulty:
+if (this.title != null) {
+  this.title.removeChangeListener(this);
+}
+Seed:
+if (plot == null) {
+  throw new NullPointerException("Null 'plot' argument.");
+}
+**************************************************
+2 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_12_buggy/source/org/jfree/data/general/AbstractDataset.java 161
+Faulty:
+return list.contains(listener);
+Seed:
+return true;
+**************************************************
+Evaluations: 513
+EstimatedTime: 1503074

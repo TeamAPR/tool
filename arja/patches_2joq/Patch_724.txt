@@ -1,0 +1,30 @@
+1 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_7_buggy/source/org/jfree/data/time/TimePeriodValues.java 302
+Faulty:
+long e=getDataItem(this.minMiddleIndex).getPeriod().getEnd().getTime();
+Seed:
+this.maxEndIndex=-1;
+**************************************************
+2 Delete /Users/georgecherian/Desktop/TSE/bugs/chart/chart_7_buggy/source/org/jfree/data/time/TimePeriodValues.java 299
+Faulty:
+if (this.maxMiddleIndex >= 0) {
+  long s=getDataItem(this.minMiddleIndex).getPeriod().getStart().getTime();
+  long e=getDataItem(this.minMiddleIndex).getPeriod().getEnd().getTime();
+  long maxMiddle=s + (e - s) / 2;
+  if (middle > maxMiddle) {
+    this.maxMiddleIndex=index;
+  }
+}
+ else {
+  this.maxMiddleIndex=index;
+}
+Seed:
+this.minEndIndex=-1;
+**************************************************
+3 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_7_buggy/source/org/jfree/data/time/TimePeriodValues.java 552
+Faulty:
+return this.maxMiddleIndex;
+Seed:
+return this.maxEndIndex;
+**************************************************
+Evaluations: 687
+EstimatedTime: 376057

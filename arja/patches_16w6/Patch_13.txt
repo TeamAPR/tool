@@ -1,0 +1,33 @@
+1 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot.java 2050
+Faulty:
+state.setPassesRequired(2);
+Seed:
+this.legendItemShape=Plot.DEFAULT_LEGEND_ITEM_CIRCLE;
+**************************************************
+2 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot3D.java 268
+Faulty:
+double linkW=plotArea.getWidth() - gapHorizontal;
+Seed:
+if (DatasetUtilities.isEmptyOrNull(getDataset())) {
+  drawNoDataMessage(g2,plotArea);
+  g2.setClip(savedClip);
+  drawOutline(g2,plotArea);
+  return;
+}
+**************************************************
+3 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot3D.java 250
+Faulty:
+double gapHorizontal=plotArea.getWidth() * (gapPercent + labelPercent) * 2.0;
+Seed:
+if (getLabelGenerator() != null) {
+  labelPercent=getLabelGap() + getMaximumLabelWidth();
+}
+**************************************************
+4 Delete /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlotState.java 109
+Faulty:
+this.passesRequired=passes;
+Seed:
+this.passesRequired=1;
+**************************************************
+Evaluations: 14
+EstimatedTime: 32517

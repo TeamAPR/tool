@@ -1,0 +1,37 @@
+1 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/chart/renderer/category/StatisticalBarRenderer.java 274
+Faulty:
+if (lclip <= 0.0) {
+  if (value >= uclip) {
+    value=uclip;
+  }
+ else {
+    if (value <= lclip) {
+      value=lclip;
+    }
+  }
+}
+ else {
+  if (value <= lclip) {
+    return;
+  }
+  base=getLowerClip();
+  if (value >= uclip) {
+    value=uclip;
+  }
+}
+Seed:
+g2.setStroke(this.errorIndicatorStroke);
+**************************************************
+2 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/chart/renderer/category/StatisticalBarRenderer.java 207
+Faulty:
+if (orientation == PlotOrientation.HORIZONTAL) {
+  drawHorizontalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,statData,row,column);
+}
+ else if (orientation == PlotOrientation.VERTICAL) {
+  drawVerticalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,statData,row,column);
+}
+Seed:
+setMinimumBarLength(1.0);
+**************************************************
+Evaluations: 708
+EstimatedTime: 1952600

@@ -1,0 +1,49 @@
+1 Delete /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/chart/renderer/category/StatisticalBarRenderer.java 274
+Faulty:
+if (lclip <= 0.0) {
+  if (value >= uclip) {
+    value=uclip;
+  }
+ else {
+    if (value <= lclip) {
+      value=lclip;
+    }
+  }
+}
+ else {
+  if (value <= lclip) {
+    return;
+  }
+  base=getLowerClip();
+  if (value >= uclip) {
+    value=uclip;
+  }
+}
+Seed:
+g2.setStroke(getItemOutlineStroke(row,column));
+**************************************************
+2 Delete /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/chart/renderer/category/StatisticalBarRenderer.java 207
+Faulty:
+if (orientation == PlotOrientation.HORIZONTAL) {
+  drawHorizontalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,statData,row,column);
+}
+ else if (orientation == PlotOrientation.VERTICAL) {
+  drawVerticalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,statData,row,column);
+}
+Seed:
+drawHorizontalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,statData,row,column);
+**************************************************
+3 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/chart/renderer/category/StatisticalBarRenderer.java 261
+Faulty:
+double base=0.0;
+Seed:
+drawHorizontalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,dataset,row,column);
+**************************************************
+4 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/data/statistics/DefaultStatisticalCategoryDataset.java 264
+Faulty:
+return this.data.getRowCount();
+Seed:
+this.maximumRangeValue=Double.NaN;
+**************************************************
+Evaluations: 190
+EstimatedTime: 379225

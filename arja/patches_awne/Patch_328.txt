@@ -1,0 +1,30 @@
+1 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/data/statistics/DefaultStatisticalCategoryDataset.java 175
+Faulty:
+return result;
+Seed:
+return this.data.getRowCount();
+**************************************************
+2 Delete /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/chart/renderer/category/StatisticalBarRenderer.java 207
+Faulty:
+if (orientation == PlotOrientation.HORIZONTAL) {
+  drawHorizontalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,statData,row,column);
+}
+ else if (orientation == PlotOrientation.VERTICAL) {
+  drawVerticalItem(g2,state,dataArea,plot,domainAxis,rangeAxis,statData,row,column);
+}
+Seed:
+if (this.errorIndicatorStroke != null) {
+  g2.setStroke(this.errorIndicatorStroke);
+}
+ else {
+  g2.setStroke(getItemOutlineStroke(row,column));
+}
+**************************************************
+3 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/data/statistics/DefaultStatisticalCategoryDataset.java 215
+Faulty:
+return this.data.getColumnKey(column);
+Seed:
+return 1;
+**************************************************
+Evaluations: 319
+EstimatedTime: 693637

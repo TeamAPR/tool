@@ -1,0 +1,14 @@
+1 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/ChartFactory.java 694
+Faulty:
+PiePlot3D plot=new PiePlot3D(dataset);
+Seed:
+PiePlot plot=new PiePlot(dataset);
+**************************************************
+2 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot.java 2051
+Faulty:
+state.setTotal(DatasetUtilities.calculatePieDatasetTotal(plot.getDataset()));
+Seed:
+this.labelShadowPaint=DEFAULT_LABEL_SHADOW_PAINT;
+**************************************************
+Evaluations: 611
+EstimatedTime: 1362845

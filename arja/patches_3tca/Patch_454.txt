@@ -1,0 +1,16 @@
+1 Delete /Users/georgecherian/Desktop/TSE/bugs/chart/chart_12_buggy/source/org/jfree/chart/JFreeChart.java 664
+Faulty:
+removeSubtitle(getLegend());
+Seed:
+if (padding == null) {
+  throw new IllegalArgumentException("Null 'padding' argument.");
+}
+**************************************************
+2 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_12_buggy/source/org/jfree/data/general/AbstractDataset.java 161
+Faulty:
+return list.contains(listener);
+Seed:
+return true;
+**************************************************
+Evaluations: 448
+EstimatedTime: 1316732

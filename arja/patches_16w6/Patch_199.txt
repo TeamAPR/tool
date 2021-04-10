@@ -1,0 +1,17 @@
+1 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/ChartFactory.java 694
+Faulty:
+PiePlot3D plot=new PiePlot3D(dataset);
+Seed:
+PiePlot plot=new PiePlot(dataset);
+**************************************************
+2 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot.java 2611
+Faulty:
+LegendItemCollection result=new LegendItemCollection();
+Seed:
+if (dataset != null) {
+  setDatasetGroup(dataset.getGroup());
+  dataset.addChangeListener(this);
+}
+**************************************************
+Evaluations: 195
+EstimatedTime: 428852

@@ -1,0 +1,33 @@
+1 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/ChartFactory.java 694
+Faulty:
+PiePlot3D plot=new PiePlot3D(dataset);
+Seed:
+PiePlot plot=new PiePlot(dataset);
+**************************************************
+2 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot.java 670
+Faulty:
+return this.interiorGap;
+Seed:
+return this.startAngle;
+**************************************************
+3 Delete /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot3D.java 234
+Faulty:
+if (info != null) {
+  info.setPlotArea(plotArea);
+  info.setDataArea(plotArea);
+}
+Seed:
+setBackgroundPaint(Color.WHITE);
+**************************************************
+4 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/ChartFactory.java 699
+Faulty:
+if (urls) {
+  plot.setURLGenerator(new StandardPieURLGenerator());
+}
+Seed:
+if (tooltips) {
+  plot.setToolTipGenerator(new StandardPieToolTipGenerator());
+}
+**************************************************
+Evaluations: 133
+EstimatedTime: 300131

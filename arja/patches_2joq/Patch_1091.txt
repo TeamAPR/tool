@@ -1,0 +1,20 @@
+1 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_7_buggy/source/org/jfree/data/time/TimePeriodValues.java 261
+Faulty:
+long middle=start + ((end - start) / 2);
+Seed:
+this.maxMiddleIndex=-1;
+**************************************************
+2 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_7_buggy/source/org/jfree/data/time/TimePeriodValues.java 306
+Faulty:
+this.maxMiddleIndex=index;
+Seed:
+throw new IllegalArgumentException("Quarter outside valid range.");
+**************************************************
+3 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_7_buggy/source/org/jfree/data/time/TimePeriodValues.java 552
+Faulty:
+return this.maxMiddleIndex;
+Seed:
+return this.maxEndIndex;
+**************************************************
+Evaluations: 1038
+EstimatedTime: 557194

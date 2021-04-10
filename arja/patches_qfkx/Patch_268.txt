@@ -1,0 +1,8 @@
+1 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_13_buggy/source/org/jfree/chart/block/BorderArrangement.java 426
+Faulty:
+w[0]=constraint.getWidth();
+Seed:
+this.rightBlock=null;
+**************************************************
+Evaluations: 266
+EstimatedTime: 2544590

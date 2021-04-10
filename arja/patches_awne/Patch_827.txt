@@ -1,0 +1,26 @@
+1 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/chart/renderer/category/StatisticalBarRenderer.java 248
+Faulty:
+if (seriesCount > 1) {
+  double seriesGap=dataArea.getHeight() * getItemMargin() / (categoryCount * (seriesCount - 1));
+  rectY=rectY + row * (state.getBarWidth() + seriesGap);
+}
+ else {
+  rectY=rectY + row * state.getBarWidth();
+}
+Seed:
+rectY=rectY + row * state.getBarWidth();
+**************************************************
+2 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/data/statistics/DefaultStatisticalCategoryDataset.java 273
+Faulty:
+return this.data.getColumnCount();
+Seed:
+return this.data.getRowCount();
+**************************************************
+3 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/chart/renderer/category/StatisticalBarRenderer.java 243
+Faulty:
+double rectY=domainAxis.getCategoryStart(column,getColumnCount(),dataArea,xAxisLocation);
+Seed:
+setNegativeItemLabelPositionFallback(null);
+**************************************************
+Evaluations: 776
+EstimatedTime: 2123349

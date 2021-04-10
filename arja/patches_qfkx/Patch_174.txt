@@ -1,0 +1,14 @@
+1 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_13_buggy/source/org/jfree/chart/block/BorderArrangement.java 300
+Faulty:
+if (this.rightBlock != null) {
+  double maxW=Math.max(width - w[2],0.0);
+  RectangleConstraint c3=new RectangleConstraint(0.0,new Range(Math.min(w[2],maxW),maxW),LengthConstraintType.RANGE,0.0,null,LengthConstraintType.NONE);
+  Size2D size=this.rightBlock.arrange(g2,c3);
+  w[3]=size.width;
+  h[3]=size.height;
+}
+Seed:
+this.leftBlock=null;
+**************************************************
+Evaluations: 176
+EstimatedTime: 2482435

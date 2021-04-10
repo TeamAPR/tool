@@ -1,0 +1,14 @@
+1 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_13_buggy/source/org/jfree/chart/block/BorderArrangement.java 301
+Faulty:
+double maxW=Math.max(width - w[2],0.0);
+Seed:
+double maxW=0.0;
+**************************************************
+2 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_13_buggy/source/org/jfree/chart/block/BorderArrangement.java 302
+Faulty:
+RectangleConstraint c3=new RectangleConstraint(0.0,new Range(Math.min(w[2],maxW),maxW),LengthConstraintType.RANGE,0.0,null,LengthConstraintType.NONE);
+Seed:
+this.leftBlock=null;
+**************************************************
+Evaluations: 457
+EstimatedTime: 2675449

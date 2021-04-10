@@ -1,0 +1,25 @@
+1 Delete /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot3D.java 239
+Faulty:
+drawBackground(g2,plotArea);
+Seed:
+drawOutline(g2,originalPlotArea);
+**************************************************
+2 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot3D.java 248
+Faulty:
+labelPercent=getLabelGap() + getMaximumLabelWidth();
+Seed:
+if (DatasetUtilities.isEmptyOrNull(getDataset())) {
+  drawNoDataMessage(g2,plotArea);
+  g2.setClip(savedClip);
+  drawOutline(g2,plotArea);
+  return;
+}
+**************************************************
+3 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/Plot.java 946
+Faulty:
+fillBackground(g2,area,PlotOrientation.VERTICAL);
+Seed:
+this.outlinePaint=DEFAULT_OUTLINE_PAINT;
+**************************************************
+Evaluations: 890
+EstimatedTime: 1983179

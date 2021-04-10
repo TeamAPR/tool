@@ -1,0 +1,8 @@
+1 Delete /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/data/statistics/DefaultStatisticalCategoryDataset.java 111
+Faulty:
+result=masd.getMean();
+Seed:
+return getMeanValue(row,column);
+**************************************************
+Evaluations: 1837
+EstimatedTime: 11651818

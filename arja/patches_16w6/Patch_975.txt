@@ -1,0 +1,25 @@
+1 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/ChartFactory.java 694
+Faulty:
+PiePlot3D plot=new PiePlot3D(dataset);
+Seed:
+PiePlot plot=new PiePlot(dataset);
+**************************************************
+2 Delete /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/ChartFactory.java 695
+Faulty:
+plot.setInsets(new RectangleInsets(0.0,5.0,5.0,5.0));
+Seed:
+if (title != null) {
+  title.addChangeListener(this);
+}
+**************************************************
+3 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot3D.java 234
+Faulty:
+if (info != null) {
+  info.setPlotArea(plotArea);
+  info.setDataArea(plotArea);
+}
+Seed:
+drawOutline(g2,originalPlotArea);
+**************************************************
+Evaluations: 811
+EstimatedTime: 1811357

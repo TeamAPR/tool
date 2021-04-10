@@ -1,0 +1,20 @@
+1 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_13_buggy/source/org/jfree/chart/block/AbstractBlock.java 443
+Faulty:
+lowerBound=trimToContentWidth(r.getLowerBound());
+Seed:
+this.height=height;
+**************************************************
+2 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_13_buggy/source/org/jfree/chart/block/BorderArrangement.java 311
+Faulty:
+h[2]=Math.max(h[2],h[3]);
+Seed:
+this.topBlock=null;
+**************************************************
+3 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_13_buggy/source/org/jfree/chart/block/BorderArrangement.java 443
+Faulty:
+h[2]=constraint.getHeight() - h[1] - h[0];
+Seed:
+this.rightBlock=null;
+**************************************************
+Evaluations: 429
+EstimatedTime: 2656252

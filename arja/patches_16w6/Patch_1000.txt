@@ -1,0 +1,20 @@
+1 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/ChartFactory.java 694
+Faulty:
+PiePlot3D plot=new PiePlot3D(dataset);
+Seed:
+PiePlot plot=new PiePlot(dataset);
+**************************************************
+2 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/Plot.java 946
+Faulty:
+fillBackground(g2,area,PlotOrientation.VERTICAL);
+Seed:
+this.noDataMessageFont=new Font("SansSerif",Font.PLAIN,12);
+**************************************************
+3 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot3D.java 266
+Faulty:
+double linkX=plotArea.getX() + gapHorizontal / 2;
+Seed:
+g2.setFont(getLabelFont());
+**************************************************
+Evaluations: 834
+EstimatedTime: 1859609

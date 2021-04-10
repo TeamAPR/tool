@@ -1,0 +1,22 @@
+1 Delete /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/chart/renderer/category/StatisticalBarRenderer.java 200
+Faulty:
+if (!(data instanceof StatisticalCategoryDataset)) {
+  throw new IllegalArgumentException("Requires StatisticalCategoryDataset.");
+}
+Seed:
+g2.setStroke(this.errorIndicatorStroke);
+**************************************************
+2 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/data/statistics/DefaultStatisticalCategoryDataset.java 273
+Faulty:
+return this.data.getColumnCount();
+Seed:
+return this.data.getRowCount();
+**************************************************
+3 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/data/statistics/DefaultStatisticalCategoryDataset.java 215
+Faulty:
+return this.data.getColumnKey(column);
+Seed:
+this.minimumRangeValue=Double.NaN;
+**************************************************
+Evaluations: 1323
+EstimatedTime: 3406744

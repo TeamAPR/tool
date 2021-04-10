@@ -1,0 +1,16 @@
+1 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/data/statistics/DefaultStatisticalCategoryDataset.java 273
+Faulty:
+return this.data.getColumnCount();
+Seed:
+return 1;
+**************************************************
+2 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/data/statistics/DefaultStatisticalCategoryDataset.java 110
+Faulty:
+if (masd != null) {
+  result=masd.getMean();
+}
+Seed:
+this.minimumRangeValue=Double.NaN;
+**************************************************
+Evaluations: 1314
+EstimatedTime: 3384971

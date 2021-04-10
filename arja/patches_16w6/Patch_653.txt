@@ -1,0 +1,32 @@
+1 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/ChartFactory.java 694
+Faulty:
+PiePlot3D plot=new PiePlot3D(dataset);
+Seed:
+PiePlot plot=new PiePlot(dataset);
+**************************************************
+2 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot.java 1398
+Faulty:
+return this.labelGenerator;
+Seed:
+return this.labelGenerator;
+**************************************************
+3 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot.java 2050
+Faulty:
+state.setPassesRequired(2);
+Seed:
+this.dataset=dataset;
+**************************************************
+4 Delete /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot.java 2051
+Faulty:
+state.setTotal(DatasetUtilities.calculatePieDatasetTotal(plot.getDataset()));
+Seed:
+this.urlGenerator=null;
+**************************************************
+5 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/data/general/DatasetUtilities.java 153
+Faulty:
+throw new IllegalArgumentException("Null 'dataset' argument.");
+Seed:
+throw new IllegalArgumentException("Null 'key' argument.");
+**************************************************
+Evaluations: 561
+EstimatedTime: 1246800

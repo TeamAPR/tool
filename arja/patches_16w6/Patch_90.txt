@@ -1,0 +1,37 @@
+1 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/ChartFactory.java 694
+Faulty:
+PiePlot3D plot=new PiePlot3D(dataset);
+Seed:
+PiePlot plot=new PiePlot(dataset);
+**************************************************
+2 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/Plot.java 946
+Faulty:
+fillBackground(g2,area,PlotOrientation.VERTICAL);
+Seed:
+this.outlinePaint=DEFAULT_OUTLINE_PAINT;
+**************************************************
+3 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot3D.java 245
+Faulty:
+double gapPercent=getInteriorGap();
+Seed:
+setCircular(false,false);
+**************************************************
+4 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot3D.java 272
+Faulty:
+if (isCircular()) {
+  double min=Math.min(linkW,linkH) / 2;
+  linkX=(linkX + linkX + linkW) / 2 - min;
+  linkY=(linkY + linkY + linkH) / 2 - min;
+  linkW=2 * min;
+  linkH=2 * min;
+}
+Seed:
+if (DatasetUtilities.isEmptyOrNull(getDataset())) {
+  drawNoDataMessage(g2,plotArea);
+  g2.setClip(savedClip);
+  drawOutline(g2,plotArea);
+  return;
+}
+**************************************************
+Evaluations: 88
+EstimatedTime: 202489

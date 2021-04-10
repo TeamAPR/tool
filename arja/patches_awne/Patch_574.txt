@@ -1,0 +1,20 @@
+1 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/chart/renderer/category/StatisticalBarRenderer.java 261
+Faulty:
+double base=0.0;
+Seed:
+setMinimumBarLength(1.0);
+**************************************************
+2 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/data/statistics/DefaultStatisticalCategoryDataset.java 169
+Faulty:
+Number result=null;
+Seed:
+this.minimumRangeValue=Double.NaN;
+**************************************************
+3 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_25_buggy/source/org/jfree/data/statistics/DefaultStatisticalCategoryDataset.java 389
+Faulty:
+return result;
+Seed:
+this.data=new KeyedObjects2D();
+**************************************************
+Evaluations: 544
+EstimatedTime: 1226030

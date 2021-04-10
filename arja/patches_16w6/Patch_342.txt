@@ -1,0 +1,37 @@
+1 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/ChartFactory.java 694
+Faulty:
+PiePlot3D plot=new PiePlot3D(dataset);
+Seed:
+PiePlot plot=new PiePlot(dataset);
+**************************************************
+2 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot.java 2613
+Faulty:
+return result;
+Seed:
+this.labelPadding=new RectangleInsets(2,2,2,2);
+**************************************************
+3 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot3D.java 268
+Faulty:
+double linkW=plotArea.getWidth() - gapHorizontal;
+Seed:
+if (DatasetUtilities.isEmptyOrNull(getDataset())) {
+  drawNoDataMessage(g2,plotArea);
+  g2.setClip(savedClip);
+  drawOutline(g2,plotArea);
+  return;
+}
+**************************************************
+4 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlot3D.java 250
+Faulty:
+double gapHorizontal=plotArea.getWidth() * (gapPercent + labelPercent) * 2.0;
+Seed:
+g2.setPaint(java.awt.Color.lightGray);
+**************************************************
+5 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_15_buggy/source/org/jfree/chart/plot/PiePlotState.java 109
+Faulty:
+this.passesRequired=passes;
+Seed:
+this.total=0.0;
+**************************************************
+Evaluations: 318
+EstimatedTime: 702465

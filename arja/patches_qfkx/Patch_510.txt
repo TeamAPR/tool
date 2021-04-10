@@ -1,0 +1,14 @@
+1 Replace /Users/georgecherian/Desktop/TSE/bugs/chart/chart_13_buggy/source/org/jfree/chart/block/BorderArrangement.java 301
+Faulty:
+double maxW=Math.max(width - w[2],0.0);
+Seed:
+double maxW=0.0;
+**************************************************
+2 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_13_buggy/source/org/jfree/chart/block/BorderArrangement.java 323
+Faulty:
+return arrange(container,g2,new RectangleConstraint(width,height));
+Seed:
+this.rightBlock=null;
+**************************************************
+Evaluations: 483
+EstimatedTime: 2693292

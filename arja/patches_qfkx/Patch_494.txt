@@ -1,0 +1,20 @@
+1 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_13_buggy/source/org/jfree/chart/block/AbstractBlock.java 443
+Faulty:
+lowerBound=trimToContentWidth(r.getLowerBound());
+Seed:
+this.height=height;
+**************************************************
+2 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_13_buggy/source/org/jfree/chart/block/BorderArrangement.java 424
+Faulty:
+double[] w=new double[5];
+Seed:
+this.centerBlock=null;
+**************************************************
+3 InsertBefore /Users/georgecherian/Desktop/TSE/bugs/chart/chart_13_buggy/source/org/jfree/chart/block/BorderArrangement.java 311
+Faulty:
+h[2]=Math.max(h[2],h[3]);
+Seed:
+this.leftBlock=null;
+**************************************************
+Evaluations: 470
+EstimatedTime: 2684488
