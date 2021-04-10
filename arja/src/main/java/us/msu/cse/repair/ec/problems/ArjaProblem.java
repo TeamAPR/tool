@@ -28,6 +28,8 @@ import us.msu.cse.repair.core.testexecutors.ITestExecutor;
 import us.msu.cse.repair.core.util.IO;
 import us.msu.cse.repair.ec.representation.ArrayIntAndBinarySolutionType;
 
+import us.msu.cse.repair.PatchJSONStandarOutput;
+
 public class ArjaProblem extends AbstractRepairProblem {
 	private static final long serialVersionUID = 1L;
 	Double weight;
@@ -39,9 +41,11 @@ public class ArjaProblem extends AbstractRepairProblem {
 	String initializationStrategy;
 
 	Boolean miFilterRule;
+	PatchJSONStandarOutput ps;
 
-	public ArjaProblem(Map<String, Object> parameters) throws Exception {
+	public ArjaProblem(Map<String, Object> parameters, PatchJSONStandarOutput ps) throws Exception {
 		super(parameters);
+		this.ps = ps;
 
 		weight = (Double) parameters.get("weight");
 		if (weight == null)
@@ -213,17 +217,23 @@ public class ArjaProblem extends AbstractRepairProblem {
 			ingredList.add(ingred);
 		}
 
+		System.out.println("Success Before Entry!!!!!!!"+globalID);
 		try {
 			if (addTestAdequatePatch(opList, locList, ingredList)) {
-				if (diffFormat) {
+		System.out.println("Success INside if 1!!!!!!!"+globalID);
+				if (true) {
 					try {
-						IO.savePatch(modifiedJavaSources, srcJavaDir, this.patchOutputRoot, globalID,numberOfEdits);
+		System.out.println("Success INside if final!!!!!!!"+globalID);
+						IO.savePatch(modifiedJavaSources, srcJavaDir, this.patchOutputRoot, globalID,numberOfEdits,this.ps);
 					} catch (InterruptedException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
+				}else{
+					System.out.println("Success INside if other!!!!!!!"+globalID);
+					saveTestAdequatePatch(opList, locList, ingredList);
+
 				}
-				saveTestAdequatePatch(opList, locList, ingredList);
 				globalID++;
 			}
 		} catch (IOException e) {

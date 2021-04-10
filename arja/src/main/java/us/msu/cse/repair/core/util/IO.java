@@ -208,7 +208,7 @@ public class IO {
 	}
 
 	public static void savePatch(Solution solution, List<ModificationPoint> modificationPoints,
-			String[] manipulationNames, String patchDir, int globalID) throws IOException {
+			String[] manipulationNames, String patchDir, int globalID) throws IOException {	
 		int[] var0 = ((ArrayInt) solution.getDecisionVariables()[0]).array_;
 		Binary var1 = (Binary) solution.getDecisionVariables()[1];
 
@@ -258,7 +258,9 @@ public class IO {
 	
 	
 	public static void savePatch(Map<String, String> modifiedJavaSources, String srcJavaDir,
-			String patchDir, int globalID,int numberOfEdits) throws IOException, InterruptedException {
+			String patchDir, int globalID,int numberOfEdits,PatchJSONStandarOutput ps) throws IOException, InterruptedException {
+
+		System.out.println("Success INside Save!!!!!!!"+globalID);
 		File root = new File(patchDir, "Patch_" + globalID);
 		System.out.println("global_id"+globalID);
 		List<String> diffs = new ArrayList<>();
@@ -279,8 +281,10 @@ public class IO {
 			diffs.addAll(diff);
 			diffs.add("\n");
 		}
-		PatchJSONStandarOutput ps = new PatchJSONStandarOutput("ARJA");
-		ps.produceOutput(finalOutput , numberOfEdits, patchDir);
+		if(ps!=null){
+			System.out.println("Success Before JSON!!!!!!!"+globalID);
+			ps.produceOutput(finalOutput , numberOfEdits, patchDir);
+		}
 		
 		FileUtils.writeLines(new File(root, "diff"), diffs);
 	}

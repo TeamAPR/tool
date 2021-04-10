@@ -1,6 +1,7 @@
 package fr.inria.astor.core.output;
 
 import java.io.FileWriter;
+import java.io.File;
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
@@ -111,9 +112,8 @@ public class PatchJSONStandarOutput implements ReportResults {
 
 		}
 		String filename = ConfigurationProperties.getProperty("jsonoutputname");
+
 		String absoluteFileName = output + "/" + filename + ".json";
-		System.out.println("===========");
-		System.out.println(absoluteFileName);
 		try (FileWriter file = new FileWriter(absoluteFileName)) {
 
 			file.write(statsjsonRoot.toJSONString());
@@ -126,7 +126,18 @@ public class PatchJSONStandarOutput implements ReportResults {
 			log.error("Problem storing ing json file" + e.toString());
 		}
 
-		absoluteFileName = output + "../../"+mode+"/output.json";
+		absoluteFileName = "/../"+mode+"/output.json";
+		System.out.println("===========");
+		System.out.println(absoluteFileName);
+		
+		try{
+			File filejson = new File(absoluteFileName);		
+			filejson.mkdirs();
+			filejson.createNewFile();
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
 		try (FileWriter file = new FileWriter(absoluteFileName)) {
 
 			file.write(statsjsonRoot.toJSONString());

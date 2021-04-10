@@ -1200,3 +1200,14 @@ Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'direct
 	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
 	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
 	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 6
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_6/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_6/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_6/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_6/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_2 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_2/lib:/Users/georgecherian/.m2/repository/junit/junit/4.11/junit-4.11.jar
+HELLLLLOOOOO
+17:20:25.564 [main] ERROR main - ex: File does not exist: /Users/georgecherian/Desktop/TSE/APRTool/astor/./output_astor/AstorMain-chart_2/bin/default/org/jfree/chart/junit/XYLineChartTests$LocalListener.class
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_2 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_2/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+HELLLLLOOOOO
+17:20:25.456 [main] ERROR main - ex: /Users/georgecherian/Desktop/TSE/APRTool/astor/./output_astor/AstorMain-chart_2/bin/default/org/jfree/chart/resources does not exist

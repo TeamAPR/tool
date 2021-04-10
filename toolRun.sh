@@ -25,6 +25,12 @@ cd ARJA
 jenv local 1.7
 mkdir -p bin
 javac -cp "lib/*": -d bin $(find src -name '*.java')
+    cd external
+    jenv local 1.7
+    rm -r bin
+    mkdir bin
+    javac -cp "lib/*": -d bin $(find src -name '*.java')
+    cd ..
 cd ..
 
 #run actual code

@@ -9,6 +9,9 @@ Run the following commands first
 ````````````
 cd astor
 mvn dependency:build-classpath -B | egrep -v "(^\[INFO\]|^\[WARNING\])" | tee /tmp/astor-classpath.txt
+cd..
+
+
 ````````````
 
 Run the following command

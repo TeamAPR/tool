@@ -12,6 +12,8 @@ import us.msu.cse.repair.ec.operators.crossover.ExtendedCrossoverFactory;
 import us.msu.cse.repair.ec.operators.mutation.ExtendedMutationFactory;
 import us.msu.cse.repair.ec.problems.ArjaProblem;
 
+import us.msu.cse.repair.PatchJSONStandarOutput;
+
 public class ArjaMain {
 	public static void main(String args[]) throws Exception {
 		HashMap<String, String> parameterStrs = Interpreter.getParameterStrings(args);
@@ -33,8 +35,8 @@ public class ArjaMain {
 		if (maxGenerationsS != null)
 			maxGenerations = Integer.parseInt(maxGenerationsS);
 		
-		
-		ArjaProblem problem = new ArjaProblem(parameters);
+			PatchJSONStandarOutput ps = new PatchJSONStandarOutput("ARJA");
+		ArjaProblem problem = new ArjaProblem(parameters,ps);
 		AbstractRepairAlgorithm repairAlg = new Arja(problem);
 
 		repairAlg.setInputParameter("populationSize", populationSize);
