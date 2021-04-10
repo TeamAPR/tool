@@ -1,0 +1,55 @@
+Astor Output:
+
+General stats:
+EXECUTION_IDENTIFIER=
+TOTAL_TIME=44.25
+NR_GENERATIONS=null
+NR_RIGHT_COMPILATIONS=13
+NR_FAILLING_COMPILATIONS=20
+NR_ERRONEOUS_VARIANCES=null
+NR_FAILING_VALIDATION_PROCESS=null
+OUTPUT_STATUS=null
+
+Patch stats:
+
+Patch 1
+VARIANT_ID=34
+TIME=31
+VALIDATION=|true|0|4402|[]|
+GENERATION=1
+FOLDER_SOLUTION_CODE=/Users/georgecherian/Desktop/TSE/APRTool/astor/./output_astor/AstorMain-chart_1//src//variant-34
+--Patch Hunk #1
+OPERATOR=IfExpresionMutOp
+
+LOCATION=org.jfree.chart.renderer.category.AbstractCategoryItemRenderer
+
+PATH=/Users/georgecherian/Desktop/TSE/bugs/chart/chart_1/source/org/jfree/chart/renderer/category/AbstractCategoryItemRenderer.java
+
+MODIFIED_FILE_PATH=/Users/georgecherian/Desktop/TSE/APRTool/astor/./output_astor/AstorMain-chart_1//src//variant-34/org/jfree/chart/renderer/category/AbstractCategoryItemRenderer.java
+
+LINE=1797
+
+SUSPICIOUNESS=0.162
+
+MP_RANKING=9
+
+ORIGINAL_CODE=dataset != null
+
+BUGGY_CODE_TYPE=CtBinaryOperatorImpl|CtIfImpl
+
+PATCH_HUNK_CODE=dataset == null
+
+PATCH_HUNK_TYPE=CtBinaryOperatorImpl|CtIfImpl
+
+INGREDIENT_SCOPE=null
+
+INGREDIENT_PARENT=null
+
+PATCH_DIFF_ORIG=--- /source/org/jfree/chart/renderer/category/AbstractCategoryItemRenderer.java
++++ /source/org/jfree/chart/renderer/category/AbstractCategoryItemRenderer.java
+@@ -1797 +1797 @@
+-		if (dataset != null) {
++		if (dataset == null) {
+
+
+

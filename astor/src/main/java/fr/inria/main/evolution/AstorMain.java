@@ -200,6 +200,7 @@ public class AstorMain extends AbstractMain {
 	 * @throws ParseException
 	 */
 	public static void main(String[] args) throws Exception {
+		System.out.println("HELLLLLOOOOO");
 		AstorMain m = new AstorMain();
 		m.execute(args);
 	}

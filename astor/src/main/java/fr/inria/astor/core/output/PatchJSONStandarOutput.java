@@ -62,15 +62,16 @@ public class PatchJSONStandarOutput implements ReportResults {
 
 			JSONObject patchjson = new JSONObject();
 			patchlistJson.add(patchjson);
-
 			Map<PatchStatEnum, Object> stats = patchStat.getStats();
 			for (PatchStatEnum statKey : PatchStatEnum.values()) {
+				int modificationCount = 0;
 				if (statKey.equals(PatchStatEnum.HUNKS)) {
 					List<PatchHunkStats> hunks = (List<PatchHunkStats>) stats.get(statKey);
 					JSONArray hunksListJson = new JSONArray();
 					patchjson.put("patchhunks", hunksListJson);
 
 					for (PatchHunkStats patchHunkStats : hunks) {
+						modificationCount++;
 						Map<HunkStatEnum, Object> statshunk = patchHunkStats.getStats();
 
 						JSONObject hunkjson = new JSONObject();
@@ -80,18 +81,30 @@ public class PatchJSONStandarOutput implements ReportResults {
 								hunkjson.put(hs.name(), JSONObject.escape(statshunk.get(hs).toString()));
 						}
 					}
+					patchjson.put("NumOfMut", JSONObject.escape(String.valueOf(modificationCount)) );
 
 				} else {
 					try {
-						if (stats.containsKey(statKey))
+						if (stats.containsKey(statKey)){
+							System.out.println(statKey.name());
+							if(statKey.name()=="PATCH_DIFF_ORIG"){
+								patchjson.put("PatchDiff", JSONObject.escape(stats.get(statKey).toString()));
+						
+							}
 							patchjson.put(statKey.name(), JSONObject.escape(stats.get(statKey).toString()));
+						}
+							
 					} catch (Exception e) {
 						log.error(e);
 						log.error("problems with key " + statKey.name());
 					}
 				}
+						
 
 			}
+			System.out.println("===============================");
+
+			patchjson.put("Tool", JSONObject.escape("Cardumen"));
 
 		}
 		String filename = ConfigurationProperties.getProperty("jsonoutputname");
