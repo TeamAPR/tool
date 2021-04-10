@@ -126,7 +126,7 @@ public class PatchJSONStandarOutput implements ReportResults {
 			log.error("Problem storing ing json file" + e.toString());
 		}
 
-		absoluteFileName = "/../"+mode+"/output.json";
+		absoluteFileName = "./../../"+mode+"_output/";
 		System.out.println("===========");
 		System.out.println(absoluteFileName);
 		
@@ -138,6 +138,7 @@ public class PatchJSONStandarOutput implements ReportResults {
 		catch(Exception e){
 			e.printStackTrace();
 		}
+		absoluteFileName = "./../../"+mode+"_output/output.json";
 		try (FileWriter file = new FileWriter(absoluteFileName)) {
 
 			file.write(statsjsonRoot.toJSONString());

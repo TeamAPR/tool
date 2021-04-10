@@ -50,7 +50,20 @@ public class PatchJSONStandarOutput {
 
 		String absoluteFileName = fileLocation +"/arja_output.json";
 
-		absoluteFileName = fileLocation + "/../../"+mode+"/output.json";
+		System.out.println("Inside prod output");
+		absoluteFileName = "./../"+mode+"_output";
+		System.out.println("===========");
+		System.out.println(absoluteFileName);
+		
+		try{
+			File filejson = new File(absoluteFileName);		
+			filejson.mkdirs();
+			filejson.createNewFile();
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
+		absoluteFileName = "./../"+mode+"_output/output.json";
 
 		try (FileWriter file = new FileWriter(absoluteFileName)) {
 

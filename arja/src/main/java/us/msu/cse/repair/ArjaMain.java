@@ -16,9 +16,12 @@ import us.msu.cse.repair.PatchJSONStandarOutput;
 
 public class ArjaMain {
 	public static void main(String args[]) throws Exception {
+		
 		HashMap<String, String> parameterStrs = Interpreter.getParameterStrings(args);
 		HashMap<String, Object> parameters = Interpreter.getBasicParameterSetting(parameterStrs);
 		System.out.println("HELLLLLLOOOOO");
+		PatchJSONStandarOutput ps = new PatchJSONStandarOutput("ARJA");
+		
 		String ingredientScreenerNameS = parameterStrs.get("ingredientScreenerName");
 		if (ingredientScreenerNameS != null) 
 			parameters.put("ingredientScreenerName", ingredientScreenerNameS);
@@ -35,7 +38,6 @@ public class ArjaMain {
 		if (maxGenerationsS != null)
 			maxGenerations = Integer.parseInt(maxGenerationsS);
 		
-			PatchJSONStandarOutput ps = new PatchJSONStandarOutput("ARJA");
 		ArjaProblem problem = new ArjaProblem(parameters,ps);
 		AbstractRepairAlgorithm repairAlg = new Arja(problem);
 
@@ -66,5 +68,6 @@ public class ArjaMain {
 		repairAlg.addOperator("selection", selection);
 		
 		repairAlg.execute();
+		ps.finalWrite("src/");
 	}
 }
