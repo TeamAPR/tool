@@ -1168,7 +1168,7 @@ public abstract class AstorCoreEngine implements AstorExtensionPoint {
 		}
 	}
 
-	protected void loadOutputResults() throws Exception {
+	protected void loadOutputResults(String mode) throws Exception {
 
 		List<ReportResults> outputs = new ArrayList<>();
 		this.setOutputResults(outputs);
@@ -1186,7 +1186,7 @@ public abstract class AstorCoreEngine implements AstorExtensionPoint {
 		} else {
 			outputs.add(new StandardOutputReport());
 			if (ConfigurationProperties.getPropertyBool("outputjsonresult")) {
-				outputs.add(new PatchJSONStandarOutput());
+				outputs.add(new PatchJSONStandarOutput(mode));
 			}
 		}
 
@@ -1300,7 +1300,7 @@ public abstract class AstorCoreEngine implements AstorExtensionPoint {
 		// Nothing by default
 	}
 
-	public void loadExtensionPoints() throws Exception {
+	public void loadExtensionPoints(String mode) throws Exception {
 		this.loadFaultLocalization();
 		this.loadTargetElements();
 		this.loadSuspiciousNavigation();
@@ -1311,7 +1311,7 @@ public abstract class AstorCoreEngine implements AstorExtensionPoint {
 		this.loadOperatorSpaceDefinition();
 		this.loadOperatorSelectorStrategy();
 		this.loadSolutionPrioritization();
-		this.loadOutputResults();
+		this.loadOutputResults(mode);
 
 	}
 

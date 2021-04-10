@@ -287,8 +287,8 @@ public abstract class IngredientBasedEvolutionaryRepairApproachImpl extends Evol
 	}
 
 	@Override
-	public void loadExtensionPoints() throws Exception {
-		super.loadExtensionPoints();
+	public void loadExtensionPoints(String mode) throws Exception {
+		super.loadExtensionPoints(mode);
 		this.loadTargetIngredientElement();
 		this.loadIngredientPool();
 		this.loadIngredientSearchStrategy();

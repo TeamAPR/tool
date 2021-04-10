@@ -304,8 +304,8 @@ public class ExhaustiveIngredientBasedEngine extends ExhaustiveSearchEngine impl
 	}
 
 	@Override
-	public void loadExtensionPoints() throws Exception {
-		super.loadExtensionPoints();
+	public void loadExtensionPoints(String mode) throws Exception {
+		super.loadExtensionPoints(mode);
 		this.loadIngredientPool();
 		this.loadIngredientSearchStrategy();
 		this.loadIngredientTransformationStrategy();

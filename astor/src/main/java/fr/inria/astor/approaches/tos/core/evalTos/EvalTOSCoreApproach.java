@@ -76,8 +76,8 @@ public class EvalTOSCoreApproach extends ExhaustiveIngredientBasedEngine {
 	}
 
 	@Override
-	public void loadExtensionPoints() throws Exception {
-		super.loadExtensionPoints();
+	public void loadExtensionPoints(String mode) throws Exception {
+		super.loadExtensionPoints(mode);
 		if (this.ingredientSpace == null) {
 			this.ingredientSpace = IngredientBasedEvolutionaryRepairApproachImpl
 					.getIngredientPool(getTargetElementProcessors());

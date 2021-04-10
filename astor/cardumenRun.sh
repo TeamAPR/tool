@@ -11,7 +11,7 @@ echo "$work_dir \n"$dep_dir
 jenv local 1.8
     
 java  -cp $(cat /tmp/astor-classpath.txt):bin fr.inria.main.evolution.AstorMain \
-    -mode jgenprog \
+    -mode cardumen \
     -srcjavafolder /source/ \
     -srctestfolder /tests/ \
     -binjavafolder /build/ \

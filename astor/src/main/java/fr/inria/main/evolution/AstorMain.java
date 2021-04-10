@@ -108,7 +108,7 @@ public class AstorMain extends AbstractMain {
 		}
 
 		// Loading extension Points
-		core.loadExtensionPoints();
+		core.loadExtensionPoints(mode.toString());
 
 		core.initModel();
 
@@ -163,7 +163,7 @@ public class AstorMain extends AbstractMain {
 
 		String mode = ConfigurationProperties.getProperty("mode").toLowerCase();
 		String customEngine = ConfigurationProperties.getProperty(ExtensionPoints.NAVIGATION_ENGINE.identifier);
-
+		
 		if (customEngine != null && !customEngine.isEmpty())
 			core = createEngine(ExecutionMode.custom);
 		else {

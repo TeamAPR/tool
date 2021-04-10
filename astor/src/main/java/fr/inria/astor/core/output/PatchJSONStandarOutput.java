@@ -19,6 +19,7 @@ import fr.inria.astor.core.stats.PatchStat.PatchStatEnum;
 import fr.inria.astor.core.stats.Stats;
 import fr.inria.astor.core.stats.Stats.GeneralStatEnum;
 import fr.inria.main.AstorOutputStatus;
+import fr.inria.main.ExecutionMode;
 
 /**
  * 
@@ -26,7 +27,10 @@ import fr.inria.main.AstorOutputStatus;
  *
  */
 public class PatchJSONStandarOutput implements ReportResults {
-
+	String mode;
+	public PatchJSONStandarOutput(String mode){
+		this.mode = mode;
+	}
 	private static Logger log = Logger.getLogger(Stats.class.getName());
 
 	@SuppressWarnings("unchecked")
@@ -104,11 +108,13 @@ public class PatchJSONStandarOutput implements ReportResults {
 			}
 			System.out.println("===============================");
 
-			patchjson.put("Tool", JSONObject.escape("Cardumen"));
+			patchjson.put("Tool", JSONObject.escape(mode));
 
 		}
 		String filename = ConfigurationProperties.getProperty("jsonoutputname");
 		String absoluteFileName = output + "/" + filename + ".json";
+		System.out.println("===========");
+		System.out.println(absoluteFileName);
 		try (FileWriter file = new FileWriter(absoluteFileName)) {
 
 			file.write(statsjsonRoot.toJSONString());
