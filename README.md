@@ -1,10 +1,17 @@
 # tool
 
+Pre requisites
+Have Jenv installed
+install java 1.7 and 1.8 using jenv
+Install maven
+
+Run the following commands first
+````````````
 cd astor
-jenv local 1.8
-
 mvn dependency:build-classpath -B | egrep -v "(^\[INFO\]|^\[WARNING\])" | tee /tmp/astor-classpath.txt
- cat /tmp/astor-classpath.txt
+````````````
 
- java -cp $(cat /tmp/astor-classpath.txt):target/classes fr.inria.main.evolution.AstorMain -mode jgenprog -srcjavafolder /src/java/ -srctestfolder /src/test/  -binjavafolder /target/classes/ -bintestfolder  /target/test-classes/ -location /home/user/astor/examples/Math-issue-280/ -dependencies examples/Math-issue-280/lib
-
+Run the following command
+````````````
+bash ./toolRun.sh abc abc abc
+````````````

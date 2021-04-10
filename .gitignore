@@ -1,2 +1,3 @@
 *.class
 /astor/output_astor/*
+*_output.txt

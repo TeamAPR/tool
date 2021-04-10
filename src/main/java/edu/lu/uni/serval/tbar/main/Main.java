@@ -30,12 +30,63 @@ public class Main {
 		String defects4jHome = args[2]; // "../defects4j/"
 		System.out.println(bugId);
 		System.out.println("Hello");
-		String output="";
-		try {
-			output = ShellUtils.shellRun(Arrays.asList("cd  astor \n", "git diff"), bugId, 1).trim();
-			System.out.println(output);
-        } catch (Exception e){
-			
+		Thread thread1 = new Thread(() -> {
+			int cardumenTotal = 0;
+			while(cardumenTotal <=26){
+				System.out.println("Cardumen :"+cardumenTotal);
+				cardumenTotal++;
+				try {
+					String output = ShellUtils.shellRun(Arrays.asList("cd  astor \n", "bash ./cardumenRun.sh "+cardumenTotal), "Cardumen"+bugId, 1).trim();
+					System.out.println(output);
+				} catch (Exception e){
+					e.printStackTrace();
+				}
+			}
+		});
+		Thread thread2 = new Thread(() -> {
+			int jGenProgTotal = 0;
+			while(jGenProgTotal <=26){
+				System.out.println("jGenProgTotal :"+jGenProgTotal);
+				jGenProgTotal++;
+				try {
+					String output = ShellUtils.shellRun(Arrays.asList("cd  astor \n", "bash ./astorRun.sh "+jGenProgTotal), "jGenProgTotal"+bugId, 1).trim();
+					System.out.println(output);
+				} catch (Exception e){
+					e.printStackTrace();
+				}
+			}
+		});
+		Thread thread3 = new Thread(() -> {
+			int ARJATotal = 4;
+			while(ARJATotal <=26){
+				System.out.println("ARJATotal :"+ARJATotal);
+				ARJATotal++;
+				try {
+					String output = ShellUtils.shellRun(Arrays.asList("cd  arja \n", "bash ./run_arja.sh "+ARJATotal), "ARJATotal"+bugId, 1).trim();
+					System.out.println(output);
+				} catch (Exception e){
+					e.printStackTrace();
+				}
+			}
+		});
+		thread1.start();
+		thread2.start();
+		thread3.start();
+		try{
+			thread1.join();
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		try{
+			thread2.join();
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		
+		try{
+			thread3.join();
+		}catch(Exception e){
+			e.printStackTrace();
 		}
 		
 	}

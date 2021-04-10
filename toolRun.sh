@@ -1,10 +1,13 @@
 #!/bin/bash
 
-javac -cp "lib/*": -d bin $(find src -name '*.java')
+mkdir -p CARDUMEN
+mkdir -p jGenProg
+mkdir -p ARJA
+
 #compile astor
 cd astor
 jenv local 1.8
-mvn dependency:build-classpath -B | egrep -v "(^\[INFO\]|^\[WARNING\])" | tee /tmp/astor-classpath.txt
+#mvn dependency:build-classpath -B | egrep -v "(^\[INFO\]|^\[WARNING\])" | tee /tmp/astor-classpath.txt
 
 
 mkdir -p bin
@@ -17,8 +20,16 @@ cp astor.properties ../../bin/astor.properties
 cd ../..
 
 cd ..
-
 #compile ARJA
+cd ARJA
+jenv local 1.7
+mkdir -p bin
+javac -cp "lib/*": -d bin $(find src -name '*.java')
+cd ..
+
+#run actual code
+jenv local 1.8
+javac -cp "lib/*": -d bin $(find src -name '*.java')
 
 bugDataPath=$1
 bugID=$2

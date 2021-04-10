@@ -116,7 +116,6 @@ public class ArjaProblem extends AbstractRepairProblem {
 
 		Map<Integer, Double> selectedMP = new HashMap<Integer, Double>();
 
-		System.out.println("Yo 2");
 		for (int i = 0; i < size; i++) {
 			if (bits.get(i)) {
 				double suspValue = modificationPoints.get(i).getSuspValue();
@@ -141,7 +140,6 @@ public class ArjaProblem extends AbstractRepairProblem {
 					selectedMP.put(i, suspValue);
 			}
 		}
-		System.out.println("Yo 3"+selectedMP.size());
 
 		if (selectedMP.isEmpty()) {
 			assignMaxObjectiveValues(solution);
@@ -171,7 +169,6 @@ public class ArjaProblem extends AbstractRepairProblem {
 		Map<String, String> modifiedJavaSources = getModifiedJavaSources(astRewriters);
 		Map<String, JavaFileObject> compiledClasses = getCompiledClassesForTestExecution(modifiedJavaSources);
 
-		System.out.println("Yo ");
 		boolean status = false;
 		if (compiledClasses != null) {
 			if (numberOfObjectives == 2 || numberOfObjectives == 3)
@@ -188,7 +185,10 @@ public class ArjaProblem extends AbstractRepairProblem {
 		}
 
 		if (status) {
+			System.out.println("Success!!!!!!!"+globalID);
 			save(solution, modifiedJavaSources, compiledClasses, list, numberOfEdits);
+		}else{
+			System.out.println("Failure!!!!!!!"+globalID);
 		}
 
 		evaluations++;
@@ -217,7 +217,7 @@ public class ArjaProblem extends AbstractRepairProblem {
 			if (addTestAdequatePatch(opList, locList, ingredList)) {
 				if (diffFormat) {
 					try {
-						IO.savePatch(modifiedJavaSources, srcJavaDir, this.patchOutputRoot, globalID);
+						IO.savePatch(modifiedJavaSources, srcJavaDir, this.patchOutputRoot, globalID,numberOfEdits);
 					} catch (InterruptedException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
@@ -275,7 +275,6 @@ public class ArjaProblem extends AbstractRepairProblem {
 				solution.setObjective(2, ratioOfFailuresInNegative);
 			}
 		} else {
-			System.out.println("Hello There");
 			assignMaxObjectiveValues(solution);
 			System.out.println("Timeout occurs!");
 		}

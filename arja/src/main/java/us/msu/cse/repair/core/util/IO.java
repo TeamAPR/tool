@@ -18,6 +18,7 @@ import jmetal.encodings.variable.Binary;
 import org.apache.commons.io.FileUtils;
 import org.eclipse.jdt.core.dom.Statement;
 
+import us.msu.cse.repair.PatchJSONStandarOutput;
 import us.msu.cse.repair.core.compiler.JavaFileObjectImpl;
 import us.msu.cse.repair.core.parser.MethodInfo;
 import us.msu.cse.repair.core.parser.ModificationPoint;
@@ -257,10 +258,11 @@ public class IO {
 	
 	
 	public static void savePatch(Map<String, String> modifiedJavaSources, String srcJavaDir,
-			String patchDir, int globalID) throws IOException, InterruptedException {
+			String patchDir, int globalID,int numberOfEdits) throws IOException, InterruptedException {
 		File root = new File(patchDir, "Patch_" + globalID);
+		System.out.println("global_id"+globalID);
 		List<String> diffs = new ArrayList<>();
-		
+		String finalOutput = "";
 		for (Map.Entry<String, String> entry : modifiedJavaSources.entrySet()) {
 			String orgFilePath = entry.getKey();
 			File patched = new File(root, "patched");
@@ -270,9 +272,15 @@ public class IO {
 			FileUtils.writeByteArrayToFile(revisedFile, entry.getValue().getBytes());
 			
 			List<String> diff = getDiff(orgFilePath, revisedFile.getAbsolutePath());
+			for(String line: diff){
+				finalOutput+=line;
+			}
+			finalOutput+="\n";
 			diffs.addAll(diff);
 			diffs.add("\n");
 		}
+		PatchJSONStandarOutput ps = new PatchJSONStandarOutput("ARJA");
+		ps.produceOutput(finalOutput , numberOfEdits, patchDir);
 		
 		FileUtils.writeLines(new File(root, "diff"), diffs);
 	}

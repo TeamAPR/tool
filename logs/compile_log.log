@@ -2,3 +2,1201 @@
 diff --git a/.DS_Store b/.DS_Store
 index bb285abf..32ebb2cc 100644
 Binary files a/.DS_Store and b/.DS_Store differ
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_2 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_2/lib:/Users/georgecherian/.m2/repository/junit/junit/4.11/junit-4.11.jar
+HELLLLLOOOOO
+Exception in thread "main" java.io.IOException: Failed to copy full contents from '/Users/georgecherian/Desktop/TSE/bugs/chart/chart_2/source/org/jfree/chart/ChartFactory.java' to '/Users/georgecherian/Desktop/TSE/APRTool/astor/./output_astor/AstorMain-chart_2/src/default/org/jfree/chart/ChartFactory.java' Expected length: 75933 Actual: 0
+	at org.apache.commons.io.FileUtils.doCopyFile(FileUtils.java:1164)
+	at org.apache.commons.io.FileUtils.doCopyDirectory(FileUtils.java:1446)
+	at org.apache.commons.io.FileUtils.doCopyDirectory(FileUtils.java:1444)
+	at org.apache.commons.io.FileUtils.doCopyDirectory(FileUtils.java:1444)
+	at org.apache.commons.io.FileUtils.doCopyDirectory(FileUtils.java:1444)
+	at org.apache.commons.io.FileUtils.copyDirectory(FileUtils.java:1388)
+	at org.apache.commons.io.FileUtils.copyDirectory(FileUtils.java:1268)
+	at org.apache.commons.io.FileUtils.copyDirectory(FileUtils.java:1237)
+	at fr.inria.astor.core.setup.ProjectRepairFacade.copyOriginalSourceCode(ProjectRepairFacade.java:73)
+	at fr.inria.astor.core.setup.ProjectRepairFacade.copyOriginalCodeToAstorWorkspace(ProjectRepairFacade.java:56)
+	at fr.inria.astor.core.setup.ProjectRepairFacade.setupWorkingDirectories(ProjectRepairFacade.java:40)
+	at fr.inria.main.evolution.AstorMain.initProject(AstorMain.java:58)
+	at fr.inria.main.evolution.AstorMain.run(AstorMain.java:162)
+	at fr.inria.main.evolution.AstorMain.execute(AstorMain.java:234)
+	at fr.inria.main.evolution.AstorMain.main(AstorMain.java:205)
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_2 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_2/lib:/Users/georgecherian/.m2/repository/junit/junit/4.11/junit-4.11.jar
+HELLLLLOOOOO
+Exception in thread "main" java.io.IOException: Failed to copy full contents from '/Users/georgecherian/Desktop/TSE/bugs/chart/chart_2/source/org/jfree/chart/ChartFactory.java' to '/Users/georgecherian/Desktop/TSE/APRTool/astor/./output_astor/AstorMain-chart_2/src/default/org/jfree/chart/ChartFactory.java' Expected length: 75933 Actual: 0
+	at org.apache.commons.io.FileUtils.doCopyFile(FileUtils.java:1164)
+	at org.apache.commons.io.FileUtils.doCopyDirectory(FileUtils.java:1446)
+	at org.apache.commons.io.FileUtils.doCopyDirectory(FileUtils.java:1444)
+	at org.apache.commons.io.FileUtils.doCopyDirectory(FileUtils.java:1444)
+	at org.apache.commons.io.FileUtils.doCopyDirectory(FileUtils.java:1444)
+	at org.apache.commons.io.FileUtils.copyDirectory(FileUtils.java:1388)
+	at org.apache.commons.io.FileUtils.copyDirectory(FileUtils.java:1268)
+	at org.apache.commons.io.FileUtils.copyDirectory(FileUtils.java:1237)
+	at fr.inria.astor.core.setup.ProjectRepairFacade.copyOriginalSourceCode(ProjectRepairFacade.java:73)
+	at fr.inria.astor.core.setup.ProjectRepairFacade.copyOriginalCodeToAstorWorkspace(ProjectRepairFacade.java:56)
+	at fr.inria.astor.core.setup.ProjectRepairFacade.setupWorkingDirectories(ProjectRepairFacade.java:40)
+	at fr.inria.main.evolution.AstorMain.initProject(AstorMain.java:58)
+	at fr.inria.main.evolution.AstorMain.run(AstorMain.java:162)
+	at fr.inria.main.evolution.AstorMain.execute(AstorMain.java:234)
+	at fr.inria.main.evolution.AstorMain.main(AstorMain.java:205)
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_3 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_3/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+HELLLLLOOOOO
+Exception in thread "main" java.io.FileNotFoundException: /Users/georgecherian/Desktop/TSE/APRTool/astor/./output_astor/AstorMain-chart_3/src/default/org/jfree/chart/ui/BasicProjectInfo.java (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:162)
+	at org.apache.commons.io.FileUtils.doCopyFile(FileUtils.java:1142)
+	at org.apache.commons.io.FileUtils.doCopyDirectory(FileUtils.java:1446)
+	at org.apache.commons.io.FileUtils.doCopyDirectory(FileUtils.java:1444)
+	at org.apache.commons.io.FileUtils.doCopyDirectory(FileUtils.java:1444)
+	at org.apache.commons.io.FileUtils.doCopyDirectory(FileUtils.java:1444)
+	at org.apache.commons.io.FileUtils.doCopyDirectory(FileUtils.java:1444)
+	at org.apache.commons.io.FileUtils.copyDirectory(FileUtils.java:1388)
+	at org.apache.commons.io.FileUtils.copyDirectory(FileUtils.java:1268)
+	at org.apache.commons.io.FileUtils.copyDirectory(FileUtils.java:1237)
+	at fr.inria.astor.core.setup.ProjectRepairFacade.copyOriginalSourceCode(ProjectRepairFacade.java:73)
+	at fr.inria.astor.core.setup.ProjectRepairFacade.copyOriginalCodeToAstorWorkspace(ProjectRepairFacade.java:56)
+	at fr.inria.astor.core.setup.ProjectRepairFacade.setupWorkingDirectories(ProjectRepairFacade.java:40)
+	at fr.inria.main.evolution.AstorMain.initProject(AstorMain.java:58)
+	at fr.inria.main.evolution.AstorMain.run(AstorMain.java:162)
+	at fr.inria.main.evolution.AstorMain.execute(AstorMain.java:234)
+	at fr.inria.main.evolution.AstorMain.main(AstorMain.java:205)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =7: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =8: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =9: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =10: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =11: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =12: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =13: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =14: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =15: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =16: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =17: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =18: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =19: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =20: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =21: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =22: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =23: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =24: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =25: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =26: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =27: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =5: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =6: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =7: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =8: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =9: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =10: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =11: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =12: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =13: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =14: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =15: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =16: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =17: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =18: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =19: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =20: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =21: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =22: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =23: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =24: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =25: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =26: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =27: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =5: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =6: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =7: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =8: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =9: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =10: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =11: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =12: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =13: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =14: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =15: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =16: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =17: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =18: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =19: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =20: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =21: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =22: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =23: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =24: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =25: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =26: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+./run_arja.sh: line 9: =27: command not found
+Exception in thread "main" java.lang.IllegalArgumentException: Parameter 'directory' is not a directory: /Users/georgecherian/Desktop/TSE/bugs/chart/chart_/build-tests
+	at org.apache.commons.io.FileUtils.validateListFilesParameters(FileUtils.java:536)
+	at org.apache.commons.io.FileUtils.listFiles(FileUtils.java:512)
+	at us.msu.cse.repair.core.util.ClassFinder.scanTestDir(ClassFinder.java:75)
+	at us.msu.cse.repair.core.util.ClassFinder.<init>(ClassFinder.java:48)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeClassFinder(AbstractRepairProblem.java:286)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:270)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:246)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:44)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:37)
+	at us.msu.cse.repair.Main.main(Main.java:8)

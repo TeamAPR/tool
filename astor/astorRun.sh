@@ -5,7 +5,7 @@ bugID=$1
 work_dir="/Users/georgecherian/Desktop/TSE/bugs/chart/chart_$bugID"
 build_dir=$work_dir"/build"
 test_dir=$work_dir"/build-tests"
-dep_dir=$work_dir"/lib:/Users/georgecherian/.m2/repository/junit/junit/4.11/junit-4.11.jar"
+dep_dir=$work_dir"/lib:/Users/georgecherian/Desktop/junit-4.11.jar"
     
 echo "$work_dir \n"$dep_dir
 jenv local 1.8

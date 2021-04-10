@@ -359,9 +359,10 @@ public abstract class AbstractRepairProblem extends Problem {
 		String[] sourceFilePaths = new String[javaFiles.size()];
 
 		int i = 0;
-		for (File file : javaFiles)
+		for (File file : javaFiles){
 			sourceFilePaths[i++] = file.getCanonicalPath();
 
+		}
 		parser.createASTs(sourceFilePaths, null, new String[] { "UTF-8" }, requestor, null);
 
 		if (maxNumberOfModificationPoints != null && modificationPoints.size() > maxNumberOfModificationPoints) {

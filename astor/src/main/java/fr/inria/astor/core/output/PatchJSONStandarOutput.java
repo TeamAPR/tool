@@ -90,7 +90,6 @@ public class PatchJSONStandarOutput implements ReportResults {
 				} else {
 					try {
 						if (stats.containsKey(statKey)){
-							System.out.println(statKey.name());
 							if(statKey.name()=="PATCH_DIFF_ORIG"){
 								patchjson.put("PatchDiff", JSONObject.escape(stats.get(statKey).toString()));
 						
@@ -127,6 +126,18 @@ public class PatchJSONStandarOutput implements ReportResults {
 			log.error("Problem storing ing json file" + e.toString());
 		}
 
+		absoluteFileName = output + "../../"+mode+"/output.json";
+		try (FileWriter file = new FileWriter(absoluteFileName)) {
+
+			file.write(statsjsonRoot.toJSONString());
+			file.flush();
+			log.info("Storing ing JSON at " + absoluteFileName);
+			log.info(filename + ":\n" + statsjsonRoot.toJSONString());
+
+		} catch (IOException e) {
+			e.printStackTrace();
+			log.error("Problem storing ing json file" + e.toString());
+		}
 		return statsjsonRoot;
 	}
 

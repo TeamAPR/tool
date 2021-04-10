@@ -107,6 +107,7 @@ public class GenProgProblem extends AbstractRepairProblem {
 		}
 
 		if (status) {
+			System.out.println("Solution Found!");
 			save(solution, modifiedJavaSources, compiledClasses);
 		}
 
@@ -123,7 +124,7 @@ public class GenProgProblem extends AbstractRepairProblem {
 			if (addTestAdequatePatch(opList, locList, ingredList)) {
 				if (diffFormat) {
 					try {
-						IO.savePatch(modifiedJavaSources, srcJavaDir, this.patchOutputRoot, globalID);
+						IO.savePatch(modifiedJavaSources, srcJavaDir, this.patchOutputRoot, globalID,0);
 					} catch (InterruptedException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
@@ -160,7 +161,6 @@ public class GenProgProblem extends AbstractRepairProblem {
 			System.out.println("Number of failed tests: " + (failureCountInPositive + failureCountInNegative));
 			System.out.println("Fitness: " + fitness);
 		} else {
-			System.out.println("Hello There");
 			solution.setObjective(0, Double.MAX_VALUE);
 			System.out.println("Timeout occurs!");
 		}
