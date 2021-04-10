@@ -108,7 +108,9 @@ public class AstorMain extends AbstractMain {
 		}
 
 		// Loading extension Points
-		core.loadExtensionPoints(mode.toString());
+		String bugName = this.bugName ==null?"":this.bugName;
+		System.out.println("BUGNAME"+bugName);
+		core.loadExtensionPoints(mode.toString(),bugName);
 
 		core.initModel();
 

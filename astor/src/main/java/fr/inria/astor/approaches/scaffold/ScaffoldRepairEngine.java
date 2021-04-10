@@ -87,7 +87,7 @@ public class ScaffoldRepairEngine extends AstorCoreEngine {
 	}
 	
 	@Override
-	public void loadExtensionPoints(String mode) throws Exception {
+	public void loadExtensionPoints(String mode,String bugName) throws Exception {
 		super.loadFaultLocalization();
 		super.loadTargetElements();
 		super.loadSuspiciousNavigation();

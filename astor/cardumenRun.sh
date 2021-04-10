@@ -12,6 +12,7 @@ jenv local 1.8
     
 java  -cp $(cat /tmp/astor-classpath.txt):bin fr.inria.main.evolution.AstorMain \
     -mode cardumen \
+    -bugName Chart_"$bugID" \
     -srcjavafolder /source/ \
     -srctestfolder /tests/ \
     -binjavafolder /build/ \

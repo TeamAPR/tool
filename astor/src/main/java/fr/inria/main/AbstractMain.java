@@ -65,6 +65,7 @@ public abstract class AbstractMain {
 	protected static Options options = new Options();
 
 	CommandLineParser parser = new BasicParser();
+	public String bugName;
 
 	static {
 		options.addOption("id", true, "(Optional) Name/identified of the project to evaluate (Default: folder name)");
@@ -87,6 +88,9 @@ public abstract class AbstractMain {
 		options.addOption("bug340", false, "Run the bug 340 from Apache Commons Math");
 
 		// Optional parameters
+
+		options.addOption("bugName", true, "(Optional) Name of the bug");
+
 		options.addOption("jvm4testexecution", true,
 				"(Optional) location of JVM that executes the mutated version of a program (Folder that contains java script, such as /bin/ ).");
 		options.addOption("jvm4evosuitetestexecution", true,
@@ -371,6 +375,7 @@ public abstract class AbstractMain {
 					ConfigurationProperties.properties.getProperty("jvm4testexecution"));
 
 		}
+		this.bugName = cmd.getOptionValue("bugName");
 
 		if (!this.isExample(cmd)) {
 			String dependenciespath = cmd.getOptionValue("dependencies");

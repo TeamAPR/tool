@@ -29,8 +29,10 @@ import fr.inria.main.ExecutionMode;
  */
 public class PatchJSONStandarOutput implements ReportResults {
 	String mode;
-	public PatchJSONStandarOutput(String mode){
+	String bugName;
+	public PatchJSONStandarOutput(String mode,String bugName){
 		this.mode = mode;
+		this.bugName = bugName;
 	}
 	private static Logger log = Logger.getLogger(Stats.class.getName());
 
@@ -126,7 +128,7 @@ public class PatchJSONStandarOutput implements ReportResults {
 			log.error("Problem storing ing json file" + e.toString());
 		}
 
-		absoluteFileName = "./../../"+mode+"_output/";
+		absoluteFileName = "./../"+this.bugName+"/"+mode+"_output/";
 		System.out.println("===========");
 		System.out.println(absoluteFileName);
 		
@@ -138,7 +140,8 @@ public class PatchJSONStandarOutput implements ReportResults {
 		catch(Exception e){
 			e.printStackTrace();
 		}
-		absoluteFileName = "./../../"+mode+"_output/output.json";
+		absoluteFileName = absoluteFileName+"/output.json";
+		
 		try (FileWriter file = new FileWriter(absoluteFileName)) {
 
 			file.write(statsjsonRoot.toJSONString());

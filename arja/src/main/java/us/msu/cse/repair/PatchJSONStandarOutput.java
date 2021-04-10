@@ -48,10 +48,12 @@ public class PatchJSONStandarOutput {
 	}
 	public void finalWrite(String fileLocation){
 
-		String absoluteFileName = fileLocation +"/arja_output.json";
-
+		String absoluteFileName = "/arja_output.json";
+		String interimLocation = "";
+		if(fileLocation != null)
+			interimLocation = fileLocation;
 		System.out.println("Inside prod output");
-		absoluteFileName = "./../"+mode+"_output";
+		absoluteFileName = "./../"+interimLocation+"/"+mode+"_output";
 		System.out.println("===========");
 		System.out.println(absoluteFileName);
 		
@@ -63,7 +65,7 @@ public class PatchJSONStandarOutput {
 		catch(Exception e){
 			e.printStackTrace();
 		}
-		absoluteFileName = "./../"+mode+"_output/output.json";
+		absoluteFileName = absoluteFileName+"/output.json";
 
 		try (FileWriter file = new FileWriter(absoluteFileName)) {
 

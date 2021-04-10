@@ -17,5 +17,6 @@ i=$1
     java -cp "lib/*":bin us.msu.cse.repair.Main Arja -DsrcJavaDir $work_dir \
                                                  -DbinJavaDir $build_dir \
                                                  -DbinTestDir $test_dir \
-                                                 -Ddependences $dep_dir > $i"test_output.txt"
+                                                 -Ddependences $dep_dir \
+                                                 -DBugName Chart_"$i" > $i"test_output.txt"
 

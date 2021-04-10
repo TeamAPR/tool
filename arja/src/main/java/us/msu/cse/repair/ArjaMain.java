@@ -22,6 +22,7 @@ public class ArjaMain {
 		System.out.println("HELLLLLLOOOOO");
 		PatchJSONStandarOutput ps = new PatchJSONStandarOutput("ARJA");
 		
+		ps.finalWrite(parameterStrs.get("BugName"));
 		String ingredientScreenerNameS = parameterStrs.get("ingredientScreenerName");
 		if (ingredientScreenerNameS != null) 
 			parameters.put("ingredientScreenerName", ingredientScreenerNameS);
@@ -68,6 +69,6 @@ public class ArjaMain {
 		repairAlg.addOperator("selection", selection);
 		
 		repairAlg.execute();
-		ps.finalWrite("src/");
+		ps.finalWrite(parameterStrs.get("BugName"));
 	}
 }

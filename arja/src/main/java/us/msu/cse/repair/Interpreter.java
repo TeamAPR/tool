@@ -123,6 +123,8 @@ public class Interpreter {
 				if (i + 1 >= args.length)
 					throw new JMException("The command is invalid!");
 				parameters.put(args[i].trim().substring(2), args[i + 1].trim());
+				System.out.println(args[i].trim().substring(2));
+				System.out.println(args[i + 1].trim());
 			}
 		}
 		

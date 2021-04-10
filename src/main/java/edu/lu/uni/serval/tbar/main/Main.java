@@ -57,7 +57,7 @@ public class Main {
 			}
 		});
 		Thread thread3 = new Thread(() -> {
-			int ARJATotal = 4;
+			int ARJATotal = 0;
 			while(ARJATotal <=26){
 				System.out.println("ARJATotal :"+ARJATotal);
 				ARJATotal++;
