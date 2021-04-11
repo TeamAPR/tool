@@ -3,7 +3,6 @@
 mkdir -p CARDUMEN
 mkdir -p jGenProg
 mkdir -p ARJA
-
 #compile astor
 cd astor
 jenv local 1.8
@@ -37,8 +36,18 @@ cd ..
 jenv local 1.8
 javac -cp "lib/*": -d bin $(find src -name '*.java')
 
-bugDataPath="abc"
 bugID=$1
+bugTill=$2
 defects4jHome="abc"
 
-java -Xmx1g -cp "lib/*":bin edu.lu.uni.serval.tbar.main.Main $bugDataPath $bugID $defects4jHome
+while [ $bugID -le $bugTill ]
+do
+    now="$(date)"
+	echo "Welcome $bugID times. $now"
+    java -Xmx1g -cp "lib/*":bin edu.lu.uni.serval.tbar.main.Main $bugTill $bugID $defects4jHome
+
+    now="$(date)"
+	echo "Welcome $bugID times. $now"
+
+	bugID=$bugID+1	 # increments $n
+done

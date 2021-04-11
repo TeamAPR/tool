@@ -1271,3 +1271,12 @@ Caused by: java.lang.ClassNotFoundException: org.apache.commons.cli.Unrecognized
 	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
 	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
 	... 7 more
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_1 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_1/lib:/Users/georgecherian/.m2/repository/junit/junit/4.11/junit-4.11.jar
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_1 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_1/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+hello 1
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_1/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_1/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_1/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_1/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_2 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_2/lib:/Users/georgecherian/.m2/repository/junit/junit/4.11/junit-4.11.jar
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_2 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_2/lib:/Users/georgecherian/Desktop/junit-4.11.jar

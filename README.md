@@ -15,7 +15,7 @@ cd..
 
 ````````````
 
-Run the following command
+Run the following command (the bug id to start from and end)
 ````````````
-bash ./toolRun.sh abc abc abc
+bash ./toolRun.sh 2 5
 ````````````
