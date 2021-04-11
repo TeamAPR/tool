@@ -889,14 +889,14 @@ public abstract class AbstractMain {
 	}
 
 	protected ProjectRepairFacade getProjectConfiguration(String location, String projectIdentifier, String method,
-			List<String> failingTestCases, String dependencies, boolean srcWithMain) throws Exception {
+			List<String> failingTestCases, String dependencies, boolean srcWithMain,String mode) throws Exception {
 
 		if (projectIdentifier == null || projectIdentifier.equals("")) {
 			File locFile = new File(location);
 			projectIdentifier = locFile.getName();
 		}
 
-		String projectUnderRepairKeyFolder = File.separator + method + "-" + projectIdentifier + File.separator;
+		String projectUnderRepairKeyFolder = File.separator + method +"-"+mode+ "-" + projectIdentifier + File.separator;
 		String workingdir = ConfigurationProperties.getProperty("workingDirectory");
 		String workingDirForSource = workingdir + projectUnderRepairKeyFolder + "/src/";
 		String workingDirForBytecode = workingdir + projectUnderRepairKeyFolder + "/bin/";
