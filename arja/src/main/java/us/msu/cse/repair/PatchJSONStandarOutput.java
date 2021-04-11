@@ -48,6 +48,7 @@ public class PatchJSONStandarOutput {
 		patchjson.put("NumOfDeleteMutations", JSONObject.escape(String.valueOf(numOfReplace)) );
 		patchjson.put("NumOfReplaceMutations", JSONObject.escape(String.valueOf(numOfDelete)) );
 
+		System.out.println(patchjson.toJSONString());
 		return statsjsonRoot;
 	}
 	public void finalWrite(String fileLocation){
