@@ -37,8 +37,8 @@ cd ..
 jenv local 1.8
 javac -cp "lib/*": -d bin $(find src -name '*.java')
 
-bugDataPath=$1
-bugID=$2
-defects4jHome=$3
+bugDataPath="abc"
+bugID=$1
+defects4jHome="abc"
 
 java -Xmx1g -cp "lib/*":bin edu.lu.uni.serval.tbar.main.Main $bugDataPath $bugID $defects4jHome

@@ -32,12 +32,12 @@ public class Main {
 		System.out.println("Hello");
 		Thread thread1 = new Thread(() -> {
 			int cardumenTotal = 0;
-			while(cardumenTotal <=26){
-				System.out.println("Cardumen :"+cardumenTotal);
+			if(cardumenTotal <=26){
+				System.out.println("Cardumen :"+bugId);
 				cardumenTotal++;
 				try {
 					ShellUtils s= new ShellUtils();
-					String output = s.shellRun(Arrays.asList("cd  astor \n", "bash ./cardumenRun.sh "+cardumenTotal), "Cardumen"+cardumenTotal, 1).trim();
+					String output = s.shellRun(Arrays.asList("cd  astor \n", "bash ./cardumenRun.sh "+bugId), "Cardumen"+bugId, 1).trim();
 					System.out.println(output);
 				} catch (Exception e){
 					e.printStackTrace();
@@ -46,12 +46,12 @@ public class Main {
 		});
 		Thread thread2 = new Thread(() -> {
 			int jGenProgTotal = 0;
-			while(jGenProgTotal <=26){
-				System.out.println("jGenProgTotal :"+jGenProgTotal);
+			if(jGenProgTotal <=26){
+				System.out.println("jGenProgTotal :"+bugId);
 				jGenProgTotal++;
 				try {
 					ShellUtils s= new ShellUtils();
-					String output = s.shellRun(Arrays.asList("cd  astor \n", "bash ./astorRun.sh "+jGenProgTotal), "jGenProgTotal"+jGenProgTotal, 1).trim();
+					String output = s.shellRun(Arrays.asList("cd  astor \n", "bash ./astorRun.sh "+bugId), "jGenProgTotal"+bugId, 1).trim();
 					System.out.println(output);
 				} catch (Exception e){
 					e.printStackTrace();
@@ -60,12 +60,12 @@ public class Main {
 		});
 		Thread thread3 = new Thread(() -> {
 			int ARJATotal = 0;
-			while(ARJATotal <=26){
-				System.out.println("ARJATotal :"+ARJATotal);
+			if(ARJATotal <=26){
+				System.out.println("ARJATotal :"+bugId);
 				ARJATotal++;
 				try {
 					ShellUtils s= new ShellUtils();
-					String output = s.shellRun(Arrays.asList("cd  arja \n", "bash ./run_arja.sh "+ARJATotal), "ARJATotal"+ARJATotal, 1).trim();
+					String output = s.shellRun(Arrays.asList("cd  arja \n", "bash ./run_arja.sh "+bugId), "ARJATotal"+bugId, 1).trim();
 					System.out.println(output);
 				} catch (Exception e){
 					e.printStackTrace();

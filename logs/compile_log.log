@@ -1234,3 +1234,40 @@ hello 1
 /Users/georgecherian/Desktop/TSE/bugs/chart/chart_1 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_1/lib:/Users/georgecherian/Desktop/junit-4.11.jar
 /Users/georgecherian/Desktop/TSE/bugs/chart/chart_1 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_1/lib:/Users/georgecherian/.m2/repository/junit/junit/4.11/junit-4.11.jar
 /Users/georgecherian/Desktop/TSE/bugs/chart/chart_2 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_2/lib:/Users/georgecherian/.m2/repository/junit/junit/4.11/junit-4.11.jar
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_1 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_1/lib:/Users/georgecherian/.m2/repository/junit/junit/4.11/junit-4.11.jar
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_2 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_2/lib:/Users/georgecherian/.m2/repository/junit/junit/4.11/junit-4.11.jar
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_3 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_3/lib:/Users/georgecherian/.m2/repository/junit/junit/4.11/junit-4.11.jar
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_1 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_1/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+cat: /tmp/astor-classpath.txt: No such file or directory
+Error: A JNI error has occurred, please check your installation and try again
+Exception in thread "main" java.lang.NoClassDefFoundError: org/apache/commons/cli/UnrecognizedOptionException
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.privateGetMethodRecursive(Class.java:3048)
+	at java.lang.Class.getMethod0(Class.java:3018)
+	at java.lang.Class.getMethod(Class.java:1784)
+	at sun.launcher.LauncherHelper.validateMainClass(LauncherHelper.java:650)
+	at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:632)
+Caused by: java.lang.ClassNotFoundException: org.apache.commons.cli.UnrecognizedOptionException
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 7 more
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_1 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_1/lib:/Users/georgecherian/.m2/repository/junit/junit/4.11/junit-4.11.jar
+cat: /tmp/astor-classpath.txt: No such file or directory
+Error: A JNI error has occurred, please check your installation and try again
+Exception in thread "main" java.lang.NoClassDefFoundError: org/apache/commons/cli/UnrecognizedOptionException
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.privateGetMethodRecursive(Class.java:3048)
+	at java.lang.Class.getMethod0(Class.java:3018)
+	at java.lang.Class.getMethod(Class.java:1784)
+	at sun.launcher.LauncherHelper.validateMainClass(LauncherHelper.java:650)
+	at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:632)
+Caused by: java.lang.ClassNotFoundException: org.apache.commons.cli.UnrecognizedOptionException
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 7 more
