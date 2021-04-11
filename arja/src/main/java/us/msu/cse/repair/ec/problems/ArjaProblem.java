@@ -208,6 +208,9 @@ public class ArjaProblem extends AbstractRepairProblem {
 		int[] var0 = ((ArrayInt) solution.getDecisionVariables()[0]).array_;
 		int size = var0.length / 2;
 
+		String [] manipulationName;
+		manipulationName = new String[numberOfEdits];
+
 		for (int i = 0; i < numberOfEdits; i++) {
 			int loc = list.get(i).getKey();
 			int op = var0[loc];
@@ -215,25 +218,29 @@ public class ArjaProblem extends AbstractRepairProblem {
 			opList.add(op);
 			locList.add(loc);
 			ingredList.add(ingred);
+			manipulationName[i] = availableManipulations.get(loc).get(op);
+			System.out.println("Manipulation #"+i);
+			System.out.println(manipulationName[i]);
 		}
 
 		System.out.println("Success Before Entry!!!!!!!"+globalID);
 		try {
 			if (addTestAdequatePatch(opList, locList, ingredList)) {
-		System.out.println("Success INside if 1!!!!!!!"+globalID);
+				System.out.println("Success INside if 1!!!!!!!"+globalID);
 				if (true) {
 					try {
-		System.out.println("Success INside if final!!!!!!!"+globalID);
-						IO.savePatch(modifiedJavaSources, srcJavaDir, this.patchOutputRoot, globalID,numberOfEdits,this.ps);
+						System.out.println("Success INside if final!!!!!!!"+globalID);
+						IO.savePatch(modifiedJavaSources, srcJavaDir, this.patchOutputRoot, globalID,numberOfEdits,this.ps , manipulationName);
 					} catch (InterruptedException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
-				}else{
+				}
+				/*else{
 					System.out.println("Success INside if other!!!!!!!"+globalID);
 					saveTestAdequatePatch(opList, locList, ingredList);
 
-				}
+				}*/
 				globalID++;
 			}
 		} catch (IOException e) {

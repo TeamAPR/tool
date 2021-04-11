@@ -258,7 +258,7 @@ public class IO {
 	
 	
 	public static void savePatch(Map<String, String> modifiedJavaSources, String srcJavaDir,
-			String patchDir, int globalID,int numberOfEdits,PatchJSONStandarOutput ps) throws IOException, InterruptedException {
+			String patchDir, int globalID,int numberOfEdits,PatchJSONStandarOutput ps,String[] manipulationNames) throws IOException, InterruptedException {
 
 		System.out.println("Success INside Save!!!!!!!"+globalID);
 		File root = new File(patchDir, "Patch_" + globalID);
@@ -283,7 +283,23 @@ public class IO {
 		}
 		if(ps!=null){
 			System.out.println("Success Before JSON!!!!!!!"+globalID);
-			ps.produceOutput(finalOutput , numberOfEdits, patchDir);
+			int numOfInsert = 0;
+			int numOfReplace = 0;
+			int numOfDelete = 0;
+			for (int i = 0; i < manipulationNames.length; i++) {
+	
+				String manipulationName = manipulationNames[i];
+				
+				if(manipulationName.toLowerCase().contains("insert")){
+					numOfInsert++;
+				}else if (manipulationName.toLowerCase().contains("delete")){
+					numOfDelete++;
+				}else{
+					numOfReplace++;
+				}
+	
+			}
+			ps.produceOutput(finalOutput , numberOfEdits, patchDir,numOfInsert,numOfReplace,numOfDelete);
 		}
 		
 		FileUtils.writeLines(new File(root, "diff"), diffs);

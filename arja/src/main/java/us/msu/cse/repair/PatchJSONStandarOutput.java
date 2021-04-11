@@ -29,7 +29,7 @@ public class PatchJSONStandarOutput {
 	}
 
 	@SuppressWarnings("unchecked")
-	public Object produceOutput(String patchOutput,int NumOfEdits,String fileLocation) {
+	public Object produceOutput(String patchOutput,int NumOfEdits,String fileLocation,int numOfInsert,int numOfReplace,int numOfDelete) {
 		
 		System.out.println("Inside prod output");
 		System.out.println("============");
@@ -44,9 +44,9 @@ public class PatchJSONStandarOutput {
 		patchjson.put("PatchDiff", JSONObject.escape(patchOutput) );
 		patchjson.put("Tool", JSONObject.escape(mode));
 
-		patchjson.put("NumOfInsertMutations", JSONObject.escape(String.valueOf(0)) );
-		patchjson.put("NumOfDeleteMutations", JSONObject.escape(String.valueOf(0)) );
-		patchjson.put("NumOfReplaceMutations", JSONObject.escape(String.valueOf(0)) );
+		patchjson.put("NumOfInsertMutations", JSONObject.escape(String.valueOf(numOfInsert)) );
+		patchjson.put("NumOfDeleteMutations", JSONObject.escape(String.valueOf(numOfReplace)) );
+		patchjson.put("NumOfReplaceMutations", JSONObject.escape(String.valueOf(numOfDelete)) );
 
 		return statsjsonRoot;
 	}

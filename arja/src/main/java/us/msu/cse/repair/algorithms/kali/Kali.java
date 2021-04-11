@@ -130,7 +130,7 @@ public class Kali extends AbstractRepairProblem {
 		if (compiledClasses != null) {
 			boolean flag = invokeTestExecutor(compiledClasses);
 			if (flag && diffFormat) {
-				IO.savePatch(modifiedJavaSources, srcJavaDir, patchOutputRoot, 0,0,null);
+				IO.savePatch(modifiedJavaSources, srcJavaDir, patchOutputRoot, 0,0,null,new String[1]);
 			}
 			return flag;
 		}
@@ -163,7 +163,7 @@ public class Kali extends AbstractRepairProblem {
 		if (compiledClasses != null) {
 			boolean flag = invokeTestExecutor(compiledClasses);
 			if (flag && diffFormat) {
-				IO.savePatch(modifiedJavaSources, srcJavaDir, patchOutputRoot, globalID,0,null);
+				IO.savePatch(modifiedJavaSources, srcJavaDir, patchOutputRoot, globalID,0,null, new String[1]);
 			}
 			return flag;
 		}

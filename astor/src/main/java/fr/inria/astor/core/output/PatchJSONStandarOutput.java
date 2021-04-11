@@ -72,6 +72,9 @@ public class PatchJSONStandarOutput implements ReportResults {
 			Map<PatchStatEnum, Object> stats = patchStat.getStats();
 			for (PatchStatEnum statKey : PatchStatEnum.values()) {
 				int modificationCount = 0;
+				int insertedCount = 0;
+				int replacedCount = 0;
+				int deletedCount = 0;
 				if (statKey.equals(PatchStatEnum.HUNKS)) {
 					List<PatchHunkStats> hunks = (List<PatchHunkStats>) stats.get(statKey);
 					JSONArray hunksListJson = new JSONArray();
@@ -84,14 +87,24 @@ public class PatchJSONStandarOutput implements ReportResults {
 						JSONObject hunkjson = new JSONObject();
 						hunksListJson.add(hunkjson);
 						for (HunkStatEnum hs : HunkStatEnum.values()) {
-							if (statshunk.containsKey(hs))
+							if (statshunk.containsKey(hs)){
+								if(hs.name()=="OPERATOR"){
+									if(statshunk.get(hs).toString().toLowerCase().contains("insert")){
+										insertedCount++;
+									}else if (statshunk.get(hs).toString().toLowerCase().contains("delete")){
+										deletedCount++;
+									}else{
+										replacedCount++;
+									}
+								}
 								hunkjson.put(hs.name(), JSONObject.escape(statshunk.get(hs).toString()));
+							}
 						}
 					}
 					patchjson.put("NumOfMut", JSONObject.escape(String.valueOf(modificationCount)) );
-					patchjson.put("NumOfInsertMutations", JSONObject.escape(String.valueOf(0)) );
-					patchjson.put("NumOfDeleteMutations", JSONObject.escape(String.valueOf(0)) );
-					patchjson.put("NumOfReplaceMutations", JSONObject.escape(String.valueOf(0)) );
+					patchjson.put("NumOfInsertMutations", JSONObject.escape(String.valueOf(insertedCount)) );
+					patchjson.put("NumOfDeleteMutations", JSONObject.escape(String.valueOf(replacedCount)) );
+					patchjson.put("NumOfReplaceMutations", JSONObject.escape(String.valueOf(deletedCount)) );
 
 				} else {
 					try {

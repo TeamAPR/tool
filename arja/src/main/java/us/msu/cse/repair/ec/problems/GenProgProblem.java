@@ -124,7 +124,9 @@ public class GenProgProblem extends AbstractRepairProblem {
 			if (addTestAdequatePatch(opList, locList, ingredList)) {
 				if (diffFormat) {
 					try {
-						IO.savePatch(modifiedJavaSources, srcJavaDir, this.patchOutputRoot, globalID,0,null);
+						String testStringArr[];
+						testStringArr = new String[10];
+						IO.savePatch(modifiedJavaSources, srcJavaDir, this.patchOutputRoot, globalID,0,null , testStringArr);
 					} catch (InterruptedException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
