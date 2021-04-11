@@ -8,6 +8,7 @@ Install maven
 Run the following commands first
 ````````````
 cd astor
+jenv local 1.8
 mvn dependency:build-classpath -B | egrep -v "(^\[INFO\]|^\[WARNING\])" | tee /tmp/astor-classpath.txt
 cd..
 

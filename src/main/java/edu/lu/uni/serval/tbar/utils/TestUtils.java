@@ -81,8 +81,10 @@ public class TestUtils {
 	private static String getDefects4jResult(String projectName, String defects4jPath, String cmdType) {
 		try {
 			String buggyProject = projectName.substring(projectName.lastIndexOf("/") + 1);
-			//which java\njava -version\n
-            String result = ShellUtils.shellRun(Arrays.asList("cd " + projectName + "\n", defects4jPath + "framework/bin/defects4j " + cmdType + "\n"), buggyProject, cmdType.equals("test") ? 2 : 1);//"defects4j " + cmdType + "\n"));//
+            //which java\njava -version\n
+            
+			ShellUtils s= new ShellUtils();
+            String result = s.shellRun(Arrays.asList("cd " + projectName + "\n", defects4jPath + "framework/bin/defects4j " + cmdType + "\n"), buggyProject, cmdType.equals("test") ? 2 : 1);//"defects4j " + cmdType + "\n"));//
             System.out.println(result);
             return result.trim();
         } catch (IOException e){
@@ -94,7 +96,9 @@ public class TestUtils {
 	public static String recoverWithGitCmd(String projectName) {
 		try {
 			String buggyProject = projectName.substring(projectName.lastIndexOf("/") + 1);
-            ShellUtils.shellRun(Arrays.asList("cd " + projectName + "\n", "git checkout -- ."), buggyProject, 1);
+            
+            ShellUtils s= new ShellUtils();
+            s.shellRun(Arrays.asList("cd " + projectName + "\n", "git checkout -- ."), buggyProject, 1);
             return "";
         } catch (IOException e){
             return "Failed to recover.";
@@ -104,7 +108,9 @@ public class TestUtils {
 	public static String readPatch(String projectName) {
 		try {
 			String buggyProject = projectName.substring(projectName.lastIndexOf("/") + 1);
-            return ShellUtils.shellRun(Arrays.asList("cd " + projectName + "\n", "git diff"), buggyProject, 1).trim();
+            
+                    ShellUtils s= new ShellUtils();
+                    return s.shellRun(Arrays.asList("cd " + projectName + "\n", "git diff"), buggyProject, 1).trim();
         } catch (IOException e){
             return null;
         }
@@ -113,7 +119,9 @@ public class TestUtils {
 	public static String checkout(String projectName) {
 		try {
 			String buggyProject = projectName.substring(projectName.lastIndexOf("/") + 1);
-            return ShellUtils.shellRun(Arrays.asList("cd " + projectName + "\n", "git checkout -- ."), buggyProject, 1).trim();
+            
+                    ShellUtils s= new ShellUtils();
+                    return s.shellRun(Arrays.asList("cd " + projectName + "\n", "git checkout -- ."), buggyProject, 1).trim();
         } catch (IOException e){
             return null;
         }

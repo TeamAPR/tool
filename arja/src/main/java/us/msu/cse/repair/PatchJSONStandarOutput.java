@@ -44,6 +44,10 @@ public class PatchJSONStandarOutput {
 		patchjson.put("PatchDiff", JSONObject.escape(patchOutput) );
 		patchjson.put("Tool", JSONObject.escape(mode));
 
+		patchjson.put("NumOfInsertMutations", JSONObject.escape(String.valueOf(0)) );
+		patchjson.put("NumOfDeleteMutations", JSONObject.escape(String.valueOf(0)) );
+		patchjson.put("NumOfReplaceMutations", JSONObject.escape(String.valueOf(0)) );
+
 		return statsjsonRoot;
 	}
 	public void finalWrite(String fileLocation){

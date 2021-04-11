@@ -89,6 +89,9 @@ public class PatchJSONStandarOutput implements ReportResults {
 						}
 					}
 					patchjson.put("NumOfMut", JSONObject.escape(String.valueOf(modificationCount)) );
+					patchjson.put("NumOfInsertMutations", JSONObject.escape(String.valueOf(0)) );
+					patchjson.put("NumOfDeleteMutations", JSONObject.escape(String.valueOf(0)) );
+					patchjson.put("NumOfReplaceMutations", JSONObject.escape(String.valueOf(0)) );
 
 				} else {
 					try {
@@ -141,7 +144,7 @@ public class PatchJSONStandarOutput implements ReportResults {
 			e.printStackTrace();
 		}
 		absoluteFileName = absoluteFileName+"/output.json";
-		
+
 		try (FileWriter file = new FileWriter(absoluteFileName)) {
 
 			file.write(statsjsonRoot.toJSONString());

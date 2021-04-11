@@ -36,7 +36,8 @@ public class Main {
 				System.out.println("Cardumen :"+cardumenTotal);
 				cardumenTotal++;
 				try {
-					String output = ShellUtils.shellRun(Arrays.asList("cd  astor \n", "bash ./cardumenRun.sh "+cardumenTotal), "Cardumen"+bugId, 1).trim();
+					ShellUtils s= new ShellUtils();
+					String output = s.shellRun(Arrays.asList("cd  astor \n", "bash ./cardumenRun.sh "+cardumenTotal), "Cardumen"+cardumenTotal, 1).trim();
 					System.out.println(output);
 				} catch (Exception e){
 					e.printStackTrace();
@@ -49,7 +50,8 @@ public class Main {
 				System.out.println("jGenProgTotal :"+jGenProgTotal);
 				jGenProgTotal++;
 				try {
-					String output = ShellUtils.shellRun(Arrays.asList("cd  astor \n", "bash ./astorRun.sh "+jGenProgTotal), "jGenProgTotal"+bugId, 1).trim();
+					ShellUtils s= new ShellUtils();
+					String output = s.shellRun(Arrays.asList("cd  astor \n", "bash ./astorRun.sh "+jGenProgTotal), "jGenProgTotal"+jGenProgTotal, 1).trim();
 					System.out.println(output);
 				} catch (Exception e){
 					e.printStackTrace();
@@ -62,7 +64,8 @@ public class Main {
 				System.out.println("ARJATotal :"+ARJATotal);
 				ARJATotal++;
 				try {
-					String output = ShellUtils.shellRun(Arrays.asList("cd  arja \n", "bash ./run_arja.sh "+ARJATotal), "ARJATotal"+bugId, 1).trim();
+					ShellUtils s= new ShellUtils();
+					String output = s.shellRun(Arrays.asList("cd  arja \n", "bash ./run_arja.sh "+ARJATotal), "ARJATotal"+ARJATotal, 1).trim();
 					System.out.println(output);
 				} catch (Exception e){
 					e.printStackTrace();
