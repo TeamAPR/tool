@@ -1,10 +1,14 @@
 package fr.inria.astor.core.output;
 
 import java.io.FileWriter;
+import java.io.FileReader;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 import org.apache.log4j.Logger;
 import org.json.simple.JSONArray;
@@ -21,6 +25,7 @@ import fr.inria.astor.core.stats.Stats;
 import fr.inria.astor.core.stats.Stats.GeneralStatEnum;
 import fr.inria.main.AstorOutputStatus;
 import fr.inria.main.ExecutionMode;
+import fr.inria.astor.core.faultlocalization.entity.SuspiciousCode;;
 
 /**
  * 
@@ -171,5 +176,124 @@ public class PatchJSONStandarOutput implements ReportResults {
 		}
 		return statsjsonRoot;
 	}
+
+	
+	@SuppressWarnings("unchecked")
+	public Object produceOutputforFL(List<SuspiciousCode> suspiciousList) {
+
+		JSONObject statsjsonRoot = new JSONObject();
+		JSONArray patchlistJson = new JSONArray();
+		statsjsonRoot.put("suspiciousCode", patchlistJson);
+		JSONParser parser = new JSONParser();
+
+		for (SuspiciousCode suspCode : suspiciousList) {
+
+			JSONObject patchjson = new JSONObject();
+			patchlistJson.add(patchjson);
+
+			System.out.println("===============================");
+
+			patchjson.put("className", JSONObject.escape(suspCode.getClassName()));
+			patchjson.put("methodName", JSONObject.escape(suspCode.getMethodName()));
+			patchjson.put("lineNumber", JSONObject.escape(String.valueOf(suspCode.getLineNumber())));
+			patchjson.put("suspiciousValue", JSONObject.escape(String.valueOf(suspCode.getSuspiciousValue())));
+			patchjson.put("fileName", JSONObject.escape(suspCode.getFileName()));
+			JSONArray coverageListJSON = new JSONArray();
+			patchjson.put("coverage", coverageListJSON);
+			
+	
+			// Traversing through the map
+			for (Map.Entry<Integer, Integer> me : suspCode.getCoverage().entrySet()) {
+				JSONObject covJSON = new JSONObject();
+				coverageListJSON.add(covJSON);
+				covJSON.put("key", JSONObject.escape(String.valueOf(me.getKey())));
+				covJSON.put("value", JSONObject.escape(String.valueOf(me.getValue())));
+			}
+
+		}
+
+		String absoluteFileName = "./../"+this.bugName+"/fault_localization/";
+		System.out.println("===========");
+		System.out.println(absoluteFileName);
+		
+		try{
+			File filejson = new File(absoluteFileName);		
+			filejson.mkdirs();
+			filejson.createNewFile();
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
+		absoluteFileName = absoluteFileName+"/output.json";
+
+		try (FileWriter file = new FileWriter(absoluteFileName)) {
+
+			file.write(statsjsonRoot.toJSONString());
+			file.flush();
+			log.info("Storing ing JSON at " + absoluteFileName);
+			log.info(absoluteFileName + ":\n" + statsjsonRoot.toJSONString());
+
+		} catch (IOException e) {
+			e.printStackTrace();
+			log.error("Problem storing ing json file" + e.toString());
+		}
+		return statsjsonRoot;
+	}
+
+	
+	@SuppressWarnings("unchecked")
+    public List<SuspiciousCode> readJSONFromFile() 
+    {
+        //JSON parser object to parse read file
+		List<SuspiciousCode> codes = new ArrayList<>();
+        JSONParser jsonParser = new JSONParser();
+         
+		String absoluteFileName = "./../"+this.bugName+"/fault_localization/";
+		System.out.println("===========");
+		System.out.println(absoluteFileName);
+		
+		absoluteFileName = absoluteFileName+"/output.json";
+
+        try (FileReader reader = new FileReader(absoluteFileName))
+        {
+            //Read JSON file
+            Object obj = jsonParser.parse(reader);
+ 
+			JSONObject employeeObject = (JSONObject) obj ;
+            JSONArray employeeList = (JSONArray) employeeObject.get("suspiciousCode");
+             
+            //Iterate over employee array
+            employeeList.forEach( susp -> {
+				SuspiciousCode sc = parseSuspiciousCodeObject( (JSONObject) susp );
+				codes.add(sc);
+			});
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+		return codes;
+    }
+ 
+	@SuppressWarnings("unchecked")
+    private SuspiciousCode parseSuspiciousCodeObject(JSONObject employeeObject) 
+    {         
+        String className = (String) employeeObject.get("className");
+        String methodName = (String) employeeObject.get("methodName");  
+        int lineNumber = new Integer((String)employeeObject.get("lineNumber"));   
+        Double suspiciousValue = new Double((String)employeeObject.get("suspiciousValue"));   
+        String fileName = (String) employeeObject.get("fileName");
+		
+		JSONArray coverageArray = (JSONArray) employeeObject.get("coverage");
+		Map<Integer,Integer> coverageMap = new HashMap<Integer, Integer>();
+		coverageArray.forEach( cov -> {
+			JSONObject covOutput = (JSONObject) cov ;
+			coverageMap.put(new Integer((String)covOutput.get("key")), new Integer((String)covOutput.get("value")));
+		});
+  
+		return new SuspiciousCode(className, methodName, lineNumber, suspiciousValue,coverageMap);
+    }
 
 }

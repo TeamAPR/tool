@@ -44,10 +44,12 @@ while [ $bugID -le $bugTill ]
 do
     now="$(date)"
 	echo "Welcome $bugID times. $now"
+    #cd astor
+    #bash ./runFaultLocalization.sh $bugID
     java -Xmx1g -cp "lib/*":bin edu.lu.uni.serval.tbar.main.Main $bugTill $bugID $defects4jHome
 
     now="$(date)"
 	echo "Welcome $bugID times. $now"
 
-	bugID=$bugID+1	 # increments $n
+	bugID=$((bugID+1))	 # increments $n
 done

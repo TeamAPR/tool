@@ -21,7 +21,7 @@ import us.msu.cse.repair.PatchJSONStandarOutput;
 
 public class RepairAlgConfig {
 
-	static PatchJSONStandarOutput ps = new PatchJSONStandarOutput("ARJA");
+	static PatchJSONStandarOutput ps = new PatchJSONStandarOutput("ARJA","");
 
 	public static AbstractRepairAlgorithm getRepairAlg(String algName, HashMap<String, Object> parameters)
 			throws Exception {
@@ -101,7 +101,7 @@ public class RepairAlgConfig {
 	}
 
 	static AbstractRepairAlgorithm getArjaAlg(HashMap<String, Object> parameters) throws Exception {
-		ArjaProblem problem = new ArjaProblem(parameters,ps);
+		ArjaProblem problem = new ArjaProblem(parameters,ps,false,"");
 		AbstractRepairAlgorithm repairAlg = new Arja(problem);
 
 		repairAlg.setInputParameter("populationSize", 40);
@@ -134,7 +134,7 @@ public class RepairAlgConfig {
 	}
 
 	static AbstractRepairAlgorithm getArjaRandomAlg(HashMap<String, Object> parameters) throws Exception {
-		ArjaProblem problem = new ArjaProblem(parameters,ps);
+		ArjaProblem problem = new ArjaProblem(parameters,ps,false,"");
 		AbstractRepairAlgorithm repairAlg = new Arja(problem);
 
 		repairAlg.setInputParameter("populationSize", 40);
@@ -167,7 +167,7 @@ public class RepairAlgConfig {
 
 	static AbstractRepairAlgorithm getArjaSingleAlg(HashMap<String, Object> parameters) throws Exception {
 		parameters.put("numberOfObjectives", 1);
-		ArjaProblem problem = new ArjaProblem(parameters,ps);
+		ArjaProblem problem = new ArjaProblem(parameters,ps,false,"");
 		AbstractRepairAlgorithm repairAlg = new ArjaSingle(problem);
 
 		repairAlg.setInputParameter("populationSize", 40);
@@ -202,7 +202,7 @@ public class RepairAlgConfig {
 	static AbstractRepairAlgorithm getArjaVarMatchAlg(HashMap<String, Object> parameters) throws Exception {
 		parameters.put("ingredientScreenerName", "VarTypeMatch");
 
-		ArjaProblem problem = new ArjaProblem(parameters,ps);
+		ArjaProblem problem = new ArjaProblem(parameters,ps,false,"");
 		AbstractRepairAlgorithm repairAlg = new Arja(problem);
 
 		repairAlg.setInputParameter("populationSize", 40);
@@ -237,7 +237,7 @@ public class RepairAlgConfig {
 	static AbstractRepairAlgorithm getArjaMethodMatchAlg(HashMap<String, Object> parameters) throws Exception {
 		parameters.put("ingredientScreenerName", "MethodTypeMatch");
 
-		ArjaProblem problem = new ArjaProblem(parameters,ps);
+		ArjaProblem problem = new ArjaProblem(parameters,ps,false,"");
 		AbstractRepairAlgorithm repairAlg = new Arja(problem);
 
 		repairAlg.setInputParameter("populationSize", 40);
@@ -272,7 +272,7 @@ public class RepairAlgConfig {
 	static AbstractRepairAlgorithm getArjaVMMatchAlg(HashMap<String, Object> parameters) throws Exception {
 		parameters.put("ingredientScreenerName", "VMTypeMatch");
 
-		ArjaProblem problem = new ArjaProblem(parameters,ps);
+		ArjaProblem problem = new ArjaProblem(parameters,ps,false,"");
 		AbstractRepairAlgorithm repairAlg = new Arja(problem);
 
 		repairAlg.setInputParameter("populationSize", 40);

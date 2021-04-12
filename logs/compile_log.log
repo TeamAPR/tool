@@ -1280,3 +1280,207 @@ hello 1
 /Users/georgecherian/Desktop/TSE/bugs/chart/chart_1/lib:/Users/georgecherian/Desktop/junit-4.11.jar
 /Users/georgecherian/Desktop/TSE/bugs/chart/chart_2 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_2/lib:/Users/georgecherian/.m2/repository/junit/junit/4.11/junit-4.11.jar
 /Users/georgecherian/Desktop/TSE/bugs/chart/chart_2 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_2/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+hello 2
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_2/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_2/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_2/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_2/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_3 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_3/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_3 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_3/lib:/Users/georgecherian/.m2/repository/junit/junit/4.11/junit-4.11.jar
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_4 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_4/lib:/Users/georgecherian/.m2/repository/junit/junit/4.11/junit-4.11.jar
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_4 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_4/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_5 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_5/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_6 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_6/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_7 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_7/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_8 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_8/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_9 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_9/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_10 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_10/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_11 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_11/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_12 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_12/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_13 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_13/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_14 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_14/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_15 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_15/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_16 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_16/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_17 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_17/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_18 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_18/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_19 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_19/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_20 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_20/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_21 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_21/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_22 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_22/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_23 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_23/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_24 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_24/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_25 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_25/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_26 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_26/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_5 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_5/lib:/Users/georgecherian/.m2/repository/junit/junit/4.11/junit-4.11.jar
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_6 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_6/lib:/Users/georgecherian/.m2/repository/junit/junit/4.11/junit-4.11.jar
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_7 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_7/lib:/Users/georgecherian/.m2/repository/junit/junit/4.11/junit-4.11.jar
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_8 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_8/lib:/Users/georgecherian/.m2/repository/junit/junit/4.11/junit-4.11.jar
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_9 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_9/lib:/Users/georgecherian/.m2/repository/junit/junit/4.11/junit-4.11.jar
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_10 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_10/lib:/Users/georgecherian/.m2/repository/junit/junit/4.11/junit-4.11.jar
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_11 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_11/lib:/Users/georgecherian/.m2/repository/junit/junit/4.11/junit-4.11.jar
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_12 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_12/lib:/Users/georgecherian/.m2/repository/junit/junit/4.11/junit-4.11.jar
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_14 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_14/lib:/Users/georgecherian/.m2/repository/junit/junit/4.11/junit-4.11.jar
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_15 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_15/lib:/Users/georgecherian/.m2/repository/junit/junit/4.11/junit-4.11.jar
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_16 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_16/lib:/Users/georgecherian/.m2/repository/junit/junit/4.11/junit-4.11.jar
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_17 \n/Users/georgecherian/Desktop/TSE/bugs/chart/chart_17/lib:/Users/georgecherian/.m2/repository/junit/junit/4.11/junit-4.11.jar
+hello 3
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_3/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_3/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_3/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_3/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+Exception in thread "main" java.lang.NullPointerException
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeFaultLocalizer(AbstractRepairProblem.java:309)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:274)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:249)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:47)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:44)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 4
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_4/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_4/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_4/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_4/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+Exception in thread "main" java.lang.NullPointerException
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeFaultLocalizer(AbstractRepairProblem.java:309)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:274)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:249)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:47)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:44)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 5
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_5/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_5/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_5/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_5/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+Exception in thread "main" java.lang.NullPointerException
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeFaultLocalizer(AbstractRepairProblem.java:309)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:274)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:249)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:47)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:44)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 6
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_6/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_6/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_6/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_6/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+Exception in thread "main" java.lang.NullPointerException
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeFaultLocalizer(AbstractRepairProblem.java:309)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:274)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:249)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:47)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:44)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 7
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_7/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_7/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_7/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_7/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+Exception in thread "main" java.lang.NullPointerException
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeFaultLocalizer(AbstractRepairProblem.java:309)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:274)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:249)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:47)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:44)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 8
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_8/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_8/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_8/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_8/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+Exception in thread "main" java.lang.NullPointerException
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeFaultLocalizer(AbstractRepairProblem.java:309)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:274)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:249)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:47)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:44)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 9
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_9/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_9/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_9/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_9/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+Exception in thread "main" java.lang.NullPointerException
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeFaultLocalizer(AbstractRepairProblem.java:309)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:274)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:249)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:47)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:44)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 10
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_10/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_10/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_10/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_10/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+Exception in thread "main" java.lang.NullPointerException
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeFaultLocalizer(AbstractRepairProblem.java:309)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:274)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:249)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:47)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:44)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 11
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_11/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_11/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_11/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_11/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+Exception in thread "main" java.lang.NullPointerException
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeFaultLocalizer(AbstractRepairProblem.java:309)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:274)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:249)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:47)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:44)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 12
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_12/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_12/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_12/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_12/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+Exception in thread "main" java.lang.NullPointerException
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeFaultLocalizer(AbstractRepairProblem.java:309)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:274)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:249)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:47)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:44)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 13
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_13/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_13/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_13/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_13/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+Exception in thread "main" java.lang.NullPointerException
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeFaultLocalizer(AbstractRepairProblem.java:309)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:274)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:249)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:47)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:44)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 14
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_14/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_14/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_14/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_14/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+Exception in thread "main" java.lang.NullPointerException
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeFaultLocalizer(AbstractRepairProblem.java:309)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:274)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:249)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:47)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:44)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 16
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_16/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_16/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_16/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_16/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+Exception in thread "main" java.lang.NullPointerException
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeFaultLocalizer(AbstractRepairProblem.java:309)
+	at us.msu.cse.repair.core.AbstractRepairProblem.invokeModules(AbstractRepairProblem.java:274)
+	at us.msu.cse.repair.core.AbstractRepairProblem.<init>(AbstractRepairProblem.java:249)
+	at us.msu.cse.repair.ec.problems.ArjaProblem.<init>(ArjaProblem.java:47)
+	at us.msu.cse.repair.ArjaMain.main(ArjaMain.java:44)
+	at us.msu.cse.repair.Main.main(Main.java:8)
+hello 3
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_3/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_3/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_3/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_3/lib:/Users/georgecherian/Desktop/junit-4.11.jar
