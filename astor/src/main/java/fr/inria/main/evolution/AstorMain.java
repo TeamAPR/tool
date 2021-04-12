@@ -31,6 +31,7 @@ import fr.inria.astor.core.setup.ProjectRepairFacade;
 import fr.inria.astor.core.solutionsearch.AstorCoreEngine;
 import fr.inria.main.AbstractMain;
 import fr.inria.main.ExecutionMode;
+import fr.inria.astor.core.output.PatchJSONStandarOutput;
 
 /**
  * Astor main
@@ -119,7 +120,13 @@ public class AstorMain extends AbstractMain {
 			// We dont use FL, so at this point the do not have suspicious
 			core.initPopulation(new ArrayList<SuspiciousCode>());
 		} else {
-			List<SuspiciousCode> suspicious = core.calculateSuspicious();
+			List<SuspiciousCode> suspicious;
+			if (ConfigurationProperties.getPropertyBool("readFLFromFile")) {
+				PatchJSONStandarOutput ps = new PatchJSONStandarOutput("FL",bugName);
+				suspicious = ps.readJSONFromFile();
+			}else{
+				suspicious = core.calculateSuspicious();
+			}
 
 			core.initPopulation(suspicious);
 		}
@@ -187,6 +194,13 @@ public class AstorMain extends AbstractMain {
 
 		}
 
+		if(this.doLocalFL){
+			System.out.println("Fault localization");
+			List<SuspiciousCode> suspicious = core.calculateSuspicious();
+			PatchJSONStandarOutput ps = new PatchJSONStandarOutput("FL",bugName);
+			ps.produceOutputforFL(suspicious);
+			return;
+		}
 		ConfigurationProperties.print();
 
 		core.startEvolution();

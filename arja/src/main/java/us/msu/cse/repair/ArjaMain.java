@@ -20,13 +20,15 @@ public class ArjaMain {
 		HashMap<String, String> parameterStrs = Interpreter.getParameterStrings(args);
 		HashMap<String, Object> parameters = Interpreter.getBasicParameterSetting(parameterStrs);
 		System.out.println("HELLLLLLOOOOO");
-		PatchJSONStandarOutput ps = new PatchJSONStandarOutput("ARJA");
+		PatchJSONStandarOutput ps = new PatchJSONStandarOutput("ARJA",parameterStrs.get("BugName"));
 		
 		ps.finalWrite(parameterStrs.get("BugName"));
 		String ingredientScreenerNameS = parameterStrs.get("ingredientScreenerName");
 		if (ingredientScreenerNameS != null) 
 			parameters.put("ingredientScreenerName", ingredientScreenerNameS);
-		
+		Boolean readFromFile=false;
+		if(parameterStrs.get("ReadFromFile")=="true")
+			readFromFile=true;
 		
 		int populationSize = 40;
 		int maxGenerations = 50;
@@ -39,7 +41,7 @@ public class ArjaMain {
 		if (maxGenerationsS != null)
 			maxGenerations = Integer.parseInt(maxGenerationsS);
 		
-		ArjaProblem problem = new ArjaProblem(parameters,ps);
+		ArjaProblem problem = new ArjaProblem(parameters,ps,readFromFile,parameterStrs.get("BugName"));
 		AbstractRepairAlgorithm repairAlg = new Arja(problem);
 
 		repairAlg.setInputParameter("populationSize", populationSize);

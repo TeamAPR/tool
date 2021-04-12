@@ -65,6 +65,7 @@ import us.msu.cse.repair.core.util.CustomURLClassLoader;
 import us.msu.cse.repair.core.util.Helper;
 import us.msu.cse.repair.core.util.IO;
 import us.msu.cse.repair.core.util.Patch;
+import us.msu.cse.repair.PatchJSONStandarOutput;
 
 public abstract class AbstractRepairProblem extends Problem {
 	/**
@@ -144,6 +145,8 @@ public abstract class AbstractRepairProblem extends Problem {
 
 	protected static long launchTime;
 	protected static int evaluations;
+	public Boolean readFromFile;
+	public String bugName;
 
 	
 
@@ -303,8 +306,12 @@ public abstract class AbstractRepairProblem extends Problem {
 					dependences);
 		else
 			faultLocalizer = new GZoltarFaultLocalizer2(gzoltarDataDir);
-
-		faultyLines = faultLocalizer.searchSuspicious(thr);
+		if(readFromFile){
+			PatchJSONStandarOutput ps = new PatchJSONStandarOutput("ARJA",bugName);
+			faultyLines = ps.readJSONFromFile();
+		}else{
+			faultyLines = faultLocalizer.searchSuspicious(thr);
+		}
 
 		positiveTests = faultLocalizer.getPositiveTests();
 		negativeTests = faultLocalizer.getNegativeTests();

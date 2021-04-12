@@ -43,9 +43,11 @@ public class ArjaProblem extends AbstractRepairProblem {
 	Boolean miFilterRule;
 	PatchJSONStandarOutput ps;
 
-	public ArjaProblem(Map<String, Object> parameters, PatchJSONStandarOutput ps) throws Exception {
+	public ArjaProblem(Map<String, Object> parameters, PatchJSONStandarOutput ps, Boolean readFromFile,String bugName) throws Exception {
 		super(parameters);
 		this.ps = ps;
+		this.readFromFile = readFromFile;
+		this.bugName = bugName;
 
 		weight = (Double) parameters.get("weight");
 		if (weight == null)
