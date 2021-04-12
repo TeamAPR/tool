@@ -24,15 +24,28 @@ public class Ranking {
 		String arjaFilePath = filePath + "/" + bugName + "/ARJA_output/output.json";
 		String cardumenFilePath = filePath + "/" + bugName + "/CARDUMEN_output/output.json";
 		String jgenprogFilePath = filePath + "/" + bugName + "/jgenprog_output/output.json";
-		
-    	List<Patch> arjaPatches = this.getPatches(arjaFilePath);
-    	List<Patch> cardumenPatches = this.getPatches(cardumenFilePath);
-    	List<Patch> jgenprogPatches = this.getPatches(jgenprogFilePath);
-    	
-    	allPatches.addAll(arjaPatches);
-    	allPatches.addAll(cardumenPatches);
-    	allPatches.addAll(jgenprogPatches);
-    	
+
+		File a_tempFile = new File(arjaFilePath);
+		if (a_tempFile.exists()){
+			System.out.println("ARJA patches are available");
+			List<Patch> arjaPatches = this.getPatches(arjaFilePath);
+			allPatches.addAll(arjaPatches);
+		}
+
+		File c_tempFile = new File(cardumenFilePath);
+		if (c_tempFile.exists()){
+			System.out.println("Cardumen patches are available");
+			List<Patch> cardumenPatches = this.getPatches(cardumenFilePath);
+			allPatches.addAll(cardumenPatches);
+		}
+
+		File j_tempFile = new File(jgenprogFilePath);
+		if (j_tempFile.exists()){
+			System.out.println("jgenprog patches are available");
+			List<Patch> jgenprogPatches = this.getPatches(jgenprogFilePath);
+    		allPatches.addAll(jgenprogPatches);
+		}
+		    	
     	return allPatches;
     	
     }
