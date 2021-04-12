@@ -94,6 +94,10 @@ public class Ranking {
     	Collections.sort(unrankedPatches, compareNumOfMut); 	
     	ranked = unrankedPatches;
 
+		for (int i = 0; i < ranked.size(); i++){
+			ranked.get(i).Rank = i + 1;
+		}
+
         return ranked;
         
     }

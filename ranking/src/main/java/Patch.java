@@ -5,6 +5,7 @@ public class Patch {
     public int NumOfReplaceMutations;
     public String PatchDiff;
     public String Tool;
+    public int Rank;
 
     Patch(String NumOfMut,  String NumOfInsertMutations, String NumOfDeleteMutations, String NumOfReplaceMutations, String PatchDiff, String Tool){
     	this.NumOfMut = Integer.parseInt(NumOfMut);
