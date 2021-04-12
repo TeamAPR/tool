@@ -195,6 +195,7 @@ public class AstorMain extends AbstractMain {
 		}
 
 		if(this.doLocalFL){
+			System.out.println("Fault localization");
 			List<SuspiciousCode> suspicious = core.calculateSuspicious();
 			PatchJSONStandarOutput ps = new PatchJSONStandarOutput("FL",bugName);
 			ps.produceOutputforFL(suspicious);
