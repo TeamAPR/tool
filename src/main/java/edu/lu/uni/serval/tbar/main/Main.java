@@ -30,7 +30,7 @@ public class Main {
 		String defects4jHome = args[2]; // "../defects4j/"
 		System.out.println(bugId);
 		System.out.println("Hello");
-
+		System.out.println("Fault Localization");
 		ShellUtils shellFinal= new ShellUtils();
 		String FLOutput = shellFinal.shellRun(Arrays.asList("cd  astor \n", "bash ./runFaultLocalization.sh "+bugId), "FL"+bugId, 1).trim();
 		System.out.println(FLOutput);
