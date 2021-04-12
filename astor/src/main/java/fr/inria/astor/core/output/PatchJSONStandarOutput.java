@@ -193,6 +193,17 @@ public class PatchJSONStandarOutput implements ReportResults {
 			patchjson.put("lineNumber", JSONObject.escape(String.valueOf(suspCode.getLineNumber())));
 			patchjson.put("suspiciousValue", JSONObject.escape(String.valueOf(suspCode.getSuspiciousValue())));
 			patchjson.put("fileName", JSONObject.escape(suspCode.getFileName()));
+			JSONArray coverageListJSON = new JSONArray();
+			patchjson.put("coverage", coverageListJSON);
+			
+	
+			// Traversing through the map
+			for (Map.Entry<String, Integer> me : suspCode.getCoverage().entrySet()) {
+				JSONObject covJSON = new JSONObject();
+				coverageListJSON.add(covJSON);
+				covJSON.put("key", JSONObject.escape(String.valueOf(me.getKey())));
+				covJSON.put("value", JSONObject.escape(String.valueOf(me.getValue())));
+			}
 
 		}
 
@@ -264,10 +275,18 @@ public class PatchJSONStandarOutput implements ReportResults {
     {         
         String className = (String) employeeObject.get("className");
         String methodName = (String) employeeObject.get("methodName");  
-        int lineNumber = (Integer) employeeObject.get("lineNumber");   
-        Double suspiciousValue = (Double) employeeObject.get("suspiciousValue");   
+        int lineNumber = new Integer(employeeObject.get("lineNumber"));   
+        Double suspiciousValue = new Double(employeeObject.get("suspiciousValue"));   
         String fileName = (String) employeeObject.get("fileName");
-		return new SuspiciousCode(className, methodName, lineNumber, suspiciousValue,null);
+		
+		JSONArray coverageArray = (JSONArray) employeeObject.get("coverage");
+		Map<Integer,Integer> coverageMap = new HashMap<Integer, Integer>();
+		coverageArray.forEach( cov -> {
+			JSONObject covOutput = (JSONObject) cov ;
+			coverageMap.put(new Integer(covOutput.get("key")), new Integer(covOutput.get("value")));
+		});
+  
+		return new SuspiciousCode(className, methodName, lineNumber, suspiciousValue,coverageMap);
     }
 
 }

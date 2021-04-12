@@ -120,10 +120,12 @@ public class AstorMain extends AbstractMain {
 			// We dont use FL, so at this point the do not have suspicious
 			core.initPopulation(new ArrayList<SuspiciousCode>());
 		} else {
+			List<SuspiciousCode> suspicious;
 			if (ConfigurationProperties.getPropertyBool("readFLFromFile")) {
-
+				PatchJSONStandarOutput ps = new PatchJSONStandarOutput("FL",bugName);
+				suspicious = ps.readJSONFromFile();
 			}else{
-				List<SuspiciousCode> suspicious = core.calculateSuspicious();
+				suspicious = core.calculateSuspicious();
 			}
 
 			core.initPopulation(suspicious);
