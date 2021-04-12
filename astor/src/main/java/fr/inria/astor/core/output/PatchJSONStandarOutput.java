@@ -21,6 +21,7 @@ import fr.inria.astor.core.stats.Stats;
 import fr.inria.astor.core.stats.Stats.GeneralStatEnum;
 import fr.inria.main.AstorOutputStatus;
 import fr.inria.main.ExecutionMode;
+import fr.inria.astor.core.faultlocalization.entity.SuspiciousCode;;
 
 /**
  * 
@@ -171,5 +172,102 @@ public class PatchJSONStandarOutput implements ReportResults {
 		}
 		return statsjsonRoot;
 	}
+
+	
+	public Object produceOutputforFL(List<SuspiciousCode> suspiciousList) {
+
+		JSONObject statsjsonRoot = new JSONObject();
+		JSONArray patchlistJson = new JSONArray();
+		statsjsonRoot.put("suspiciousCode", patchlistJson);
+		JSONParser parser = new JSONParser();
+
+		for (SuspiciousCode suspCode : suspiciousList) {
+
+			JSONObject patchjson = new JSONObject();
+			patchlistJson.add(patchjson);
+
+			System.out.println("===============================");
+
+			patchjson.put("className", JSONObject.escape(suspCode.getClassName()));
+			patchjson.put("methodName", JSONObject.escape(suspCode.getMethodName()));
+			patchjson.put("lineNumber", JSONObject.escape(String.valueOf(suspCode.getLineNumber())));
+			patchjson.put("suspiciousValue", JSONObject.escape(String.valueOf(suspCode.getSuspiciousValue())));
+			patchjson.put("fileName", JSONObject.escape(suspCode.getFileName()));
+
+		}
+
+		absoluteFileName = "./../"+this.bugName+"/fault_localization/";
+		System.out.println("===========");
+		System.out.println(absoluteFileName);
+		
+		try{
+			File filejson = new File(absoluteFileName);		
+			filejson.mkdirs();
+			filejson.createNewFile();
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
+		absoluteFileName = absoluteFileName+"/output.json";
+
+		try (FileWriter file = new FileWriter(absoluteFileName)) {
+
+			file.write(statsjsonRoot.toJSONString());
+			file.flush();
+			log.info("Storing ing JSON at " + absoluteFileName);
+			log.info(filename + ":\n" + statsjsonRoot.toJSONString());
+
+		} catch (IOException e) {
+			e.printStackTrace();
+			log.error("Problem storing ing json file" + e.toString());
+		}
+		return statsjsonRoot;
+	}
+
+	
+    public List<SuspiciousCode> readJSONFromFile() 
+    {
+        //JSON parser object to parse read file
+		List<SuspiciousCode> codes = new ArrayList<>();
+        JSONParser jsonParser = new JSONParser();
+         
+		absoluteFileName = "./../"+this.bugName+"/fault_localization/";
+		System.out.println("===========");
+		System.out.println(absoluteFileName);
+		
+		absoluteFileName = absoluteFileName+"/output.json";
+
+        try (FileReader reader = new FileReader(absoluteFileName))
+        {
+            //Read JSON file
+            Object obj = jsonParser.parse(reader);
+ 
+			JSONObject employeeObject = (JSONObject) obj ;
+            JSONArray employeeList = (JSONArray) employeeObject.get("suspiciousCode");
+             
+            //Iterate over employee array
+            employeeList.forEach( susp -> {
+				SuspiciousCode sc = parseSuspiciousCodeObject( (JSONObject) susp );
+				codes.add(sc);
+			});
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+		return codes;
+    }
+ 
+    private SuspiciousCode parseSuspiciousCodeObject(JSONObject employee) 
+    {         
+        String className = (String) employeeObject.get("className");
+        String methodName = (String) employeeObject.get("methodName");  
+        int lineNumber = (Integer) employeeObject.get("lineNumber");   
+        Double suspiciousValue = (Double) employeeObject.get("suspiciousValue");   
+        String fileName = (String) employeeObject.get("fileName");
+		return new SuspiciousCode(className, methodName, lineNumber, suspiciousValue,null);
+    }
 
 }

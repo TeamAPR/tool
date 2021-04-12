@@ -66,6 +66,8 @@ public abstract class AbstractMain {
 
 	CommandLineParser parser = new BasicParser();
 	public String bugName;
+	public Boolean readFLFromFile;
+	public Boolean doLocalFL;
 
 	static {
 		options.addOption("id", true, "(Optional) Name/identified of the project to evaluate (Default: folder name)");
@@ -90,6 +92,12 @@ public abstract class AbstractMain {
 		// Optional parameters
 
 		options.addOption("bugName", true, "(Optional) Name of the bug");
+		
+		options.addOption("readFLFromFile", true,
+		"(Optional) Read Fault localization from file? false by default");
+		options.addOption("doLocalFL", true,
+		"(Optional) Only run Fault localization");
+		
 
 		options.addOption("jvm4testexecution", true,
 				"(Optional) location of JVM that executes the mutated version of a program (Folder that contains java script, such as /bin/ ).");
@@ -187,7 +195,6 @@ public abstract class AbstractMain {
 				"(Optional) Scope of the ingredient seach space: Local (same class), package (classes from the same package) or global (all classes from the application under analysis). Default: local."
 						+ " It accepts customize scopes, which must implement from "
 						+ AstorCtIngredientPool.class.getCanonicalName());
-
 		options.addOption("skipfaultlocalization", false,
 				"The fault localization is skipped and all statements are considered");
 
@@ -376,6 +383,9 @@ public abstract class AbstractMain {
 
 		}
 		this.bugName = cmd.getOptionValue("bugName");
+
+		this.readFLFromFile = cmd.hasOption("readFLFromFile");
+		this.doLocalFL = cmd.hasOption("doLocalFL");
 
 		if (!this.isExample(cmd)) {
 			String dependenciespath = cmd.getOptionValue("dependencies");
