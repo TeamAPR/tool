@@ -194,6 +194,12 @@ public class AstorMain extends AbstractMain {
 
 		}
 
+		if(this.doLocalFL){
+			List<SuspiciousCode> suspicious = core.calculateSuspicious();
+			PatchJSONStandarOutput ps = new PatchJSONStandarOutput("FL",bugName);
+			ps.produceOutputforFL(suspicious);
+			return;
+		}
 		ConfigurationProperties.print();
 
 		core.startEvolution();
@@ -240,12 +246,6 @@ public class AstorMain extends AbstractMain {
 		String projectName = ConfigurationProperties.getProperty("projectIdentifier");
 
 		setupLogging();
-		if(this.doLocalFL){
-			List<SuspiciousCode> suspicious = core.calculateSuspicious();
-			PatchJSONStandarOutput ps = new PatchJSONStandarOutput("FL",bugName);
-			ps.produceOutputforFL(suspicious);
-			return;
-		}
 
 		run(location, projectName, dependencies, packageToInstrument, thfl, failing);
 
