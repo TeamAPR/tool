@@ -306,9 +306,13 @@ public abstract class AbstractRepairProblem extends Problem {
 					dependences);
 		else
 			faultLocalizer = new GZoltarFaultLocalizer2(gzoltarDataDir);
-		if(readFromFile){
-			PatchJSONStandarOutput ps = new PatchJSONStandarOutput("ARJA",bugName);
-			faultyLines = ps.readJSONFromFile();
+		if(this.readFromFile != null){
+			if(this.readFromFile){
+				PatchJSONStandarOutput ps = new PatchJSONStandarOutput("ARJA",bugName);
+				faultyLines = ps.readJSONFromFile();
+			}else{
+				faultyLines = faultLocalizer.searchSuspicious(thr);
+			}
 		}else{
 			faultyLines = faultLocalizer.searchSuspicious(thr);
 		}

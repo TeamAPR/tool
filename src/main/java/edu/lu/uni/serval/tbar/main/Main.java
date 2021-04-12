@@ -33,12 +33,12 @@ public class Main {
 		Thread thread1 = new Thread(() -> {
 			int cardumenTotal = 0;
 			if(cardumenTotal <=26){
-				System.out.println("Cardumen :"+bugId);
+				//System.out.println("Cardumen :"+bugId);
 				cardumenTotal++;
 				try {
 					ShellUtils s= new ShellUtils();
-					String output = s.shellRun(Arrays.asList("cd  astor \n", "bash ./cardumenRun.sh "+bugId), "Cardumen"+bugId, 1).trim();
-					System.out.println(output);
+					//String output = s.shellRun(Arrays.asList("cd  astor \n", "bash ./cardumenRun.sh "+bugId), "Cardumen"+bugId, 1).trim();
+					//System.out.println(output);
 				} catch (Exception e){
 					e.printStackTrace();
 				}
@@ -47,12 +47,12 @@ public class Main {
 		Thread thread2 = new Thread(() -> {
 			int jGenProgTotal = 0;
 			if(jGenProgTotal <=26){
-				System.out.println("jGenProgTotal :"+bugId);
+				//System.out.println("jGenProgTotal :"+bugId);
 				jGenProgTotal++;
 				try {
 					ShellUtils s= new ShellUtils();
-					String output = s.shellRun(Arrays.asList("cd  astor \n", "bash ./astorRun.sh "+bugId), "jGenProgTotal"+bugId, 1).trim();
-					System.out.println(output);
+					//String output = s.shellRun(Arrays.asList("cd  astor \n", "bash ./astorRun.sh "+bugId), "jGenProgTotal"+bugId, 1).trim();
+					//System.out.println(output);
 				} catch (Exception e){
 					e.printStackTrace();
 				}
