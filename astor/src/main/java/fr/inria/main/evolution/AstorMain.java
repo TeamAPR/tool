@@ -115,6 +115,15 @@ public class AstorMain extends AbstractMain {
 		core.loadExtensionPoints(mode.toString(),bugName);
 
 		core.initModel();
+		System.out.println("Do Local FL"+this.doLocalFL);
+
+		if(this.doLocalFL){
+			System.out.println("Fault localization");
+			List<SuspiciousCode> suspicious = core.calculateSuspicious();
+			PatchJSONStandarOutput ps = new PatchJSONStandarOutput("FL",bugName);
+			ps.produceOutputforFL(suspicious);
+			return core;
+		}
 
 		if (ConfigurationProperties.getPropertyBool("skipfaultlocalization")) {
 			// We dont use FL, so at this point the do not have suspicious
@@ -193,14 +202,12 @@ public class AstorMain extends AbstractMain {
 			}
 
 		}
+		System.out.println("Do Local FL 2 "+this.doLocalFL);
 
 		if(this.doLocalFL){
-			System.out.println("Fault localization");
-			List<SuspiciousCode> suspicious = core.calculateSuspicious();
-			PatchJSONStandarOutput ps = new PatchJSONStandarOutput("FL",bugName);
-			ps.produceOutputforFL(suspicious);
 			return;
 		}
+
 		ConfigurationProperties.print();
 
 		core.startEvolution();
