@@ -1,10 +1,14 @@
 package fr.inria.astor.core.output;
 
 import java.io.FileWriter;
+import java.io.FileReader;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 import org.apache.log4j.Logger;
 import org.json.simple.JSONArray;
@@ -174,6 +178,7 @@ public class PatchJSONStandarOutput implements ReportResults {
 	}
 
 	
+	@SuppressWarnings("unchecked")
 	public Object produceOutputforFL(List<SuspiciousCode> suspiciousList) {
 
 		JSONObject statsjsonRoot = new JSONObject();
@@ -198,7 +203,7 @@ public class PatchJSONStandarOutput implements ReportResults {
 			
 	
 			// Traversing through the map
-			for (Map.Entry<String, Integer> me : suspCode.getCoverage().entrySet()) {
+			for (Map.Entry<Integer, Integer> me : suspCode.getCoverage().entrySet()) {
 				JSONObject covJSON = new JSONObject();
 				coverageListJSON.add(covJSON);
 				covJSON.put("key", JSONObject.escape(String.valueOf(me.getKey())));
@@ -207,7 +212,7 @@ public class PatchJSONStandarOutput implements ReportResults {
 
 		}
 
-		absoluteFileName = "./../"+this.bugName+"/fault_localization/";
+		String absoluteFileName = "./../"+this.bugName+"/fault_localization/";
 		System.out.println("===========");
 		System.out.println(absoluteFileName);
 		
@@ -226,7 +231,7 @@ public class PatchJSONStandarOutput implements ReportResults {
 			file.write(statsjsonRoot.toJSONString());
 			file.flush();
 			log.info("Storing ing JSON at " + absoluteFileName);
-			log.info(filename + ":\n" + statsjsonRoot.toJSONString());
+			log.info(absoluteFileName + ":\n" + statsjsonRoot.toJSONString());
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -236,13 +241,14 @@ public class PatchJSONStandarOutput implements ReportResults {
 	}
 
 	
+	@SuppressWarnings("unchecked")
     public List<SuspiciousCode> readJSONFromFile() 
     {
         //JSON parser object to parse read file
 		List<SuspiciousCode> codes = new ArrayList<>();
         JSONParser jsonParser = new JSONParser();
          
-		absoluteFileName = "./../"+this.bugName+"/fault_localization/";
+		String absoluteFileName = "./../"+this.bugName+"/fault_localization/";
 		System.out.println("===========");
 		System.out.println(absoluteFileName);
 		
@@ -271,19 +277,20 @@ public class PatchJSONStandarOutput implements ReportResults {
 		return codes;
     }
  
-    private SuspiciousCode parseSuspiciousCodeObject(JSONObject employee) 
+	@SuppressWarnings("unchecked")
+    private SuspiciousCode parseSuspiciousCodeObject(JSONObject employeeObject) 
     {         
         String className = (String) employeeObject.get("className");
         String methodName = (String) employeeObject.get("methodName");  
-        int lineNumber = new Integer(employeeObject.get("lineNumber"));   
-        Double suspiciousValue = new Double(employeeObject.get("suspiciousValue"));   
+        int lineNumber = new Integer((String)employeeObject.get("lineNumber"));   
+        Double suspiciousValue = new Double((String)employeeObject.get("suspiciousValue"));   
         String fileName = (String) employeeObject.get("fileName");
 		
 		JSONArray coverageArray = (JSONArray) employeeObject.get("coverage");
 		Map<Integer,Integer> coverageMap = new HashMap<Integer, Integer>();
 		coverageArray.forEach( cov -> {
 			JSONObject covOutput = (JSONObject) cov ;
-			coverageMap.put(new Integer(covOutput.get("key")), new Integer(covOutput.get("value")));
+			coverageMap.put(new Integer((String)covOutput.get("key")), new Integer((String)covOutput.get("value")));
 		});
   
 		return new SuspiciousCode(className, methodName, lineNumber, suspiciousValue,coverageMap);

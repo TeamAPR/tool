@@ -1,16 +1,20 @@
 package us.msu.cse.repair;
 
 import java.io.FileWriter;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
+import java.util.HashMap;
 import java.io.File;
+import java.io.FileNotFoundException;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+import us.msu.cse.repair.core.parser.LCNode;
 
 /**
  * 
@@ -21,10 +25,12 @@ public class PatchJSONStandarOutput {
 	String mode;
 	JSONObject statsjsonRoot;
 	JSONArray patchlistJson;
-	public PatchJSONStandarOutput(String mode){
+	String bugName;
+	public PatchJSONStandarOutput(String mode,String bugName){
 		this.mode = mode;
 		this.statsjsonRoot = new JSONObject();
 		this.patchlistJson = new JSONArray();
+		this.bugName = bugName;
 		this.statsjsonRoot.put("patches", this.patchlistJson);
 	}
 
@@ -86,4 +92,40 @@ public class PatchJSONStandarOutput {
 
 	}
 
+    public Map<LCNode, Double> readJSONFromFile() 
+    {
+        //JSON parser object to parse read file
+		Map<LCNode, Double> listOfSusp = new HashMap<LCNode, Double>();
+        JSONParser jsonParser = new JSONParser();
+         
+		String absoluteFileName = "./../"+this.bugName+"/fault_localization/";
+		System.out.println("===========");
+		System.out.println(absoluteFileName);
+		
+		absoluteFileName = absoluteFileName+"/output.json";
+
+        try (FileReader reader = new FileReader(absoluteFileName))
+        {
+            //Read JSON file
+            Object obj = jsonParser.parse(reader);
+ 
+			JSONObject employeeObject = (JSONObject) obj ;
+            JSONArray employeeList = (JSONArray) employeeObject.get("suspiciousCode");
+			for(Object susp: employeeList){
+				if ( susp instanceof JSONObject ) {
+					JSONObject SuspiciousStatements = (JSONObject) susp;
+					LCNode sc = new LCNode((String)SuspiciousStatements.get("className") , new Integer((String)SuspiciousStatements.get("lineNumber")));
+					Double suspiciousValue = new Double((String) SuspiciousStatements.get("suspiciousValue"));  
+					listOfSusp.put(sc,suspiciousValue);
+				}
+			}
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+		return listOfSusp;
+    }
 }
