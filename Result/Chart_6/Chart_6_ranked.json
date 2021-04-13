@@ -1,0 +1,13 @@
+{
+  "patches": [
+    {
+      "NumOfMut": 1,
+      "NumOfDeleteMutations": 1,
+      "NumOfInsertMutations": 0,
+      "Rank": 1,
+      "NumOfReplaceMutations": 0,
+      "PatchDiff": "--- \\/source\\/org\\/jfree\\/chart\\/util\\/ShapeList.java\\n+++ \\/source\\/org\\/jfree\\/chart\\/util\\/ShapeList.java\\n@@ -81 +81 @@\\n-\\t\\tset(index, shape);\\n+\\t\\tset(org.jfree.chart.util.AbstractObjectList.DEFAULT_INITIAL_CAPACITY, shape);\\n\\n",
+      "Tool": "CARDUMEN"
+    }
+  ]
+}
