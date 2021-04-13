@@ -1484,3 +1484,13 @@ hello 3
 /Users/georgecherian/Desktop/TSE/bugs/chart/chart_3/build
 /Users/georgecherian/Desktop/TSE/bugs/chart/chart_3/build-tests
 /Users/georgecherian/Desktop/TSE/bugs/chart/chart_3/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+hello 4
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_4/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_4/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_4/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_4/lib:/Users/georgecherian/Desktop/junit-4.11.jar
+hello 5
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_5/source 
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_5/build
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_5/build-tests
+/Users/georgecherian/Desktop/TSE/bugs/chart/chart_5/lib:/Users/georgecherian/Desktop/junit-4.11.jar
