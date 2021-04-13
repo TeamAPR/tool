@@ -1,0 +1,22 @@
+{
+  "patches": [
+    {
+      "NumOfMut": 1,
+      "NumOfDeleteMutations": 1,
+      "NumOfInsertMutations": 0,
+      "Rank": 1,
+      "NumOfReplaceMutations": 0,
+      "PatchDiff": "--- \\/source\\/org\\/jfree\\/chart\\/util\\/ShapeUtilities.java\\n+++ \\/source\\/org\\/jfree\\/chart\\/util\\/ShapeUtilities.java\\n@@ -275 +275 @@\\n-\\t\\tjava.awt.geom.PathIterator iterator2 = p1.getPathIterator(null);\\n+\\t\\tjava.awt.geom.PathIterator iterator2 = p2.getPathIterator(null);\\n\\n",
+      "Tool": "CARDUMEN"
+    },
+    {
+      "NumOfMut": 1,
+      "NumOfDeleteMutations": 1,
+      "NumOfInsertMutations": 0,
+      "Rank": 2,
+      "NumOfReplaceMutations": 0,
+      "PatchDiff": "--- \\/source\\/org\\/jfree\\/chart\\/util\\/ShapeUtilities.java\\n+++ \\/source\\/org\\/jfree\\/chart\\/util\\/ShapeUtilities.java\\n@@ -274 +274 @@\\n-\\t\\tjava.awt.geom.PathIterator iterator1 = p1.getPathIterator(null);\\n+\\t\\tjava.awt.geom.PathIterator iterator1 = p2.getPathIterator(null);\\n\\n",
+      "Tool": "CARDUMEN"
+    }
+  ]
+}
