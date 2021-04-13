@@ -33,14 +33,16 @@ II. Run the tool
  III. Structure of the Directories
  -------------------------------
  ```powershell
-  |--- README.md               :  user guidance
-  |--- D4J                     :  Defects4J information
+  |--- README.md               :  Readme for help
+  |--- toolRun.sh                     :  Shell script to run the code
   |--- FailedTestCases         :  Failed test cases of each Defects4J bug
-  |--- lib                     :  GZoltar jar files
-  |--- Chart_*                 :  Generated patches
-  |------ fault_localization          :  
-  |------ PerfectFL            :  
-  |------ NormalFL             :  
+  |--- lib                     :  JAR files needed
+  |--- Chart_xx                :  Generated patches
+  |------ fault_localization   :  
+  |------ ARJA_output            :  
+  |------ CARDUMEN_output             :  
+  |------ jGenProg_output             : 
+  |------ Chart_xx_ranked.json             : 
   |--- src                     :  source code
   |--- ranking :  
   |--- astor                  :  
