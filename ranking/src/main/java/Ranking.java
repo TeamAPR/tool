@@ -95,9 +95,9 @@ public class Ranking {
     	    public int compare(Patch p1, Patch p2) {
     	        int c = p1.NumOfDeleteMutations - p2.NumOfDeleteMutations;
 				if (c == 0)
-					c = p1.NumOfReplaceMutations - p2.NumOfReplaceMutations;
-				if (c == 0)
 					c = p1.NumOfInsertMutations - p2.NumOfInsertMutations;
+				if (c == 0)
+					c = p1.NumOfReplaceMutations - p2.NumOfReplaceMutations;
 				if (c == 0)
 					c = p1.NumOfMut - p2.NumOfMut;
 				return c;
