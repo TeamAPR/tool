@@ -157,6 +157,7 @@ public class Ranking {
     public static void main(String[] args) {
     	if (args.length != 1) {
     		System.out.println("Missing/Invalid arguments");
+			return;
     	}
     	
     	String bugName = args[0];
