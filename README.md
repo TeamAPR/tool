@@ -1,6 +1,7 @@
 # GYMPaG
 
 An APR tool to generate patches , rank them and classify them
+This repo contains the source code as well as the experiment results for running the app on Defects4J Charts bug
 
 
 I. Pre requisites
@@ -36,15 +37,21 @@ II. Run the tool
   |--- README.md                      :  Readme for help
   |--- toolRun.sh                     :  Shell script to run the code
   |--- lib                            :  JAR files needed
-  |--- Chart_xx                       :  Generated patches
+  |--- Results                        :  The final results of the runs made by the system
+  |--- Project Assignments            :  Assignments for TSE
+  |--- src                            :  Source code for orchestrator
+  |--- ranking                        :  Source code for ranking
+  |--- astor                          :  Modified Source code for Cardumen, jGenProg and Fault localization
+  |--- arja                           :  Modified Source code for ARJA
+```
+
+
+This is the folder structure for results
+ ```powershell
+  |--- Chart_xx                       :  Generated patches for specific bugs
   |------ fault_localization          :  fault Localization output
   |------ ARJA_output                 :  ARJA output
   |------ CARDUMEN_output             :  Cardumen output
   |------ jGenProg_output             :  jGenProg output
   |------ Chart_xx_ranked.json        :  Ranking of output from the three tools
-  |--- src                            :  source code
-  |--- ranking                        :  Source code for ranking
-  |--- astor                          :  Modified Source code for Cardumen, jGenProg and Fault localization
-  |--- arja                           :  Modified Source code for 
 ```
-
