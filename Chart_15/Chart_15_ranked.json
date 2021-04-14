@@ -1,0 +1,13 @@
+{
+  "patches": [
+    {
+      "NumOfMut": 1,
+      "NumOfDeleteMutations": 1,
+      "NumOfInsertMutations": 0,
+      "Rank": 1,
+      "NumOfReplaceMutations": 0,
+      "PatchDiff": "--- \\/source\\/org\\/jfree\\/chart\\/JFreeChart.java\\n+++ \\/source\\/org\\/jfree\\/chart\\/JFreeChart.java\\n@@ -1219 +1219 @@\\n-\\t\\tthis.plot.draw(g2, plotArea, anchor, null, plotInfo);\\n+\\n\\n",
+      "Tool": "jGenProg"
+    }
+  ]
+}
