@@ -32,9 +32,13 @@ II. Run the tool
     ````````````
    6. If you are running for a generic program then use this step
     Run the following command to run the tool 
+    
+    
     ````````````
     bash ./runTOOLPATH.sh $bugName $bugID $work_dir $build_dir_location $test_dir_location $dep_dir $src_dir_location $build_test_dir_location
     ````````````
+    
+    
      ```powershell
       |--- bugName                        :  Name of the bug Can be anything e.g. Chart1
       |--- bugID                          :  an Id associated with the bug can be anything e.g. 1
