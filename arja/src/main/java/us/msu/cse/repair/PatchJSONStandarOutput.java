@@ -64,7 +64,7 @@ public class PatchJSONStandarOutput {
 		if(fileLocation != null)
 			interimLocation = fileLocation;
 		System.out.println("Inside prod output");
-		absoluteFileName = "./../"+interimLocation+"/"+mode+"_output";
+		absoluteFileName = "./../Result"+interimLocation+"/"+mode+"_output";
 		System.out.println("===========");
 		System.out.println(absoluteFileName);
 		

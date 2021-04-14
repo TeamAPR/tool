@@ -1,0 +1,1 @@
+{"suspiciousCode":[{"coverage":[{"value":"2","key":"1646"},{"value":"2","key":"2805"}],"fileName":null,"methodName":"generateToolTipFragment(Ljava\\\/lang\\\/String;)Ljava\\\/lang\\\/String;","className":"org.jfree.chart.imagemap.StandardToolTipTagFragmentGenerator","lineNumber":"65","suspiciousValue":"1.0"}]}
