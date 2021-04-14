@@ -36,10 +36,9 @@ II. Run the tool
     
     ````````````
     bash ./runTOOLPATH.sh $bugName $bugID $work_dir $build_dir_location $test_dir_location $dep_dir $src_dir_location $build_test_dir_location
-    ````````````
     
     
-     ```powershell
+   
       |--- bugName                        :  Name of the bug Can be anything e.g. Chart1
       |--- bugID                          :  an Id associated with the bug can be anything e.g. 1
       |--- work_dir                       :  The location of all the directories for the bug e.g. "/Users/george/Desktop/TSE/Chart_1"
@@ -48,7 +47,7 @@ II. Run the tool
       |--- src_dir_location               :  The location of the source code for the program e.g.  "source/"
       |--- dep_dir                        :  The location of the dpeendencies for the program e.g. "lib/"
       |--- build_test_dir_location        :  The location of the dpeendencies for the program e.g. "build-tests/"
-    ```
+    ````````````
 
  
  III. Structure of the Directories
