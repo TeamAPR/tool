@@ -21,9 +21,9 @@ public class Ranking {
 		String filePath = new File("").getAbsolutePath();
 		filePath = filePath.substring(0, filePath.length() - 22);
 		
-		String arjaFilePath = filePath + "/" + bugName + "/ARJA_output/output.json";
-		String cardumenFilePath = filePath + "/" + bugName + "/CARDUMEN_output/output.json";
-		String jgenprogFilePath = filePath + "/" + bugName + "/jgenprog_output/output.json";
+		String arjaFilePath = filePath + "/Result/" + bugName + "/ARJA_output/output.json";
+		String cardumenFilePath = filePath + "/Result/" + bugName + "/CARDUMEN_output/output.json";
+		String jgenprogFilePath = filePath + "/Result/" + bugName + "/jgenprog_output/output.json";
 
 		File a_tempFile = new File(arjaFilePath);
 		if (a_tempFile.exists()){
@@ -134,7 +134,7 @@ public class Ranking {
     		String filePath = new File("").getAbsolutePath();
 			filePath = filePath.substring(0, filePath.length() - 22);
 
-    		String writeFilePath = filePath + "/" + bugName + "/" + bugName + "_ranked.json";
+    		String writeFilePath = filePath + "/Result/" + bugName + "/" + bugName + "_ranked.json";
     		FileWriter writer = new FileWriter(writeFilePath);
     		writer.write(obj.toJSONString());
     		writer.flush();
