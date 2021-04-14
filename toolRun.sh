@@ -38,6 +38,7 @@ javac -cp "lib/*": -d bin $(find src -name '*.java')
 
 bugID=$1
 bugTill=$2
+bugName="Chart_"
 defects4jHome="abc"
 
 while [ $bugID -le $bugTill ]
@@ -46,7 +47,7 @@ do
 	echo "Welcome $bugID times. $now"
     #cd astor
     #bash ./runFaultLocalization.sh $bugID
-    java -Xmx1g -cp "lib/*":bin edu.lu.uni.serval.tbar.main.Main $bugTill $bugID $defects4jHome
+    java -Xmx1g -cp "lib/*":bin edu.lu.uni.serval.tbar.main.Main $bugName"$bugID" $bugID $defects4jHome
 
     now="$(date)"
 	echo "Welcome $bugID times. $now"

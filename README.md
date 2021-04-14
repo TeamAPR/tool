@@ -24,12 +24,12 @@ II. Run the tool
     mvn dependency:build-classpath -B | egrep -v "(^\[INFO\]|^\[WARNING\])" | tee /tmp/astor-classpath.txt
     cd..
     ````````````
-
-  5.Run the following command to run the tool (if you're using a set of defects4J bugs then provide start and end number
+  5. Run the following command to run the tool (if you're using a set of defects4J bugs then provide start and end number
     ````````````
     bash ./toolRun.sh 2 5
     ````````````
  
+
  
  III. Structure of the Directories
  -------------------------------

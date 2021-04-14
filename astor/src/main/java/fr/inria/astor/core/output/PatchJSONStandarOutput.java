@@ -248,7 +248,7 @@ public class PatchJSONStandarOutput implements ReportResults {
 		List<SuspiciousCode> codes = new ArrayList<>();
         JSONParser jsonParser = new JSONParser();
          
-		String absoluteFileName = "./../"+this.bugName+"/fault_localization/";
+		String absoluteFileName = "./../Result"+this.bugName+"/fault_localization/";
 		System.out.println("===========");
 		System.out.println(absoluteFileName);
 		

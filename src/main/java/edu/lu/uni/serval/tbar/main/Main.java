@@ -25,7 +25,12 @@ public class Main {
 					+ "\t<defects4j_Home>: the directory of defects4j git repository.\n");
 			System.exit(0);
 		}
-		String bugDataPath = args[0];// "../Defects4JData/"
+		
+		ShellUtils shell= new ShellUtils();
+		String outputFL = shell.shellRun(Arrays.asList("cd  astor \n", "bash ./runFaultLocalization.sh "+bugId), "FL"+bugId, 1).trim();
+		System.out.println(outputFL);
+
+		String bugName = args[0];// "../Defects4JData/"
 		String bugId = args[1]; // "Chart_1"
 		String defects4jHome = args[2]; // "../defects4j/"
 		System.out.println(bugId);
@@ -33,12 +38,12 @@ public class Main {
 		Thread thread1 = new Thread(() -> {
 			int cardumenTotal = 0;
 			if(cardumenTotal <=26){
-				//System.out.println("Cardumen :"+bugId);
+				System.out.println("Cardumen :"+bugId);
 				cardumenTotal++;
 				try {
 					ShellUtils s= new ShellUtils();
-					//String output = s.shellRun(Arrays.asList("cd  astor \n", "bash ./cardumenRun.sh "+bugId), "Cardumen"+bugId, 1).trim();
-					//System.out.println(output);
+					String output = s.shellRun(Arrays.asList("cd  astor \n", "bash ./cardumenRun.sh "+bugId), "Cardumen"+bugId, 1).trim();
+					System.out.println(output);
 				} catch (Exception e){
 					e.printStackTrace();
 				}
@@ -51,8 +56,8 @@ public class Main {
 				jGenProgTotal++;
 				try {
 					ShellUtils s= new ShellUtils();
-					//String output = s.shellRun(Arrays.asList("cd  astor \n", "bash ./astorRun.sh "+bugId), "jGenProgTotal"+bugId, 1).trim();
-					//System.out.println(output);
+					String output = s.shellRun(Arrays.asList("cd  astor \n", "bash ./astorRun.sh "+bugId), "jGenProgTotal"+bugId, 1).trim();
+					System.out.println(output);
 				} catch (Exception e){
 					e.printStackTrace();
 				}
@@ -92,6 +97,12 @@ public class Main {
 			e.printStackTrace();
 		}
 		
+		ShellUtils shellForRanking= new ShellUtils();
+		String outputRanking = shellForRanking.shellRun(Arrays.asList("cd ranking/src/main/java \n", "javac -cp \"lib/*;.\" $(find src -name '*.java')","java -cp \"lib/*;.\" src.main.Ranking "+bugName), "Ranking"+bugId, 1).trim();
+		System.out.println(outputRanking);
+		
+
+
 	}
 
 }
