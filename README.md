@@ -19,6 +19,7 @@ II. Run the tool
  3. Only applies if you directly want to run Defects4J bugs for a large set if you want to run for a particular program Skip to Step 4
       Make sure you replace the path files for the bug you want to check in the ./astor/cardumenRun.sh,./astor/astorRun.sh, ./astor/runFaultLocalization.sh and ./arja/run_arja.sh ()
  4. Run the following commands in the root dir
+ 
     ````````````
     cd astor
     jenv local 1.8
@@ -27,6 +28,7 @@ II. Run the tool
     ````````````
   5. If you are running for Defects 4J Bugs then use this step
     Run the following command to run the tool (if you're using a set of defects4J bugs then provide start and end number)
+
     ````````````
     bash ./toolRun.sh 2 5
     ````````````
