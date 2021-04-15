@@ -11,7 +11,7 @@ import java.util.Map;
 public class Distance {
 
 
-    private final static String INCORRECT = "incorrect";
+    private final static String INCORRECT = "plausible";
     private final static String CORRECT = "correct";
 
 
@@ -157,12 +157,12 @@ public class Distance {
     public static void main(String[] args) throws IOException{
 
         String inputFileName = ".//src//main//java//Chart_1_ranked.json";
-        String inputFileName2 = ".//src//main//java//7025632976040690657chart_1_ranked.json";
+        //String inputFileName2 = ".//src//main//java//7025632976040690657chart_1_ranked.json";
         String outputFileName = "src\\main\\java\\output1.json";
-        String outputFileName2 = "src\\main\\java\\output2.json";
+        //String outputFileName2 = "src\\main\\java\\output2.json";
 
         calculateDistance(inputFileName, outputFileName);
-        calculateDistance(inputFileName2, outputFileName2);
+        //calculateDistance(inputFileName2, outputFileName2);
 
     }
 
