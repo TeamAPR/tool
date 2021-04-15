@@ -44,11 +44,11 @@ II. Run the tool
       |--- bugName                        :  Name of the bug Can be anything e.g. Chart1
       |--- bugID                          :  an Id associated with the bug can be anything e.g. 1
       |--- work_dir                       :  The location of all the directories for the bug e.g. "/Users/george/Desktop/TSE/Chart_1"
-      |--- build_dir_location             :  The location of the class files for the program e.g. "build/"
-      |--- test_dir_location              :  The location of the test cases for the program e.g. "tests/"
-      |--- src_dir_location               :  The location of the source code for the program e.g.  "source/"
-      |--- dep_dir                        :  The location of the dependencies for the program e.g. "lib/"
-      |--- build_test_dir_location        :  The location of the built code for the test program e.g. "build-tests/"
+      |--- build_dir_location             :  The location of the class files for the program e.g. "/build/"
+      |--- test_dir_location              :  The location of the test cases for the program e.g. "/tests/"
+      |--- src_dir_location               :  The location of the source code for the program e.g.  "/source/"
+      |--- dep_dir                        :  The location of the dependencies for the program e.g. "/lib/"
+      |--- build_test_dir_location        :  The location of the built code for the test program e.g. "/build-tests/"
     ````````````
 
  

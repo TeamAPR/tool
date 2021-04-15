@@ -16,8 +16,8 @@ import java.util.List;
 public class Main {
 	
 	public static void main(String[] args) {
-		if (args.length != 3 || args.length !=8) {
-			System.err.println("Arguments: \n" 
+		if (args.length != 3 && args.length !=8) {
+			System.err.println("Arguments: \n" +args.length
 					+ "\t<Bug_Data_Path>: the directory of checking out Defects4J bugs. \n"
 					+ "\t<Bug_ID>: bug id of each Defects4J bug, such as Chart_1. \n"
 //					+ "\t<Suspicious_Code_Positions_File_Path>: \n"
@@ -44,24 +44,38 @@ public class Main {
 		String src_dir_location = args[6]; // "source/"
 		String build_test_dir_location = args[7]; // "build-tests/"
 		System.out.println(bugId);
-		System.out.println("Hello");
-		ShellUtils shell= new ShellUtils();
-		String FLCommand ="bash ./runFaultLocalizationPATH.sh "+bugId+" "+workDir;
-		FLCommand +=" "+build_dir_location;
-		FLCommand +=" "+test_dir_location;
-		FLCommand += " "+dep_dir;
-		FLCommand += " "+src_dir_location;
-		FLCommand += " "+build_test_dir_location;
-		String outputFL = shell.shellRun(Arrays.asList("cd  astor \n", FLCommand), "FL"+bugId, 1).trim();
-		System.out.println(outputFL);
+		System.out.println("Hello normal");
+		try {
+			ShellUtils shell= new ShellUtils();
+			String FLCommand ="bash ./runFaultLocalizationPATH.sh "+bugId+" "+workDir;
+			FLCommand +=" "+build_dir_location;
+			FLCommand +=" "+test_dir_location;
+			FLCommand += " "+dep_dir;
+			FLCommand += " "+src_dir_location;
+			FLCommand += " "+bugName;
+			FLCommand += " "+build_test_dir_location;
+			System.out.println(FLCommand);
+			String outputFL = shell.shellRun(Arrays.asList("cd  astor \n", FLCommand), "FL"+bugId, 1).trim();
+			System.out.println(outputFL);
+		}catch (Exception e){
+			e.printStackTrace();
+		}
 		Thread thread1 = new Thread(() -> {
 			int cardumenTotal = 0;
 			if(cardumenTotal <=26){
 				System.out.println("Cardumen :"+bugId);
 				cardumenTotal++;
 				try {
+					String FLCommand ="bash ./runCARDUMENPATH.sh "+bugId+" "+workDir;
+					FLCommand +=" "+build_dir_location;
+					FLCommand +=" "+test_dir_location;
+					FLCommand += " "+dep_dir;
+					FLCommand += " "+src_dir_location;
+					FLCommand += " "+bugName;
+					FLCommand += " "+build_test_dir_location;
+					System.out.println(FLCommand);
 					ShellUtils s= new ShellUtils();
-					String output = s.shellRun(Arrays.asList("cd  astor \n", "bash ./runCARDUMENPATH.sh "+bugId), "Cardumen"+bugId, 1).trim();
+					String output = s.shellRun(Arrays.asList("cd  astor \n", FLCommand), "Cardumen"+bugId, 1).trim();
 					System.out.println(output);
 				} catch (Exception e){
 					e.printStackTrace();
@@ -74,8 +88,16 @@ public class Main {
 				//System.out.println("jGenProgTotal :"+bugId);
 				jGenProgTotal++;
 				try {
+					String FLCommand ="bash ./runASTORPATH.sh "+bugId+" "+workDir;
+					FLCommand +=" "+build_dir_location;
+					FLCommand +=" "+test_dir_location;
+					FLCommand += " "+dep_dir;
+					FLCommand += " "+src_dir_location;
+					FLCommand += " "+bugName;
+					FLCommand += " "+build_test_dir_location;
+					System.out.println(FLCommand);
 					ShellUtils s= new ShellUtils();
-					String output = s.shellRun(Arrays.asList("cd  astor \n", "bash ./runASTORPATH.sh "+bugId), "jGenProgTotal"+bugId, 1).trim();
+					String output = s.shellRun(Arrays.asList("cd  astor \n", FLCommand), "jGenProgTotal"+bugId, 1).trim();
 					System.out.println(output);
 				} catch (Exception e){
 					e.printStackTrace();
@@ -88,8 +110,16 @@ public class Main {
 				System.out.println("ARJATotal :"+bugId);
 				ARJATotal++;
 				try {
+					String FLCommand ="bash ./runARJAPATH.sh "+bugId+" "+workDir;
+					FLCommand +=" "+build_dir_location;
+					FLCommand +=" "+test_dir_location;
+					FLCommand += " "+dep_dir;
+					FLCommand += " "+src_dir_location;
+					FLCommand += " "+bugName;
+					FLCommand += " "+build_test_dir_location;
+					System.out.println(FLCommand);
 					ShellUtils s= new ShellUtils();
-					String output = s.shellRun(Arrays.asList("cd  arja \n", "bash ./runARJAPATH.sh "+bugId), "ARJATotal"+bugId, 1).trim();
+					String output = s.shellRun(Arrays.asList("cd  arja \n", FLCommand), "ARJATotal"+bugId, 1).trim();
 					System.out.println(output);
 				} catch (Exception e){
 					e.printStackTrace();
@@ -115,10 +145,13 @@ public class Main {
 		}catch(Exception e){
 			e.printStackTrace();
 		}
-		
-		ShellUtils shellForRanking= new ShellUtils();
-		String outputRanking = shellForRanking.shellRun(Arrays.asList("cd ranking/src/main/java \n", "javac -cp \"lib/*;.\" $(find src -name '*.java')","java -cp \"lib/*;.\" src.main.Ranking "+bugName), "Ranking"+bugId, 1).trim();
-		System.out.println(outputRanking);
+		try{
+			ShellUtils shellForRanking= new ShellUtils();
+			String outputRanking = shellForRanking.shellRun(Arrays.asList("cd ranking/src/main/java \n", "javac -cp \"lib/*;.\" $(find src -name '*.java')","java -cp \"lib/*;.\" src.main.Ranking "+bugName), "Ranking"+bugId, 1).trim();
+			System.out.println(outputRanking);
+		}catch (Exception e){
+			e.printStackTrace();
+		}
 		
 	}
 	public static void chart_bug_run(String[] args){
@@ -129,9 +162,14 @@ public class Main {
 		String defects4jHome = args[2]; // "../defects4j/"
 		System.out.println(bugId);
 		System.out.println("Hello");
-		ShellUtils shell= new ShellUtils();
-		String outputFL = shell.shellRun(Arrays.asList("cd  astor \n", "bash ./runFaultLocalization.sh "+bugId), "FL"+bugId, 1).trim();
-		System.out.println(outputFL);
+		try{
+			ShellUtils shell= new ShellUtils();
+			String outputFL = shell.shellRun(Arrays.asList("cd  astor \n", "bash ./runFaultLocalization.sh "+bugId), "FL"+bugId, 1).trim();
+			System.out.println(outputFL);
+
+		}catch(Exception e){
+			e.printStackTrace();
+		}
 		Thread thread1 = new Thread(() -> {
 			int cardumenTotal = 0;
 			if(cardumenTotal <=26){
@@ -194,9 +232,13 @@ public class Main {
 			e.printStackTrace();
 		}
 		
-		ShellUtils shellForRanking= new ShellUtils();
-		String outputRanking = shellForRanking.shellRun(Arrays.asList("cd ranking/src/main/java \n", "javac -cp \"lib/*;.\" $(find src -name '*.java')","java -cp \"lib/*;.\" src.main.Ranking "+bugName), "Ranking"+bugId, 1).trim();
-		System.out.println(outputRanking);
+		try{
+			ShellUtils shellForRanking= new ShellUtils();
+			String outputRanking = shellForRanking.shellRun(Arrays.asList("cd ranking/src/main/java \n", "javac -cp \"lib/*;.\" $(find src -name '*.java')","java -cp \"lib/*;.\" src.main.Ranking "+bugName), "Ranking"+bugId, 1).trim();
+			System.out.println(outputRanking);
+		}catch (Exception e){
+			e.printStackTrace();
+		}
 		
 	}
 

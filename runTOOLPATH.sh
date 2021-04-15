@@ -38,11 +38,11 @@ javac -cp "lib/*": -d bin $(find src -name '*.java')
 
 bugName=$1
 bugID=$2
-work_dir = $3
-build_dir_location = $4
-test_dir_location = $5
-dep_dir = $6
-src_dir_location = $7
-build_test_dir_location = $8
+work_dir=$3
+build_dir_location=$4
+test_dir_location=$5
+dep_dir=$6
+src_dir_location=$7
+build_test_dir_location=$8
 
 java -Xmx1g -cp "lib/*":bin edu.lu.uni.serval.tbar.main.Main $bugName $bugID $work_dir $build_dir_location $test_dir_location $dep_dir $src_dir_location $build_test_dir_location
