@@ -47,8 +47,8 @@ II. Run the tool
       |--- build_dir_location             :  The location of the class files for the program e.g. "build/"
       |--- test_dir_location              :  The location of the test cases for the program e.g. "tests/"
       |--- src_dir_location               :  The location of the source code for the program e.g.  "source/"
-      |--- dep_dir                        :  The location of the dpeendencies for the program e.g. "lib/"
-      |--- build_test_dir_location        :  The location of the dpeendencies for the program e.g. "build-tests/"
+      |--- dep_dir                        :  The location of the dependencies for the program e.g. "lib/"
+      |--- build_test_dir_location        :  The location of the built code for the test program e.g. "build-tests/"
     ````````````
 
  
